@@ -26,7 +26,7 @@
 				</div>
 			</div>
 		</div>
-  </section>
+  	</section>
 	<section class="bg-body">
 		<div class="container-fluid">
 			<div class="container col-xxl-8">
@@ -46,15 +46,18 @@
 	</section>
 	<CounterComponent />
 	<FundamentalsComponent />
-	<section class="container-fluid">
+	<section class="container-fluid bg-body-tertiary">
 		<div class="container">
-			<div class="row g-4">
-			<div class="col-md-6" v-for="card in valueCards" :key="card.descripcion">
-				<ValueCardComponent
-				:descripcion="card.descripcion"
-				:img="card.img"
-				/>
+			<div class="text-center">
+				<h2 class="fw-bold mb-5 title-brand display-5">Conectando mas allá de la Comunicación</h2>
 			</div>
+			<div class="row g-4">
+				<div class="col-md-6" v-for="card in valueCards" :key="card.descripcion">
+					<ValueCardComponent
+					:descripcion="card.descripcion"
+					:img="card.img"
+					/>
+				</div>
 			</div>
   		</div>
 	</section>
