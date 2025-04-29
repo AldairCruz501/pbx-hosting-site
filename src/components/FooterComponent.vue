@@ -14,19 +14,16 @@
               <i class="bi bi-facebook"></i>
             </a>
             <a href="" class="me-4 text-reset text-decoration-none">
-              <i class="bi bi-twitter"></i>
+              <i class="bi bi-twitter-x"></i>
             </a>
             <a href="" class="me-4 text-reset text-decoration-none">
-              <i class="bi bi-google"></i>
+              <i class="bi bi-tiktok"></i>
             </a>
             <a href="" class="me-4 text-reset text-decoration-none">
               <i class="bi bi-instagram"></i>
             </a>
             <a href="" class="me-4 text-reset text-decoration-none">
               <i class="bi bi-linkedin"></i>
-            </a>
-            <a href="" class="me-4 text-reset text-decoration-none">
-              <i class="bi bi-github"></i>
             </a>
           </div>
         </section>

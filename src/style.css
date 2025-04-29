@@ -12,8 +12,9 @@
     --default_color: #FFFFFF;
     --color_one: #fee4e4;
     --color-tercary: #c4696e;
+    --color-four: #7e0d13;
     /* Background */
-    --primary_bg: #FAF7FE;
+    --primry_bg: #5c1414;
 }
 
 html {

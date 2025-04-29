@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import CounterComponent from '../components/CounterComponent.vue';
 import FooterComponent from '../components/FooterComponent.vue';
 import HeaderComponent from '../components/HeaderComponent.vue';
 import { homeData } from '../data/home';
@@ -6,12 +7,13 @@ import { homeData } from '../data/home';
 
 <template>
   <HeaderComponent />
-  <section class="hero-home text-center text-md-start">
+  <section class="hero-home text-center text-md-start bg-body-tertiary">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-12 col-lg-6 mb-4">
-					<h1 class="large-title position-relative">Provedores de <span>Telefonía IP</span> en México</h1>
-					<p>Optimiza tus comunicaciones con nuestra tecnología VoIP avanzada, segura y personalizada. Mejora la eficiencia y reduce costos hoy mismo.</p>
+					<h1 class="large-title position-relative">
+						Conectamos lo que más importa: tu negocio y tus clientes.
+					</h1>
 				</div>
 				<div class="col-12 col-lg-6">
 					<div class="hero-home-right position-relative">
@@ -36,7 +38,7 @@ import { homeData } from '../data/home';
 			</div>
 		</div>
 	</section>
-	<section class="voip-home">
+	<section class="bg-body-tertiary">
 		<div class="container-fluid">
 			<div class="container col-xxl-8">
 				<div class="row d-flex align-items-center g-5 py-5">
@@ -55,36 +57,7 @@ import { homeData } from '../data/home';
 			</div>
     	</div>
 	</section>
-	<section class="counter-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-6 col-lg-3 text-center mb-4 mb-lg-0">
-					<div class="counter">
-                        <h2><span class="fw-bold display-4">100 Mills</span>+</h2>
-                        <h4 class="mb-0">De minutos mensuales</h4>
-                    </div>
-				</div>
-				<div class="col-6 col-lg-3 text-center mb-4 mb-md-0">
-                    <div class="counter">
-                        <h2><span class="fw-bold display-4">99.99</span>%</h2>
-                        <h4 class="mb-0">Disponibilidad efectiva</h4>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-3 text-center">
-                    <div class="counter">
-                        <h2><span class="fw-bold display-4">10</span>+</h2>
-                        <h4 class="mb-0">Años de experiencia</h4>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-3 text-center">
-                    <div class="counter">
-                        <h2><span class="fw-bold display-4">5k</span>+</h2>
-                        <h4 class="mb-0">Clientes satisfechos</h4>
-                    </div>
-                </div>
-			</div>
-		</div>
-	</section>
+	<CounterComponent />
 	<section class="services-section">
 		<div class="container">
 			<div class="row">
@@ -106,7 +79,20 @@ import { homeData } from '../data/home';
 			</div>
 		</div>
 	</section>
-	<section class="section border-top">
+	<section class="container-fluid bg-options">
+      <div class="px-4 pt-5 text-center text-white">
+        <h1 class="display-4 fw-bold"><span class="title-dialer">PBXDialer:</span> Software de Call Center Intuitivo</h1>
+        <div class="col-lg-6 mx-auto pb-4">
+          <p class="lead mb-4 text-dialer">PBXDialer optimiza la contactación y el servicio al cliente con su interfaz intuitiva y marcador predictivo, mejorando la productividad del equipo y la satisfacción del cliente.</p>
+        </div>
+        <div class="overflow-hidden">
+          <div class="container px-5">
+            <img src="/img/pbx-dialer-img.webp" class="img-fluid" alt="Example image"loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+	<section class="section bg-body-tertiary">
 		<div class="container">
 			<div class="row align-items-center justify-content-between">
 				<div class="col-lg-5">
@@ -139,13 +125,71 @@ import { homeData } from '../data/home';
 			</div>
 		</div>
 	</section>
+	<section class="container-fluid">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-6">
+					<div class="row g-4">
+						<div class="col-12">
+							<div class="d-flex align-items-start card-hover">
+								<div class="icon-circle me-3">
+									<img src="/img/plazo-forzoso.png" alt="" class="img-fluid">
+								</div>
+								<div>
+									<div class="highlight-text">Sin plazos forzosos</div>
+									<p class="text-dialer">Usa nuestro servicio sin contratos largos ni compromisos. Tú decides cuándo parar, sin penalizaciones.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="d-flex align-items-start card-hover">
+								<div class="icon-circle me-3">
+									<img src="/img/paga-que-llamas.png" alt="" class="img-fluid">
+								</div>
+								<div>
+									<div class="highlight-text">Paga por lo que llamas</div>
+									<p class="text-dialer">Solo paga por los minutos que realmente usas. Sin cargos fijos ni sorpresas inesperadas en tu factura.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-12">
+							<div class="d-flex align-items-start card-hover">
+								<div class="icon-circle me-3">
+									<img src="/img/ladas-mexico.png" alt="" class="img-fluid">
+								</div>
+								<div>
+									<div class="highlight-text">+300 Ladas México</div>
+									<p class="text-dialer">Ofrecemos líneas telefónicas de más de 300 Ladas en México. Amplía tu presencia local en todo el país fácilmente.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-12">
+							<div class="d-flex align-items-start card-hover">
+								<div class="icon-circle me-3">
+									<img src="/img/tarifa-minuto.png" alt="" class="img-fluid">
+								</div>
+								<div>
+									<div class="highlight-text">La mejor tarifa por minuto</div>
+									<p class="text-dialer">Disfruta de las tarifas más bajas por minuto, ¡te podemos mejorar fácilmente la tarifa del proveedor actual!</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 text-center">
+					<img src="/img/img-options.png" alt="Illustration" class="img-fluid">
+				</div>
+			</div>
+		</div>
+	</section>
 	<FooterComponent />
 </template>
 
 <style scoped>
 	.hero-home{
 		padding: 100px 0px 150px;
-		background-color: #fdfdfd;
     	background-position: right center;
 	}
 	.hero-home p {
@@ -179,34 +223,14 @@ import { homeData } from '../data/home';
 		color: var(--default_color);
     	transition: 0.4s all;
 	}
-	.voip-home {
-		background-color: #fdfdfd;
-	}
 	.subtitle-hero,
 	.subtitle-service,
 	.subtitle-reseller {
 		color: var(--secondary_color)
 	}
-	.voip-home p {
+	.voip-home p,
+	.text-dialer {
 		font-family: "Open Sans", sans-serif !important;
-	}
-	.counter-section {
-		background: linear-gradient(12deg, rgba(252, 82, 76, 0.959) 40%, rgba(228, 55, 69, 0.95) 100%), url('/img/counter_bg.webp');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-	}
-	.counter {
-		padding: 47px 0px;
-		border-radius: 5px;
-		border: 1px dashed rgba(255, 255, 255, 0.25);
-	}
-	.counter h2 {
-		color: var(--default_color);
-		margin-bottom: 20px;
-	}
-	.counter h4 {
-		color: var(--default_color);
 	}
 	.services-section,
 	.reseller-section{
@@ -310,4 +334,36 @@ import { homeData } from '../data/home';
 		color: var(--primary_color);
 		background-color: rgba(157, 149, 189, 0.2);
 	}
+	.title-dialer {
+		color: var(--secondary_color);
+	}
+	.bg-options {
+		background-color: rgba(181, 81, 81, 0.2);
+	}
+	.icon-circle {
+      background-color: var(--secondary_color);
+      border-radius: 5%;
+      padding: 25px;
+      color: white;
+      font-size: 1.5rem;
+    }
+    .highlight-text {
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+    .custom-section {
+      padding: 60px 0;
+    }
+    .illustration-img {
+      width: 100%;
+      max-width: 400px;
+    }
+	.card-hover {
+      transition: all 0.3s ease;
+      padding: 15px;
+      border-radius: 10px;
+    }
+    .card-hover:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
 </style>

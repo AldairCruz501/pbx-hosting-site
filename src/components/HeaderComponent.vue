@@ -34,16 +34,16 @@
   <header class="header-pbx sticky-top">
     <div class="container">
       <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="/">
+        <router-link class="navbar-brand" to="/">
           <img src="/img/pbx-logo.webp" alt="Logo-pbx" class="w-100">
-        </a>
+        </router-link>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link text-uppercase" href="">Nosotros</a>
+              <router-link class="nav-link text-uppercase" to="/nosotros">Nosotros</router-link>
             </li>
             <li class="nav-item dropdown position-static" @mouseleave="handleMouseLeave">
               <a class="nav-link dropdown-toggle text-uppercase" href="#" @mouseenter="handleMouseEnter(servicios[0].nombre)" data-bs-toggle="dropdown">
