@@ -1,38 +1,70 @@
 <script lang="ts" setup>
+import { onMounted, ref } from 'vue';
+import { CountUp } from 'countup.js';
+import type { CounterItem } from '../interfaces/General';
+import { counters as counterData } from '../data/general';
+
+const counters = ref<CounterItem[]>(counterData)
+const animated = ref<Set<string>>(new Set()) 
+
+const animateCounter = (counter: CounterItem) => {
+  if (animated.value.has(counter.id)) return
+
+  const options = {
+    suffix: counter.suffix || '',
+    decimalPlaces: counter.endVal % 1 !== 0 ? 2 : 0,
+    duration: 3,
+  }
+  const countUp = new CountUp(counter.id, counter.endVal, options)
+  if (!countUp.error) {
+    countUp.start()
+    animated.value.add(counter.id)
+  } else {
+    console.error(countUp.error)
+  }
+}
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id
+          const counter = counters.value.find(c => c.id === id)
+          if (counter) animateCounter(counter)
+        }
+      })
+    },
+    {
+      threshold: 0.5,
+    }
+  )
+
+  counters.value.forEach((counter) => {
+    const el = document.getElementById(counter.id)
+    if (el) observer.observe(el)
+  })
+})
 </script>
 
 <template>
-    <section class="counter-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-6 col-lg-3 text-center mb-4 mb-lg-0">
-					<div class="counter">
-                        <h2><span class="fw-bold display-4">100 Mills</span>+</h2>
-                        <h4 class="mb-0">De minutos mensuales</h4>
-                    </div>
-				</div>
-				<div class="col-6 col-lg-3 text-center mb-4 mb-md-0">
-                    <div class="counter">
-                        <h2><span class="fw-bold display-4">99.99</span>%</h2>
-                        <h4 class="mb-0">Disponibilidad efectiva</h4>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-3 text-center">
-                    <div class="counter">
-                        <h2><span class="fw-bold display-4">10</span>+</h2>
-                        <h4 class="mb-0">Años de experiencia</h4>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-3 text-center">
-                    <div class="counter">
-                        <h2><span class="fw-bold display-4">5k</span>+</h2>
-                        <h4 class="mb-0">Clientes satisfechos</h4>
-                    </div>
-                </div>
+	<section class="counter-section">
+	  <div class="container">
+		<div class="row">
+		  <div
+			v-for="(counter, index) in counters"
+			:key="index"
+			class="col-6 col-lg-3 text-center mb-4 mb-lg-0"
+		  >
+			<div class="counter">
+			  <h2 :id="counter.id" class="fw-bold display-6"></h2>
+			  <h4 class="mb-0">{{ counter.label }}</h4>
 			</div>
+		  </div>
 		</div>
+	  </div>
 	</section>
-</template>
+  </template>
 
 <style scoped>
     .counter-section {
