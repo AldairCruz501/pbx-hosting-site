@@ -28,13 +28,17 @@
     showMegaMenu.value = false
   }
 
+  const handleScrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
 </script>
 
 <template>
   <header class="header-pbx sticky-top">
     <div class="container">
       <nav class="navbar navbar-expand-lg">
-        <router-link class="navbar-brand" to="/">
+        <router-link class="navbar-brand" to="/" @click="handleScrollToTop">
           <img src="/img/pbx-logo.webp" alt="Logo-pbx" class="w-100">
         </router-link>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +47,7 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <router-link class="nav-link text-uppercase" to="/nosotros">Nosotros</router-link>
+              <router-link class="nav-link text-uppercase" to="/nosotros" @click="handleScrollToTop">Nosotros</router-link>
             </li>
             <li class="nav-item dropdown position-static" @mouseleave="handleMouseLeave">
               <a class="nav-link dropdown-toggle text-uppercase" href="#" @mouseenter="handleMouseEnter(servicios[0].nombre)" data-bs-toggle="dropdown">
@@ -94,10 +98,10 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-uppercase" href="">Soporte</a>
+              <a class="nav-link text-uppercase" href="" @click="handleScrollToTop">Soporte</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-uppercase" href="">Contacto</a>
+              <a class="nav-link text-uppercase" href="" @click="handleScrollToTop">Contacto</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-uppercase d-block d-lg-none" href="https://www.pbxhosting.com.mx/clientarea/" target="_blank">

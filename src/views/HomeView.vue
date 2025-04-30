@@ -2,12 +2,14 @@
 import CounterComponent from '../components/CounterComponent.vue';
 import FooterComponent from '../components/FooterComponent.vue';
 import HeaderComponent from '../components/HeaderComponent.vue';
+import LoaderComponent from '../components/LoaderComponent.vue';
 import { homeData } from '../data/home';
 </script>
 
 <template>
-  <HeaderComponent />
-  <section class="hero-home text-center text-md-start bg-body-tertiary">
+	<LoaderComponent />
+  	<HeaderComponent />
+ 	<section class="hero-home text-center text-md-start bg-body-tertiary">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-12 col-lg-6 mb-4">
@@ -152,7 +154,6 @@ import { homeData } from '../data/home';
 								</div>
 							</div>
 						</div>
-
 						<div class="col-12">
 							<div class="d-flex align-items-start card-hover">
 								<div class="icon-circle me-3">
@@ -164,7 +165,6 @@ import { homeData } from '../data/home';
 								</div>
 							</div>
 						</div>
-
 						<div class="col-12">
 							<div class="d-flex align-items-start card-hover">
 								<div class="icon-circle me-3">

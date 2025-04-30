@@ -8,11 +8,13 @@
 	import ValueCardComponent from '../components/ValueCardComponent.vue';
 	import { valueCardsData } from '../data/about';
 	import type { ValueCardData } from '../interfaces/About';
+	import LoaderComponent from '../components/LoaderComponent.vue';
 
 	const valueCards: ValueCardData[] = valueCardsData;
 </script>
 
 <template>
+	<LoaderComponent />
 	<HeaderComponent />
 	<section class="container-fluid bg-body-tertiary">
 		<div class="px-4 pt-4 text-center">
