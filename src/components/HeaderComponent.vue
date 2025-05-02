@@ -68,7 +68,7 @@
                           <router-link
                             :to="serv.route"
                             class="nav-link fw-bold text-decoration-none d-flex align-items-center"
-                            @click.stop
+                            @click="handleScrollToTop"
                           >
                             <i :class="serv.icono" class="mx-2"></i>{{ serv.nombre }}
                           </router-link>
@@ -85,7 +85,7 @@
                         <div class="col-12 col-lg-6" v-for="(grupo, index) in getServicios" :key="index">
                           <ul class="list-unstyled">
                             <li v-for="servicio in grupo" :key="servicio.nombre" class="mb-2">
-                              <router-link :to="servicio.route" class="text-decoration-none sub-link">
+                              <router-link :to="servicio.route" class="text-decoration-none sub-link" @click="handleScrollToTop">
                                 <i :class="servicio.icono" class="mx-2" style="color: #FFFFFF;"></i> {{ servicio.nombre }}
                               </router-link>
                             </li>

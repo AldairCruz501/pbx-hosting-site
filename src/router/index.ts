@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
+import DomainsView from '../views/services/DomainsView.vue'
+import TestView from '../views/services/TestView.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -12,6 +14,16 @@ const routes: RouteRecordRaw[] = [
     path: '/nosotros',
     name: 'Nosotros',
     component: AboutView
+  },
+  {
+    path: '/servicios/dominios',
+    name: 'Dominios',
+    component: DomainsView
+  },
+  {
+    path: '/servicios/test',
+    name: 'Test',
+    component: TestView 
   },
 ]
 
