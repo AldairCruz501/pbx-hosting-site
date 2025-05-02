@@ -63,7 +63,7 @@ export const servicios: Servicio[] = [
 		servicios: [
 			{
 				nombre: "Comprar Dominio",
-				route: "/servicios/test",
+				route: "/servicios/dominios",
 				icono: "bi-cart"
 			},
 			{
