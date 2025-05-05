@@ -1,5 +1,7 @@
 <script setup lang="ts">
-
+  const handleScrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
 </script>
 
 <template>
@@ -10,20 +12,23 @@
             <span>Conéctate con nosotros en las redes sociales:</span>
           </div>
           <div>
-            <a href="" class="me-4 text-reset text-decoration-none">
+            <a href="https://www.facebook.com/PBXHostingMX/" target="_blank" class="me-4 text-reset text-decoration-none">
               <i class="bi bi-facebook"></i>
             </a>
-            <a href="" class="me-4 text-reset text-decoration-none">
+            <a href="https://x.com/PBX_Hosting" target="_blank" class="me-4 text-reset text-decoration-none">
               <i class="bi bi-twitter-x"></i>
             </a>
-            <a href="" class="me-4 text-reset text-decoration-none">
+            <a href="https://www.tiktok.com/@pbxhosting" target="_blank" class="me-4 text-reset text-decoration-none">
               <i class="bi bi-tiktok"></i>
             </a>
-            <a href="" class="me-4 text-reset text-decoration-none">
+            <a href="https://www.instagram.com/pbxhostingmx/" target="_blank" class="me-4 text-reset text-decoration-none">
               <i class="bi bi-instagram"></i>
             </a>
-            <a href="" class="me-4 text-reset text-decoration-none">
+            <a href="https://www.linkedin.com/company/pbx-hosting/" target="_blank" class="me-4 text-reset text-decoration-none">
               <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://www.youtube.com/@PBXHosting" target="_blank" class="me-4 text-reset text-decoration-none">
+              <i class="bi bi-youtube"></i>
             </a>
           </div>
         </section>
@@ -43,16 +48,16 @@
                   Enlaces
                 </h6>
                 <p class="fs-6">
-                  <a href="#!" class="text-reset text-decoration-none">Inicio</a>
+                  <router-link to="/" class="text-reset text-decoration-none" @click="handleScrollToTop">Inicio</router-link>
                 </p>
                 <p class="fs-6">
-                  <a href="#!" class="text-reset text-decoration-none">Nosotros</a>
+                  <router-link to="/nosotros" class="text-reset text-decoration-none" @click="handleScrollToTop">Nosotros</router-link>
                 </p>
                 <p class="fs-6">
-                  <a href="#!" class="text-reset text-decoration-none">Servicios</a>
+                  <router-link to="" class="text-reset text-decoration-none">Servicios</router-link>
                 </p>
                 <p class="fs-6">
-                  <a href="#!" class="text-reset text-decoration-none">Soporte</a>
+                  <router-link to="" class="text-reset text-decoration-none">Soporte</router-link>
                 </p>
               </div>
               <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -60,7 +65,7 @@
                   Servicios Estrella
                 </h6>
                 <p class="fs-6">
-                  <a href="#!" class="text-reset text-decoration-none">Telefonía IP</a>
+                  <router-link to="/telefonia-ip" class="text-reset text-decoration-none" @click="handleScrollToTop">Telefonía IP</router-link>
                 </p>
                 <p class="fs-6">
                   <a href="#!" class="text-reset text-decoration-none">SMS Marketing</a>
