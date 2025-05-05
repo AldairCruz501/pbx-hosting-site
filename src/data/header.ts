@@ -3,32 +3,32 @@ import type { Servicio } from "../interfaces/Header";
 export const servicios: Servicio[] = [
 	{
 		nombre: "Telefonía IP",
-		route: "/",
+		route: "/telefonia-ip",
 		icono: 'bi-telephone',
 		servicios: [
 			{
 				nombre: "Telefonía IP",
-				route: "/",
+				route: "/telefonia-ip",
 				icono: "bi-telephone"
 			},
 			{
 				nombre: "Línea Sip",
-				route: "/",
+				route: "/telefonia-ip/linea-sip",
 				icono: "bi-voicemail"
 			},
 			{
 				nombre: "Líneas Telefónicas",
-				route: "/",
+				route: "/telefonia-ip/lineas-telefonicas",
 				icono: "bi-phone"
 			},
 			{
 				nombre: "Paquetes VoIP",
-				route: "/",
+				route: "/telefonia-ip/paquetes-voip",
 				icono: "bi-box-seam"
 			},
 			{
 				nombre: "Paquetes PyME",
-				route: "/",
+				route: "/telefonia-ip/paquetes-pyme",
 				icono: "bi-building"
 			},
 		],
@@ -58,17 +58,17 @@ export const servicios: Servicio[] = [
 	},
 	{
 		nombre: "Dominio",
-		route: "/servicios/dominios",
+		route: "/dominios",
 		icono: "bi-globe",
 		servicios: [
 			{
 				nombre: "Comprar Dominio",
-				route: "/servicios/dominios",
+				route: "/dominios",
 				icono: "bi-cart"
 			},
 			{
 				nombre: "Transferir Dominio",
-				route: "/servicios/dominios",
+				route: "/dominios",
 				icono: "bi-arrow-left-right"
 			},
 		],
