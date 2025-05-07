@@ -10,3 +10,7 @@ export interface Servicios {
     icono: string,
     route: string,
 }
+
+export interface CarruselItem {
+    img: string;
+}  

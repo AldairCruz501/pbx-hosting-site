@@ -1,37 +1,185 @@
+<!--<template>
+  <div class="container py-4">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">MegaMenu</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#megaNavbar"
+          aria-controls="megaNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="megaNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown position-static">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Collection
+              </a>
+              <div class="dropdown-menu w-100 shadow p-4 mt-0">
+                <div class="row">
+                  <!-- Column 1
+                  <div class="col-lg-3">
+                    <h6 class="text-primary">New in Stores</h6>
+                    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="https://placehold.co/254x150/3498db/f5f5f5?text=New+Collection" class="d-block w-100" alt="...">
+                          <h6 class="mt-2"><small>Summer dress floral prints</small></h6>
+                          <div class="d-grid gap-2">
+                            <button class="btn btn-primary btn-sm">49,99 €</button>
+                            <button class="btn btn-outline-secondary btn-sm">
+                              <i class="bi bi-heart"></i> Add to Wishlist
+                            </button>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="https://placehold.co/254x150/ef5e55/f5f5f5?text=New+Collection" class="d-block w-100" alt="...">
+                          <h6 class="mt-2"><small>Gold sandals with shiny touch</small></h6>
+                          <div class="d-grid gap-2">
+                            <button class="btn btn-primary btn-sm">9,99 €</button>
+                            <button class="btn btn-outline-secondary btn-sm">
+                              <i class="bi bi-heart"></i> Add to Wishlist
+                            </button>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="https://placehold.co/254x150/2ecc71/f5f5f5?text=New+Collection" class="d-block w-100" alt="...">
+                          <h6 class="mt-2"><small>Denim jacket stamped</small></h6>
+                          <div class="d-grid gap-2">
+                            <button class="btn btn-primary btn-sm">49,99 €</button>
+                            <button class="btn btn-outline-secondary btn-sm">
+                              <i class="bi bi-heart"></i> Add to Wishlist
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <a href="#" class="text-decoration-none">
+                      View all Collection <i class="bi bi-chevron-right float-end"></i>
+                    </a>
+                  </div>
+
+                  <!-- Column 2
+                  <div class="col-lg-3">
+                    <h6 class="text-primary">Dresses</h6>
+                    <ul class="list-unstyled">
+                      <li><a href="#" class="dropdown-item">Unique Features</a></li>
+                      <li><a href="#" class="dropdown-item">Image Responsive</a></li>
+                      <li><a href="#" class="dropdown-item">Auto Carousel</a></li>
+                      <li><a href="#" class="dropdown-item">Newsletter Form</a></li>
+                      <li><a href="#" class="dropdown-item">Four columns</a></li>
+                    </ul>
+                    <hr>
+                    <h6 class="text-primary">Tops</h6>
+                    <ul class="list-unstyled">
+                      <li><a href="#" class="dropdown-item">Good Typography</a></li>
+                    </ul>
+                  </div>
+
+                  <!-- Column 3
+                  <div class="col-lg-3">
+                    <h6 class="text-primary">Jackets</h6>
+                    <ul class="list-unstyled">
+                      <li><a href="#" class="dropdown-item">Easy to customize</a></li>
+                      <li><a href="#" class="dropdown-item">Bootstrap Icons</a></li>
+                      <li><a href="#" class="dropdown-item">Pull Right Elements</a></li>
+                    </ul>
+                    <hr>
+                    <h6 class="text-primary">Pants</h6>
+                    <ul class="list-unstyled">
+                      <li><a href="#" class="dropdown-item">Coloured Headers</a></li>
+                      <li><a href="#" class="dropdown-item">Primary Buttons & Default</a></li>
+                      <li><a href="#" class="dropdown-item">Calls to action</a></li>
+                    </ul>
+                  </div>
+
+                  <!-- Column 4
+                  <div class="col-lg-3">
+                    <h6 class="text-primary">Accessories</h6>
+                    <ul class="list-unstyled">
+                      <li><a href="#" class="dropdown-item">Default Navbar</a></li>
+                      <li><a href="#" class="dropdown-item">Lovely Fonts</a></li>
+                      <li><a href="#" class="dropdown-item">Responsive Dropdown</a></li>
+                    </ul>
+                    <hr>
+                    <h6 class="text-primary">Newsletter</h6>
+                    <form @submit.prevent="onSubmit">
+                      <div class="mb-3">
+                        <input
+                          type="email"
+                          class="form-control"
+                          placeholder="Enter email"
+                          v-model="email"
+                        />
+                      </div>
+                      <button type="submit" class="btn btn-primary btn-sm w-100">Sign up</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <h1 class="text-center display-4 mt-5">Bootstrap 5 Mega Menu</h1>
+  </div>
+</template>
+
 <script setup lang="ts">
-  import { computed, ref } from 'vue';
-  import { servicios as serviciosList } from '../data/header';
-  import type { Servicio } from '../interfaces/Header';
+import { ref } from 'vue';
 
-  const servicios = ref<Servicio[]>(serviciosList)
+const email = ref('');
 
-  const activeServicio = ref<string | null> (null)
-  const showMegaMenu = ref(false)
-
-  const getServicios = computed(() => {
-  const serv = servicios.value.find(s => s.nombre === activeServicio.value)
-    if (!serv) return []
-    const chunkSize = 2
-    const chunks = []
-    for (let i = 0; i < serv.servicios.length; i += chunkSize) {
-      chunks.push(serv.servicios.slice(i, i + chunkSize))
-    }
-    return chunks
-  })
-
-  function handleMouseEnter(name: string) {
-    activeServicio.value = name
-    showMegaMenu.value = true
+function onSubmit() {
+  if (email.value) {
+    alert(`Subscribed: ${email.value}`);
+    email.value = '';
   }
+}
+</script>
 
-  function handleMouseLeave() {
-    showMegaMenu.value = false
-  }
+<style scoped>
+.dropdown-menu {
+  top: 100%;
+  left: 0;
+  border-radius: 0;
+}
+</style>-->
+
+
+
+<script setup lang="ts">
+  import { computed } from 'vue';
+  import { servicios, carruselItems } from '../data/header';
 
   const handleScrollToTop = () => {
-    window.scrollTo(0, 0);
-  };
+    window.scrollTo(0, 0)
+  }
 
+  const columnas = computed(() => {
+    const total = servicios.length
+    const chunk = Math.ceil(total / 3)
+    return [
+      servicios.slice(0, chunk),
+      servicios.slice(chunk, chunk * 2),
+      servicios.slice(chunk * 2)
+    ]
+  })
 </script>
 
 <template>
@@ -39,76 +187,83 @@
     <div class="container">
       <nav class="navbar navbar-expand-lg">
         <router-link class="navbar-brand" to="/" @click="handleScrollToTop">
-          <img src="/img/pbx-logo.webp" alt="Logo-pbx" class="w-100">
+          <img src="/img/pbx-logo.webp" alt="Logo-pbx" class="w-100" />
         </router-link>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <li class="nav-item">
               <router-link class="nav-link text-uppercase" to="/nosotros" @click="handleScrollToTop">Nosotros</router-link>
             </li>
-            <li class="nav-item dropdown position-static" @mouseleave="handleMouseLeave">
-              <a class="nav-link dropdown-toggle text-uppercase" href="#" @mouseenter="handleMouseEnter(servicios[0].nombre)" data-bs-toggle="dropdown">
+
+            <!-- Mega Menú -->
+            <li class="nav-item dropdown position-static">
+              <a class="nav-link dropdown-toggle text-uppercase" href="#" role="button" data-bs-toggle="dropdown">
                 Servicios
               </a>
-              <div class="dropdown-menu w-100 mt-0 border-0 rounded-0 shadow mega-menu">
-                <div class="container-fluid">
-                  <div class="row">
-                    <!-- Lista principal -->
-                    <div class="col-12 col-md-6 col-lg-4">
-                      <ul class="list-unstyled text-uppercase">
-                        <li
-                          class="mb-2 ms-3 border-bottom"
-                          v-for="serv in servicios"
-                          :key="serv.nombre"
-                          @mouseenter="handleMouseEnter(serv.nombre)"
+              <div class="dropdown-menu w-100 shadow p-4 mt-0">
+                <div class="row">
+                  <!-- Columna 1: Carrusel -->
+                  <div class="col-lg-3">
+                    <h6 class="text-color fw-bold fs-5">Nuevos Promociones</h6>
+                    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                        <div
+                          v-for="(item, index) in carruselItems"
+                          :key="index"
+                          class="carousel-item"
+                          :class="{ active: index === 0 }"
                         >
-                          <router-link
-                            :to="serv.route"
-                            class="nav-link fw-bold text-decoration-none d-flex align-items-center"
-                            @click="handleScrollToTop"
-                          >
-                            <i :class="serv.icono" class="mx-2"></i>{{ serv.nombre }}
-                          </router-link>
-                        </li>
-                      </ul>
-                    </div>
-                    <!-- Subcategorías -->
-                    <div class="col-12 col-md-6 col-lg-8 mt-3 mt-md-0 hover-productos" v-if="showMegaMenu">
-                      <div class="row">
-                        <!-- Mostrar el título de la categoría activa -->
-                        <div class="col-10 ms-3 mb-3 mt-3 border-bottom">
-                          <h5 class="text-uppercase fw-bold">{{ activeServicio }}</h5>
-                        </div>
-                        <div class="col-12 col-lg-6" v-for="(grupo, index) in getServicios" :key="index">
-                          <ul class="list-unstyled">
-                            <li v-for="servicio in grupo" :key="servicio.nombre" class="mb-2">
-                              <router-link :to="servicio.route" class="text-decoration-none sub-link" @click="handleScrollToTop">
-                                <i :class="servicio.icono" class="mx-2" style="color: #FFFFFF;"></i> {{ servicio.nombre }}
-                              </router-link>
-                            </li>
-                          </ul>
+                          <img :src="item.img" class="d-block w-100" alt="img-promocion" />
                         </div>
                       </div>
+                    </div>
+                    <hr />
+                    <a href="#" class="text-decoration-none text-color">
+                      Saber Más <i class="bi bi-chevron-right float-end"></i>
+                    </a>
+                  </div>
+
+                  <!-- Columnas 2-4: Servicios -->
+                  <div
+                    v-for="(col, colIndex) in columnas"
+                    :key="colIndex"
+                    class="col-lg-3"
+                  >
+                    <div v-for="grupo in col" :key="grupo.nombre">
+                      <h6 class="text-color fw-bold fs-5">{{ grupo.nombre }}</h6>
+                      <ul class="list-unstyled">
+                        <li v-for="sub in grupo.servicios" :key="sub.nombre">
+                          <router-link class="dropdown-item" :to="sub.route">
+                            <i :class="`bi ${sub.icono}`"></i> {{ sub.nombre }}
+                          </router-link>
+                        </li>
+                        <li v-if="grupo.servicios.length === 0" class="text-muted ps-3">
+                          Próximamente...
+                        </li>
+                      </ul>
+                      <hr />
                     </div>
                   </div>
                 </div>
               </div>
             </li>
+
             <li class="nav-item">
-              <a class="nav-link text-uppercase" href="" @click="handleScrollToTop">Soporte</a>
+              <a class="nav-link text-uppercase" href="#" @click="handleScrollToTop">Soporte</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-uppercase" href="" @click="handleScrollToTop">Contacto</a>
+              <a class="nav-link text-uppercase" href="#" @click="handleScrollToTop">Contacto</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link text-uppercase d-block d-lg-none" href="https://www.pbxhosting.com.mx/clientarea/" target="_blank">
-                Mi Cuenta
-              </a>
+            <li class="nav-item d-block d-lg-none">
+              <a class="nav-link text-uppercase" href="https://www.pbxhosting.com.mx/clientarea/" target="_blank">Mi Cuenta</a>
             </li>
           </ul>
+
           <div class="d-none d-lg-block">
             <a href="https://www.pbxhosting.com.mx/clientarea/" target="_blank" class="btn">Mi cuenta</a>
           </div>
@@ -215,5 +370,9 @@
   display: none;
   margin-left: 0.1rem;
   margin-right: 0.1rem;
+}
+
+.text-color {
+  color: var(--secondary_color) !important;
 }
 </style>

@@ -1,4 +1,4 @@
-import type { Servicio } from "../interfaces/Header";
+import type { Servicio, CarruselItem } from "../interfaces/Header";
 
 export const servicios: Servicio[] = [
 	{
@@ -124,3 +124,24 @@ export const servicios: Servicio[] = [
 		],
 	},
 ]
+
+export const carruselItems: CarruselItem[] = [
+	{
+	  img: '/img/ACD_LÍNEASTELEFÓNICAS_PROMOSHOT.png',
+	},
+	{
+	  img: '/img/image.png',
+	},
+	{
+	  img: '/img/JB_SMSMASIVOS.png',
+	},
+	{
+		img: '/img/ACD_POBDIFUSIÓN_LOGOEXPRESS.png',
+	  },
+	  {
+		img: '/img/CJ_PÁGINAWEB.jpg',
+	  },
+	  {
+		img: '/img/ACD_PBXDIALER30.png',
+	  },
+  ];

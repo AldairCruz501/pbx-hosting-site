@@ -6,7 +6,6 @@
   </template>
   
   <script lang="ts" setup>
-  import { defineProps } from 'vue';
   import type { ValueCardData } from '../interfaces/About'; 
   
   // Usamos destructuración directa desde props tipados
