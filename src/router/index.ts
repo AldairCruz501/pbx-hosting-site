@@ -10,9 +10,9 @@ import DomainsView from '../views/services/DomainsView.vue'
 
 //Vistas de Subservicios
 import SIPLineView from '../views/services/iptelephonyservices/SIPLineView.vue'
-import TelephoneLinesView from '../views/services/iptelephonyservices/TelephoneLinesView.vue'
+/*import TelephoneLinesView from '../views/services/iptelephonyservices/TelephoneLinesView.vue'
 import VOIPPackagesView from '../views/services/iptelephonyservices/VOIPPackagesView.vue'
-import SMEPackagesView from '../views/services/iptelephonyservices/SMEPackagesView.vue'
+import SMEPackagesView from '../views/services/iptelephonyservices/SMEPackagesView.vue'*/
 
 const routes: RouteRecordRaw[] = [
   {
