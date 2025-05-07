@@ -35,7 +35,7 @@ const routes: RouteRecordRaw[] = [
     component: SIPLineView,
     meta: { title: 'Proveedores Troncal SIP | PbxHosting' },
   },
-  {
+  /*{
     path: '/telefonia-ip/lineas-telefonicas',
     component: TelephoneLinesView,
     meta: { title: 'Líneas Telefónicas | PbxHosting' },
@@ -49,7 +49,7 @@ const routes: RouteRecordRaw[] = [
     path: '/telefonia-ip/paquetes-pyme',
     component: SMEPackagesView,
     meta: { title: 'Paquetes PyME | PbxHosting' },
-  },
+  },*/
   {
     path: '/dominios',
     component: DomainsView,
