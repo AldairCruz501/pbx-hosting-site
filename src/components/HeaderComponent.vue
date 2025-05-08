@@ -1,168 +1,3 @@
-<!--<template>
-  <div class="container py-4">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">MegaMenu</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#megaNavbar"
-          aria-controls="megaNavbar"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="megaNavbar">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown position-static">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Collection
-              </a>
-              <div class="dropdown-menu w-100 shadow p-4 mt-0">
-                <div class="row">
-                  <!-- Column 1
-                  <div class="col-lg-3">
-                    <h6 class="text-primary">New in Stores</h6>
-                    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-                      <div class="carousel-inner">
-                        <div class="carousel-item active">
-                          <img src="https://placehold.co/254x150/3498db/f5f5f5?text=New+Collection" class="d-block w-100" alt="...">
-                          <h6 class="mt-2"><small>Summer dress floral prints</small></h6>
-                          <div class="d-grid gap-2">
-                            <button class="btn btn-primary btn-sm">49,99 €</button>
-                            <button class="btn btn-outline-secondary btn-sm">
-                              <i class="bi bi-heart"></i> Add to Wishlist
-                            </button>
-                          </div>
-                        </div>
-                        <div class="carousel-item">
-                          <img src="https://placehold.co/254x150/ef5e55/f5f5f5?text=New+Collection" class="d-block w-100" alt="...">
-                          <h6 class="mt-2"><small>Gold sandals with shiny touch</small></h6>
-                          <div class="d-grid gap-2">
-                            <button class="btn btn-primary btn-sm">9,99 €</button>
-                            <button class="btn btn-outline-secondary btn-sm">
-                              <i class="bi bi-heart"></i> Add to Wishlist
-                            </button>
-                          </div>
-                        </div>
-                        <div class="carousel-item">
-                          <img src="https://placehold.co/254x150/2ecc71/f5f5f5?text=New+Collection" class="d-block w-100" alt="...">
-                          <h6 class="mt-2"><small>Denim jacket stamped</small></h6>
-                          <div class="d-grid gap-2">
-                            <button class="btn btn-primary btn-sm">49,99 €</button>
-                            <button class="btn btn-outline-secondary btn-sm">
-                              <i class="bi bi-heart"></i> Add to Wishlist
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <hr>
-                    <a href="#" class="text-decoration-none">
-                      View all Collection <i class="bi bi-chevron-right float-end"></i>
-                    </a>
-                  </div>
-
-                  <!-- Column 2
-                  <div class="col-lg-3">
-                    <h6 class="text-primary">Dresses</h6>
-                    <ul class="list-unstyled">
-                      <li><a href="#" class="dropdown-item">Unique Features</a></li>
-                      <li><a href="#" class="dropdown-item">Image Responsive</a></li>
-                      <li><a href="#" class="dropdown-item">Auto Carousel</a></li>
-                      <li><a href="#" class="dropdown-item">Newsletter Form</a></li>
-                      <li><a href="#" class="dropdown-item">Four columns</a></li>
-                    </ul>
-                    <hr>
-                    <h6 class="text-primary">Tops</h6>
-                    <ul class="list-unstyled">
-                      <li><a href="#" class="dropdown-item">Good Typography</a></li>
-                    </ul>
-                  </div>
-
-                  <!-- Column 3
-                  <div class="col-lg-3">
-                    <h6 class="text-primary">Jackets</h6>
-                    <ul class="list-unstyled">
-                      <li><a href="#" class="dropdown-item">Easy to customize</a></li>
-                      <li><a href="#" class="dropdown-item">Bootstrap Icons</a></li>
-                      <li><a href="#" class="dropdown-item">Pull Right Elements</a></li>
-                    </ul>
-                    <hr>
-                    <h6 class="text-primary">Pants</h6>
-                    <ul class="list-unstyled">
-                      <li><a href="#" class="dropdown-item">Coloured Headers</a></li>
-                      <li><a href="#" class="dropdown-item">Primary Buttons & Default</a></li>
-                      <li><a href="#" class="dropdown-item">Calls to action</a></li>
-                    </ul>
-                  </div>
-
-                  <!-- Column 4
-                  <div class="col-lg-3">
-                    <h6 class="text-primary">Accessories</h6>
-                    <ul class="list-unstyled">
-                      <li><a href="#" class="dropdown-item">Default Navbar</a></li>
-                      <li><a href="#" class="dropdown-item">Lovely Fonts</a></li>
-                      <li><a href="#" class="dropdown-item">Responsive Dropdown</a></li>
-                    </ul>
-                    <hr>
-                    <h6 class="text-primary">Newsletter</h6>
-                    <form @submit.prevent="onSubmit">
-                      <div class="mb-3">
-                        <input
-                          type="email"
-                          class="form-control"
-                          placeholder="Enter email"
-                          v-model="email"
-                        />
-                      </div>
-                      <button type="submit" class="btn btn-primary btn-sm w-100">Sign up</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <h1 class="text-center display-4 mt-5">Bootstrap 5 Mega Menu</h1>
-  </div>
-</template>
-
-<script setup lang="ts">
-import { ref } from 'vue';
-
-const email = ref('');
-
-function onSubmit() {
-  if (email.value) {
-    alert(`Subscribed: ${email.value}`);
-    email.value = '';
-  }
-}
-</script>
-
-<style scoped>
-.dropdown-menu {
-  top: 100%;
-  left: 0;
-  border-radius: 0;
-}
-</style>-->
-
-
-
 <script setup lang="ts">
   import { computed } from 'vue';
   import { servicios, carruselItems } from '../data/header';
@@ -190,11 +25,80 @@ function onSubmit() {
           <img src="/img/pbx-logo.webp" alt="Logo-pbx" class="w-100" />
         </router-link>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <!-- Botón toggler -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- Offcanvas para móviles -->
+        <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <img src="/img/pbx-logo.webp" alt="Logo-pbx" class="w-25" />
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <router-link class="nav-link text-uppercase" to="/nosotros" @click="handleScrollToTop">Nosotros</router-link>
+            </li>
+            <!-- Solo en móviles -->
+            <div class="d-lg-none">
+              <li class="nav-item">
+                <a class="nav-link text-uppercase" data-bs-toggle="collapse" href="#serviciosCollapse" role="button" aria-expanded="false" aria-controls="serviciosCollapse">
+                  Servicios
+                </a>
+                <div class="collapse" id="serviciosCollapse">
+                <div class="mb-3">
+                  <h6 class="text-color fw-bold fs-5">Nuestras Promociones</h6>
+                  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div
+                        v-for="(item, index) in carruselItems"
+                        :key="index"
+                        class="carousel-item"
+                        :class="{ active: index === 0 }"
+                      >
+                        <img :src="item.img" class="d-block w-100" alt="img-promocion" />
+                      </div>
+                    </div>
+                  </div>
+                  <hr />
+                  <a href="#" class="text-decoration-none text-color">
+                    Saber Más <i class="bi bi-chevron-right float-end"></i>
+                  </a>
+                </div>
+                <ul class="list-unstyled ps-3">
+                  <li v-for="grupo in servicios" :key="grupo.nombre">
+                    <strong>{{ grupo.nombre }}</strong>
+                    <ul>
+                      <li v-for="sub in grupo.servicios" :key="sub.nombre">
+                        <router-link class="dropdown-item" :to="sub.route" @click="handleScrollToTop">
+                          <i :class="`bi ${sub.icono}`" class="me-2"></i> {{ sub.nombre }}
+                        </router-link>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
 
-        <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+              </li>
+            </div>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase" href="#" @click="handleScrollToTop">Soporte</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase" href="#" @click="handleScrollToTop">Contacto</a>
+            </li>
+          </ul>
+            <a href="https://www.pbxhosting.com.mx/clientarea/" target="_blank" class="btn mt-3 w-100">Mi cuenta</a>
+          </div>
+        </div>
+        <div class="collapse navbar-collapse justify-content-between d-none d-lg-flex" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <li class="nav-item">
               <router-link class="nav-link text-uppercase" to="/nosotros" @click="handleScrollToTop">Nosotros</router-link>
@@ -205,11 +109,11 @@ function onSubmit() {
               <a class="nav-link dropdown-toggle text-uppercase" href="#" role="button" data-bs-toggle="dropdown">
                 Servicios
               </a>
-              <div class="dropdown-menu w-100 shadow p-4 mt-0">
+              <div class="dropdown-menu w-100 mega-menu shadow p-4 mt-0">
                 <div class="row">
                   <!-- Columna 1: Carrusel -->
                   <div class="col-lg-3">
-                    <h6 class="text-color fw-bold fs-5">Nuevos Promociones</h6>
+                    <h6 class="text-color fw-bold fs-5">Nuestras Promociones</h6>
                     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
                       <div class="carousel-inner">
                         <div
@@ -235,11 +139,13 @@ function onSubmit() {
                     class="col-lg-3"
                   >
                     <div v-for="grupo in col" :key="grupo.nombre">
-                      <h6 class="text-color fw-bold fs-5">{{ grupo.nombre }}</h6>
+                      <h6 class="text-color fw-bold fs-5">
+                        <i :class="`bi ${grupo.icono}`" class="mx-1"></i>{{ grupo.nombre }}
+                      </h6>
                       <ul class="list-unstyled">
                         <li v-for="sub in grupo.servicios" :key="sub.nombre">
-                          <router-link class="dropdown-item" :to="sub.route">
-                            <i :class="`bi ${sub.icono}`"></i> {{ sub.nombre }}
+                          <router-link class="dropdown-item" :to="sub.route" @click="handleScrollToTop">
+                            <i :class="`bi ${sub.icono}`" class="m-0"></i> {{ sub.nombre }}
                           </router-link>
                         </li>
                         <li v-if="grupo.servicios.length === 0" class="text-muted ps-3">
@@ -304,35 +210,49 @@ function onSubmit() {
     color: var(--secondary_color);
     transition: .4s all ease;
   }
+
   .mega-menu {
+  width: 100% !important;
   left: 0 !important;
   right: 0 !important;
   top: 100% !important;
   z-index: 1000;
-  width: 100% !important;
-  max-width: 900px;
   margin: 0 auto;
 }
 
-/* Ajustes para pantallas menores a md (768px) */
-@media (max-width: 767.98px) {
+/* Estilos para móviles */
+@media (max-width: 991.98px) {
   .mega-menu {
     position: static !important;
     width: 100% !important;
     max-width: 100% !important;
-    padding: 1rem;
+    padding: 1rem 0;
+    box-shadow: none !important;
   }
 
   .mega-menu .row {
     flex-direction: column;
   }
 
-  .mega-menu .col-12 {
-    margin-bottom: 1rem;
+  .mega-menu .col-lg-3 {
+    width: 100%;
+    margin-bottom: 1.5rem;
   }
 
-  .mega-menu .nav-link {
+  .dropdown-menu {
+    position: static !important;
+    transform: none !important;
+    display: block !important;
+  }
+
+  .navbar-nav {
+    border-left: none !important;
+  }
+
+  .nav-link,
+  .dropdown-item {
     font-size: 1rem;
+    word-wrap: break-word;
   }
 }
 
@@ -372,7 +292,35 @@ function onSubmit() {
   margin-right: 0.1rem;
 }
 
+.dropdown-item {
+  transition: all 0.2s ease-in-out; /* Suaviza la animación */
+}
+
+.dropdown-item:hover {
+  background-color: var(--secondary_color) !important;
+  color: #ffffff !important;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.03);
+  border-radius: 0.25rem;
+}
+
+.dropdown-item:hover i {
+  color: #ffffff !important;
+}
+
+
 .text-color {
   color: var(--secondary_color) !important;
 }
+
+@media(max-width: 991px) {
+  ul li {
+    color: var(--text_color);
+    margin: none !important;
+    display: block !important;
+    align-items: center;
+  }
+}
+
 </style>

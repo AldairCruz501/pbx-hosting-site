@@ -95,4 +95,76 @@ export const ipTelephonyData: IPTelephonyData = {
             img: "bi bi-headphones"
         },
     ],
+    advantages: [
+        {
+            titulo: "Gran Ahorro",
+            descripción: "Gracias a la transmisión de datos por internet permite ser mas económica a la telefonía tradicional."
+        },
+        {
+            titulo: "Geolocalización",
+            descripción: "Permiten que las llamadas se enruten a través de diferentes ubicaciones geográficas, lo que puede ser beneficioso para empresas con presencia internacional."
+        },
+        {
+            titulo: "Compatibilidad",
+            descripción: "Facilita la integración con PBX IP y otros equipos de telecomunicaciones modernos."
+        },
+    ],
+    steps: [
+        {
+            id: 1,
+            icono: "bi bi-telephone",
+            titulo: "1. Inicio de la llamada",
+            contenido: "Un usuario inicia una llamada desde un teléfono conectado a una centralita telefónica (PBX).",
+            color: "one"
+        },
+        {
+            id: 2,
+            icono: "bi bi-diagram-3",
+            titulo: "2. Enrutamiento Interno",
+            contenido: "Si la llamada es interna (por ejemplo, entre dos extensiones de la misma empresa), la PBX enruta la llamada directamente al teléfono de destino.",
+            color: "two"
+        },
+        {
+            id: 3,
+            icono: "bi bi-arrow-up-right",
+            titulo: "3. Enrutamiento Externo",
+            contenido: "Si la llamada es externa, la PBX decide cómo manejarla. Puede enviarla a través de una troncal SIP o hacia la red PSTN, dependiendo de la configuración",
+            color: "three"
+        },
+        {
+            id: 4,
+            icono: "bi bi-telephone-fill",
+            titulo: "4. Comunicación con la PSTN",
+            contenido: "Si la llamada se dirige a un número fuera de la red de la empresa, la PBX la envía a la red PSTN, la cual conecta la llamada al destinatario final.",
+            color: "four"
+        },
+        {
+            id: 5,
+            icono: "bi bi-cloud-arrow-up",
+            titulo: "5. Comunicación a través de la Troncal SIP",
+            contenido: "Si la llamada se realiza a través de una troncal SIP, la PBX utiliza esta conexión basada en SIP para enrutar la llamada hacia la red VoIP o Internet.",
+            color: "five"
+        },
+        {
+            id: 6,
+            icono: "bi bi-cloud-check",
+            titulo: "6. Conexión a la Red PSTN",
+            contenido: "Si la llamada se origina en una red VoIP y se dirige a un número en la red PSTN, la troncal SIP actúa como un puente, conectando la llamada a través de la PSTN.",
+            color: "one"
+        },
+        {
+            id: 7,
+            icono: "bi bi-cloud",
+            titulo: "7. Comunicación a través de la Internet",
+            contenido: "En el caso de llamadas VoIP puras, la comunicación se realiza a través de la infraestructura de Internet utilizando protocolos VoIP como SIP.",
+            color: "two"
+        },
+        {
+            id: 8,
+            icono: "bi bi-chat",
+            titulo: "8. Conversación y Finalización",
+            contenido: "Una vez que la llamada se ha enrutado adecuadamente, los usuarios pueden hablar entre sí. La conversación continúa hasta que uno de ellos cuelga, momento en el cual la llamada se finaliza.",
+            color: "three"
+        },
+    ]
 }

@@ -36,7 +36,13 @@ export const servicios: Servicio[] = [
 	{
 		nombre: "Conmutador en la nube",
 		route: "/",
-		servicios: [],
+		servicios: [
+			{
+				nombre: "Conmutadores en la nube",
+				icono: "bi-cloud",
+				route: "/"
+			}
+		],
 		icono: "bi-cloud"
 	},
 	{
@@ -96,10 +102,16 @@ export const servicios: Servicio[] = [
 		],
 	},
 	{
-		nombre: "SMS Marketing",
+		nombre: "SMS",
 		route: "/",
 		icono: "bi-chat-dots",
-		servicios: [],
+		servicios: [
+			{
+				nombre: "SMS Marketing",
+				icono: "bi-chat-dots",
+				route: "/"
+			}
+		],
 	},
 	{
 		nombre: "Callcenter",

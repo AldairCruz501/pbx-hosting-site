@@ -36,3 +36,7 @@ onUnmounted(() => {
   delete window.Tawk_LoadStart
 })
 </script>
+
+<template>
+  <div></div>
+</template>
