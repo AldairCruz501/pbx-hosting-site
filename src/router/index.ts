@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
+import AOS from 'aos'
 //Vistas Principales
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
@@ -60,12 +61,21 @@ const routes: RouteRecordRaw[] = [
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0 } // Siempre hace scroll al inicio
+  }
 })
 
+
 router.afterEach((to) => {
-  document.title = (to.meta.title as string) || 'Tuis';
-});
+  document.title = (to.meta.title as string) || 'Tuis'
+
+  // Refresca AOS tras cambio de ruta
+  setTimeout(() => {
+    AOS.refresh()
+  }, 200)
+})
 
 
 export default router

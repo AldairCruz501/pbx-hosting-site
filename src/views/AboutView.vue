@@ -10,6 +10,7 @@
 	import type { ValueCardData } from '../interfaces/About';
 	import LoaderComponent from '../components/LoaderComponent.vue';
 
+
 	const valueCards: ValueCardData[] = valueCardsData;
 </script>
 
@@ -17,7 +18,7 @@
 	<LoaderComponent />
 	<HeaderComponent />
 	<section class="container-fluid bg-body-tertiary">
-		<div class="px-4 pt-4 text-center">
+		<div class="px-4 pt-4 text-center animate__animated animate__fadeInUp animate__delay-3s">
 			<h1 class="display-4 fw-bold title-hero-about">Impulsamos la transformación digital en comunicaciones empresariales con Telefonía IP de alto nivel.</h1>
 			<div class="col-lg-6 mx-auto pb-2">
 				<p class="lead mb-2 text-dark text-hero-about">En PBXHosting optimizamos tu comunicación empresarial con soluciones VoIP eficientes, económicas y respaldadas por soporte especializado.</p>
@@ -33,13 +34,19 @@
 		<div class="container-fluid">
 			<div class="container col-xxl-8">
 				<div class="row d-flex align-items-center g-5 py-5">
-					<div class="col-lg-6">
+					<div 
+						class="col-lg-6"
+						data-aos="fade-right"
+					>
 						<h2 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">En el mundo de los negocios cada llamada cuenta</h2>
 						<p>
 							No solo proporcionamos servicios de telefonía IP, sino que también abrazamos la visión de un mundo donde la comunicación empresarial es sinónimo de simplicidad, eficiencia y conectividad ininterrumpida.
 						</p>
 					</div>
-					<div class="col-10 col-sm-8 col-lg-6">
+					<div 
+						class="col-10 col-sm-8 col-lg-6"
+						data-aos="zoom-out"
+					>
 						<img src="/img/img-callcenter.webp" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"  width="90%" loading="lazy">
 					</div>
 				</div>
@@ -47,9 +54,15 @@
 		</div>
 	</section>
 	<CounterComponent />
-	<FundamentalsComponent />
+	<FundamentalsComponent 
+		data-aos="fade-up"
+		data-aos-mirror="true"
+	/>
 	<section class="container-fluid bg-body-tertiary">
-		<div class="container">
+		<div 
+			class="container"
+			data-aos="zoom-in-up"
+		>
 			<div class="text-center">
 				<h2 class="fw-bold mb-5 title-brand display-5">Conectando mas allá de la Comunicación</h2>
 			</div>

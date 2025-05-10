@@ -48,10 +48,10 @@
                   Enlaces
                 </h6>
                 <p class="fs-6">
-                  <router-link to="/" class="text-reset text-decoration-none" @click="handleScrollToTop">Inicio</router-link>
+                  <router-link to="/" class="text-reset text-decoration-none" >Inicio</router-link>
                 </p>
                 <p class="fs-6">
-                  <router-link to="/nosotros" class="text-reset text-decoration-none" @click="handleScrollToTop">Nosotros</router-link>
+                  <router-link to="/nosotros" class="text-reset text-decoration-none" >Nosotros</router-link>
                 </p>
                 <p class="fs-6">
                   <router-link to="" class="text-reset text-decoration-none">Servicios</router-link>
@@ -65,7 +65,7 @@
                   Servicios Estrella
                 </h6>
                 <p class="fs-6">
-                  <router-link to="/telefonia-ip" class="text-reset text-decoration-none" @click="handleScrollToTop">Telefonía IP</router-link>
+                  <router-link to="/telefonia-ip" class="text-reset text-decoration-none" >Telefonía IP</router-link>
                 </p>
                 <p class="fs-6">
                   <a href="#!" class="text-reset text-decoration-none">SMS Marketing</a>

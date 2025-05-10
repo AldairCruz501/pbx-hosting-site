@@ -2,10 +2,6 @@
   import { computed } from 'vue';
   import { servicios, carruselItems } from '../data/header';
 
-  const handleScrollToTop = () => {
-    window.scrollTo(0, 0)
-  }
-
   const columnas = computed(() => {
     const total = servicios.length
     const chunk = Math.ceil(total / 3)
@@ -21,7 +17,7 @@
   <header class="header-pbx sticky-top">
     <div class="container">
       <nav class="navbar navbar-expand-lg">
-        <router-link class="navbar-brand" to="/" @click="handleScrollToTop">
+        <router-link class="navbar-brand" to="/" >
           <img src="/img/pbx-logo.webp" alt="Logo-pbx" class="w-100" />
         </router-link>
 
@@ -44,7 +40,7 @@
           <div class="offcanvas-body">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <router-link class="nav-link text-uppercase" to="/nosotros" @click="handleScrollToTop">Nosotros</router-link>
+              <router-link class="nav-link text-uppercase" to="/nosotros" >Nosotros</router-link>
             </li>
             <!-- Solo en móviles -->
             <div class="d-lg-none">
@@ -77,7 +73,7 @@
                     <strong>{{ grupo.nombre }}</strong>
                     <ul>
                       <li v-for="sub in grupo.servicios" :key="sub.nombre">
-                        <router-link class="dropdown-item" :to="sub.route" @click="handleScrollToTop">
+                        <router-link class="dropdown-item" :to="sub.route" >
                           <i :class="`bi ${sub.icono}`" class="me-2"></i> {{ sub.nombre }}
                         </router-link>
                       </li>
@@ -89,10 +85,10 @@
               </li>
             </div>
             <li class="nav-item">
-              <a class="nav-link text-uppercase" href="#" @click="handleScrollToTop">Soporte</a>
+              <a class="nav-link text-uppercase" href="#" >Soporte</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-uppercase" href="#" @click="handleScrollToTop">Contacto</a>
+              <a class="nav-link text-uppercase" href="#" >Contacto</a>
             </li>
           </ul>
             <a href="https://www.pbxhosting.com.mx/clientarea/" target="_blank" class="btn mt-3 w-100">Mi cuenta</a>
@@ -101,7 +97,7 @@
         <div class="collapse navbar-collapse justify-content-between d-none d-lg-flex" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <router-link class="nav-link text-uppercase" to="/nosotros" @click="handleScrollToTop">Nosotros</router-link>
+              <router-link class="nav-link text-uppercase" to="/nosotros" >Nosotros</router-link>
             </li>
 
             <!-- Mega Menú -->
@@ -144,7 +140,7 @@
                       </h6>
                       <ul class="list-unstyled">
                         <li v-for="sub in grupo.servicios" :key="sub.nombre">
-                          <router-link class="dropdown-item" :to="sub.route" @click="handleScrollToTop">
+                          <router-link class="dropdown-item" :to="sub.route" >
                             <i :class="`bi ${sub.icono}`" class="m-0"></i> {{ sub.nombre }}
                           </router-link>
                         </li>
@@ -160,10 +156,10 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link text-uppercase" href="#" @click="handleScrollToTop">Soporte</a>
+              <a class="nav-link text-uppercase" href="#" >Soporte</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-uppercase" href="#" @click="handleScrollToTop">Contacto</a>
+              <a class="nav-link text-uppercase" href="#" >Contacto</a>
             </li>
             <li class="nav-item d-block d-lg-none">
               <a class="nav-link text-uppercase" href="https://www.pbxhosting.com.mx/clientarea/" target="_blank">Mi Cuenta</a>
