@@ -1,7 +1,4 @@
 <script setup lang="ts">
-  const handleScrollToTop = () => {
-    window.scrollTo(0, 0);
-  };
 </script>
 
 <template>
