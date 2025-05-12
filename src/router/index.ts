@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
-import AOS from 'aos'
 //Vistas Principales
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
@@ -54,7 +53,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/dominios',
     component: DomainsView,
-    meta: { title: 'Dominios | PbxHosting' },
+    meta: { title: 'Dominio Web | PbxHosting' },
   },
 ]
 
@@ -69,13 +68,8 @@ const router = createRouter({
 
 
 router.afterEach((to) => {
-  document.title = (to.meta.title as string) || 'Tuis'
-
-  // Refresca AOS tras cambio de ruta
-  setTimeout(() => {
-    AOS.refresh()
-  }, 200)
-})
+  document.title = (to.meta.title as string) || 'PbxHosting';
+});
 
 
 export default router

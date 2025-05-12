@@ -71,7 +71,7 @@ const filteredAlternatives = computed(() =>
           type="text"
           v-model="search"
           class="form-control"
-          placeholder="Buscar dominio (ej. ejemplo.com)"
+          placeholder="Escribe el nombre de tu dominio"
           required
         />
         <button class="btn btn-primary" type="submit" :disabled="loading">
@@ -79,6 +79,7 @@ const filteredAlternatives = computed(() =>
         </button>
       </div>
     </form>
+
     <div class="text-center">
       <SpinnerComponent v-if="loading" />
     </div>

@@ -1,7 +1,6 @@
-<!-- components/LoadingOverlay.vue -->
 <script setup>
 import { ref, onMounted } from 'vue'
-import { SelfBuildingSquareSpinner  } from 'epic-spinners'
+import { CirclesToRhombusesSpinner } from 'epic-spinners'
 
 const loading = ref(true)
 
@@ -17,7 +16,12 @@ onMounted(() => {
 
 <template>
   <div v-if="loading" class="loading-overlay">
-    <SelfBuildingSquareSpinner  :animation-duration="6000" :size="80" color="#be222a" />
+    <div class="spinner-container">
+      <div class="mb-2">
+        <img src="/img/pbx-logo.webp" alt="Logo-pbx" class="img-fluid" width="120" />
+      </div>
+      <CirclesToRhombusesSpinner :animation-duration="1200" :circles-num="3" :circle-size="15" color="#be222a" />
+    </div>
   </div>
 </template>
 
@@ -35,4 +39,10 @@ onMounted(() => {
   z-index: 9999;
 }
 
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 </style>

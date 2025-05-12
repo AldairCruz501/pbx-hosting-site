@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TawkToWidget from './components/TawkToWidget.vue';
+//import TawkToWidget from './components/TawkToWidget.vue';
 import WhatsappChatComponent from './components/WhatsappChatComponent.vue';
 </script>
 

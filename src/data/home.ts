@@ -22,27 +22,32 @@ export const homeData: HomeData = {
 		{
 			nombre: "Telefonía IP",
 			descripcion: "Proporciona una conexión confiable para facilitar la comunicación organización.",
-			num: "1"
+			num: "1",
+			url: "/telefonia-ip"
 		},
 		{
 			nombre: "SMS Marketing",
 			descripcion: "¡La mejor herramienta para llegar a tus clientes! Envía Recordatorios, Cupones y mucho más.",
-			num: "2"
+			num: "2",
+			url: ""
 		},
 		{
 			nombre: "Conmutador en la nube",
 			descripcion: "Descubre la solución definitiva para tus necesidades de comunicación empresarial.",
-			num: "3"
+			num: "3",
+			url: ""
 		},
 		{
 			nombre: "Servidores",
 			descripcion: "Obtén el control total sobre tu entorno virtual con nuestros servidores VPS personalizables.",
-			num: "4"
+			num: "4",
+			url: ""
 		},
 		{
 			nombre: "CallCenter",
 			descripcion: "Telefonía para Callcenters con una excelente tarifa para mejorar tu contactación día a día.",
-			num: "5"
+			num: "5",
+			url: ""
 		},
 	],
 	resellers: [

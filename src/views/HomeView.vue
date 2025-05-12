@@ -14,13 +14,13 @@ import { homeData } from '../data/home';
 			<div class="row align-items-center">
 				<div class="col-12 col-lg-6 mb-4">
 					<h1 
-						class="large-title position-relative"
+						class="large-title position-relative animate__animated animate__fadeInLeft animate__delay-3s" 
 					>
 						Conectamos lo que más importa: tu negocio y tus clientes.
 					</h1>
 				</div>
 				<div class="col-12 col-lg-6">
-					<div class="hero-home-right position-relative animate__animated animate__fadeInUp animate__delay-3s">
+					<div class="hero-home-right position-relative animate__animated animate__fadeIn animate__delay-3s">
 						<img src="/img/img-hero.webp" class="w-100 h-100" alt="hero-img">
 					</div>
 				</div>
@@ -28,7 +28,12 @@ import { homeData } from '../data/home';
 		</div>
 	</section>
 	<section class="features-home">
-		<div class="container">
+		<div 
+			class="container"
+			v-motion-slide-visible-left
+			:delay="200"
+			:duration="1200"
+		>
 			<div class="row">
 				<div v-for="(card, index) in homeData.cards" :key="index" class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
 					<div
@@ -48,19 +53,20 @@ import { homeData } from '../data/home';
   	</section>
 	<section class="bg-body-tertiary">
 		<div class="container-fluid">
-			<div class="container col-xxl-8">
+			<div 
+				class="container col-xxl-8"
+				v-motion-slide-visible-bottom
+				:delay="200"
+				:duration="1200"
+			>
 				<div class="row d-flex align-items-center g-5 py-5">
 					<div 
 						class="col-10 col-sm-8 col-lg-6"
-						data-aos="zoom-in"
-						data-aos-mirror="true"
 					>
 						<img src="/img/img-callcenter.webp" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"  width="90%" loading="lazy">
 					</div>
 					<div 
 						class="col-lg-6"
-						data-aos="fade-left"
-						data-aos-mirror="true"
 					>
 						<h4 class="subtitle-hero fs-5">Servicios Escalables</h4>
 						<h2 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Soluciones VoIP Personalizadas para empresas de todos los tamaños</h2>
@@ -85,31 +91,29 @@ import { homeData } from '../data/home';
 					</div>
       			</div>
 				  <div v-for="(service, index) in homeData.services" :key="index" class="col-lg-4 col-md-6 service-item">
-					<a class="text-black text-decoration-none" href="">
+					<router-link class="text-black text-decoration-none" :to="service.url">
 						<div class="block"> <span class="colored-box text-center h3 mb-4">{{service.num}}</span>
 							<h3 class="mb-3 service-title">{{ service.nombre }}</h3>
 							<p class="mb-0 service-description">{{ service.descripcion }}</p>
 						</div>
-					</a>
+					</router-link>
      			</div>
 			</div>
 		</div>
 	</section>
 	<section class="container-fluid bg-options">
-      <div class="px-4 pt-5 text-center text-white">
-		<div 
-			data-aos="zoom-in"
-			data-aos-mirror="true"
-		>
+      <div 
+	  	class="px-4 pt-5 text-center text-white"
+		  v-motion-pop-visible
+		  :delay="200"
+		  :duration="1200"
+	  >
 		<h1 class="display-4 fw-bold"><span class="title-dialer">PBXDialer:</span> Software de Call Center Intuitivo</h1>
-		</div>
         <div class="col-lg-6 mx-auto pb-4">
           <p class="lead mb-4 text-dialer">PBXDialer optimiza la contactación y el servicio al cliente con su interfaz intuitiva y marcador predictivo, mejorando la productividad del equipo y la satisfacción del cliente.</p>
         </div>
         <div 
 			class="overflow-hidden"
-			data-aos="flip-down"
-			data-aos-mirror="true"
 		>
           <div class="container px-5">
             <img src="/img/pbx-dialer-img.webp" class="img-fluid" alt="Example image"loading="lazy">
@@ -203,8 +207,9 @@ import { homeData } from '../data/home';
 				</div>
 				<div 
 					class="col-lg-6 text-center"
-					data-aos="fade-up-left"
-					data-aos-mirror="true"
+					v-motion-slide-visible-right
+					:delay="200"
+					:duration="1200"
 				>
 					<img src="/img/img-options.png" alt="Illustration" class="img-fluid">
 				</div>

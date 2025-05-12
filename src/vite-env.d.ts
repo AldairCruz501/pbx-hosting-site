@@ -6,22 +6,8 @@ declare module '*.vue' {
     export default component
 }
 
-
-declare module 'aos' {
-    const AOS: {
-      init: (options?: {
-        offset?: number
-        delay?: number
-        duration?: number
-        easing?: string
-        once?: boolean
-        mirror?: boolean
-        anchorPlacement?: string
-      }) => void
-      refresh: () => void
-      refreshHard: () => void
-    }
-  
-    export default AOS
+declare module '@tawk.to/tawk-messenger-vue-3' {
+    const TawkMessengerVue: any;
+    export default TawkMessengerVue;
   }
   

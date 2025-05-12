@@ -32,11 +32,15 @@
   	</section>
 	<section class="bg-body">
 		<div class="container-fluid">
-			<div class="container col-xxl-8">
+			<div 
+				class="container col-xxl-8"
+				v-motion-fade-visible
+				:delay="200"
+				:duration="1200"
+			>
 				<div class="row d-flex align-items-center g-5 py-5">
 					<div 
 						class="col-lg-6"
-						data-aos="fade-right"
 					>
 						<h2 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">En el mundo de los negocios cada llamada cuenta</h2>
 						<p>
@@ -45,7 +49,6 @@
 					</div>
 					<div 
 						class="col-10 col-sm-8 col-lg-6"
-						data-aos="zoom-out"
 					>
 						<img src="/img/img-callcenter.webp" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"  width="90%" loading="lazy">
 					</div>
@@ -55,13 +58,16 @@
 	</section>
 	<CounterComponent />
 	<FundamentalsComponent 
-		data-aos="fade-up"
-		data-aos-mirror="true"
+		v-motion-pop-visible
+		:delay="200"
+		:duration="1200"
 	/>
 	<section class="container-fluid bg-body-tertiary">
 		<div 
 			class="container"
-			data-aos="zoom-in-up"
+			v-motion-slide-visible-right
+			:delay="200"
+			:duration="1200"
 		>
 			<div class="text-center">
 				<h2 class="fw-bold mb-5 title-brand display-5">Conectando mas allá de la Comunicación</h2>

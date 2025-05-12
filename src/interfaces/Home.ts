@@ -7,7 +7,8 @@ export interface Card {
 export interface Service {
     num: string;
     nombre: string;
-    descripcion: string;
+    descripcion: string,
+    url: string,
 }
 
 export interface Reseller {

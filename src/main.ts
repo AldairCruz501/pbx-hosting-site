@@ -1,31 +1,27 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
-import router from './router'
+// main.ts o main.js
+import { createApp } from 'vue';
+import './style.css';
+import App from './App.vue';
+import router from './router';
 
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+// Dependencias globales
+import 'animate.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import { MotionPlugin } from '@vueuse/motion';
 
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import 'bootstrap-icons/font/bootstrap-icons.css'
+// Plugin de Tawk.to
+import TawkMessengerVue from '@tawk.to/tawk-messenger-vue-3';
 
-const app = createApp(App)
-app.use(router)
-
-router.isReady().then(() => {
-  app.mount('#app')
-
-  AOS.init({
-    once: false,
-    duration: 1000,
-    easing: 'ease-in-out',
-    mirror: true
+// Crear y montar la app
+createApp(App)
+  .use(router)
+  .use(MotionPlugin)
+  .use(TawkMessengerVue, {
+    propertyId: '592f165db3d02e11ecc67aae', 
+    widgetId: '1ble2n5gh',                  
   })
-  router.afterEach(() => {
-    setTimeout(() => {
-      AOS.refresh()
-    }, 200) // le das tiempo al DOM para renderizar
-  })
-})
+  .mount('#app');
+
 
