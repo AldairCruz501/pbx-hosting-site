@@ -317,7 +317,82 @@ export const ipTelephonyData: IPTelephonyData = {
                 "Llamadas ilimitadas* de México",
             ]
         },
-    ]
+    ],
+    pymes: [
+        {
+            titulo: "Conmutador en la Nube",
+            descripcion: "Facilita la gestión de comunicaciones entre departamentos dentro de la empresa.",
+            icono: "bi-cloud-check"
+        },
+        {
+            titulo: "Bolsa de minutos",
+            descripcion: "Plan de Minutos para empezar a realizar llamadas a teléfonos fijos y celulares.",
+            icono: "bi-stopwatch"
+        },
+        {
+            titulo: "Microsite",
+            descripcion: "Un sitio web es la mejor manera de tener una mejor presentación hacia tus clientes.",
+            icono: "bi-window"
+        },
+        {
+            titulo: "Líneas Telefónicas",
+            descripcion: "Las líneas telefónicas son una opción económica y flexible que permite mejorar la imagen de la empresa.",
+            icono: "bi-telephone-forward"
+        },
+        {
+            titulo: "Equipo Telefónico",
+            descripcion: "Incluye funciones para silenciar, transferir y realizar llamadas con hasta 3 personas en simultaneo.",
+            icono: "bi-phone"
+        },
+        {
+            titulo: "SMS Marketing",
+            descripcion: "Envía miles de sms en sólo 3 pasos, perfectos para campañas y recordatorios para los clientes.",
+            icono: "bi-chat-dots"
+        },
+    ],
+    pricesPyme: [
+        {
+            titulo: "PLUS 2",
+            precio: "6,999",
+            características: [
+                "Conmutador PBX30",
+                "4 Líneas Telefónicas 5 Canales c/u",
+                "Fijos: 1500 Minutos",
+                "Celular: 4500 Minutos",
+                "3 Teléfonos IP GXP1610",
+                "1 Teléfono IP GXP2160",
+            ],
+            mensualidad: "2,280"
+        },
+        {
+            titulo: "PLUS 3",
+            precio: "13,156",
+            características: [
+                "Conmutador PBX60",
+                "6 Líneas Telefónicas 10 Canales c/u",
+                "Fijos: 3000 Minutos",
+                "Celular: 7000 Minutos",
+                "9 Teléfonos IP GXP1610",
+                "1 Teléfono IP GXP2160",
+            ],
+            mensualidad: "4,099"
+        },
+        {
+            titulo: "ULTIMATE PRO",
+            precio: "6,760",
+            características: [
+                "Conmutador PBX30",
+                "3 Líneas Telefónicas 10 Canales c/u",
+                "Fijos: 1500 Minutos",
+                "Celular: 4500 Minutos",
+                "4 Teléfonos IP GXP1610",
+                "Microsite",
+                "Hosting + Dominio",
+                "500 SMS Masivos",
+            ],
+            mensualidad: "2,598"
+        },
+    ],
 }
  
  

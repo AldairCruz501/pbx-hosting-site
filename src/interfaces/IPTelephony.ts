@@ -10,6 +10,8 @@ export interface IPTelephonyData {
     offices: Office[];
     points: IVR[];
     pricesVoip: PriceVoip[];
+    pymes: Pyme[];
+    pricesPyme: PricePyme[];
 }
 
 export interface TelephonyFunction {
@@ -75,5 +77,18 @@ export interface IVR {
 export interface PriceVoip {
     titulo: string,
     precio: string,
+    características: string[]
+}
+
+export interface Pyme {
+    titulo: string,
+    descripcion: string,
+    icono: string,
+}
+
+export interface PricePyme {
+    titulo: string,
+    precio: string,
+    mensualidad: string,
     características: string[]
 }
