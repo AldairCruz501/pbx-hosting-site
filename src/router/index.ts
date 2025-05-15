@@ -10,9 +10,9 @@ import DomainsView from '../views/services/DomainsView.vue'
 
 //Vistas de Subservicios
 import SIPLineView from '../views/services/iptelephonyservices/SIPLineView.vue'
-/*import TelephoneLinesView from '../views/services/iptelephonyservices/TelephoneLinesView.vue'
+import TelephoneLinesView from '../views/services/iptelephonyservices/TelephoneLinesView.vue'
 import VOIPPackagesView from '../views/services/iptelephonyservices/VOIPPackagesView.vue'
-import SMEPackagesView from '../views/services/iptelephonyservices/SMEPackagesView.vue'*/
+/*import SMEPackagesView from '../views/services/iptelephonyservices/SMEPackagesView.vue'*/
 
 const routes: RouteRecordRaw[] = [
   {
@@ -35,17 +35,17 @@ const routes: RouteRecordRaw[] = [
     component: SIPLineView,
     meta: { title: 'Proveedores Troncal SIP | PbxHosting' },
   },
-  /*{
+  {
     path: '/telefonia-ip/lineas-telefonicas',
     component: TelephoneLinesView,
     meta: { title: 'Líneas Telefónicas | PbxHosting' },
   },
-  {
+ {
     path: '/telefonia-ip/paquetes-voip',
     component: VOIPPackagesView,
     meta: { title: 'Paquetes VOIP | PbxHosting' },
   },
-  {
+  /*{
     path: '/telefonia-ip/paquetes-pyme',
     component: SMEPackagesView,
     meta: { title: 'Paquetes PyME | PbxHosting' },
