@@ -166,5 +166,158 @@ export const ipTelephonyData: IPTelephonyData = {
             contenido: "Una vez que la llamada se ha enrutado adecuadamente, los usuarios pueden hablar entre sí. La conversación continúa hasta que uno de ellos cuelga, momento en el cual la llamada se finaliza.",
             color: "three"
         },
+    ],
+    purposes: [
+        {
+            titulo: "Identificador de llamadas",
+            descripcion: "Te permitirá saber quién está al otro lado antes de contestar.",
+            icono: "bi bi-telephone-inbound"
+        },
+        {
+            titulo: "Multiplataforma",
+            descripcion: "Nuestra línea virtual es compatible con una variedad de dispositivos y sistemas operativos.",
+            icono: "bi bi-collection"
+        },
+        {
+            titulo: "Contactos",
+            descripcion: "Mantenga su lista de contactos organizada y accesible desde cualquier lugar.",
+            icono: "bi bi-person-lines-fill"
+        },
+        {
+            titulo: "Buzón de voz",
+            descripcion: "Con nuestro eficiente buzón de voz, puede recibir y revisar mensajes incluso cuando no puede contestar el teléfono.",
+            icono: "bi bi-voicemail"
+        },
+        {
+            titulo: "Utilice su número",
+            descripcion: "Mantenga su número actual al portarlo con nosotros.",
+            icono: "bi bi-123"
+        },
+        {
+            titulo: "Flexibilidad",
+            descripcion: "Nuestra línea virtual le brinda la libertad de adaptar su experiencia según sus necesidades.",
+            icono: "bi bi-arrows-move"
+        },
+    ],
+    qualities: [
+        {
+            img: "/img/img-channel.png",
+            titulo: "Canales de entrada",
+            descrpition: "Es por donde se puede emitir una llamada, un canal permite una llamada, si tu número virtual cuenta con 2 canales entrada únicamente podrá recibir hasta 2 llamadas de manera simultánea y las siguientes serán rebotadas."
+        },
+        {
+            img: "/img/img-voip-cash.png",
+            titulo: "Saldo Voip",
+            descrpition: "Crédito virtual que permite realizar llamadas por internet a diferentes destinos, tantos fijos como móviles, a un excelente costo a diferencia de otras compañías de telefonía análoga."
+        },
+    ],
+    prices: [
+        {
+            insignia: "2 Canales",
+            titulo: "Línea Telefónica",
+            precio: "840",
+            pais: "México",
+            imgPais: "/img/mexico.png"
+        },
+        {
+            insignia: "10 Canales",
+            titulo: "Línea Telefónica",
+            precio: "1,680",
+            pais: "México",
+            imgPais: "/img/mexico.png"
+        },
+        {
+            insignia: "2 Canales",
+            titulo: "Línea Telefónica",
+            precio: "1,056",
+            pais: "Estados Unidos",
+            imgPais: "/img/estados-unidos.png"
+        },
+    ],
+    offices: [
+        {
+            titulo: "Fácil de Usar",
+            descripcion: "Los servicios VoIP suelen ser fáciles de configurar y poner en marcha. No requieren hardware costoso ni instalaciones complicadas, lo que simplifica la implementación para los usuarios de home office.",
+            icono: "bi bi-ui-checks"
+        },
+                {
+            titulo: "Flexible",
+            descripcion: "Puedes mantener tu número de teléfono de la oficina sin importar dónde te encuentres. Esto te permite trabajar desde diferentes lugares sin cambiar tu número de contacto.",
+            icono: "bi bi-sliders"
+        },
+                {
+            titulo: "Movilidad",
+            descripcion: "Puedes acceder a tu línea telefónica desde cualquier lugar con conexión a Internet, lo que te permite mantenerte conectado y productivo incluso cuando estás fuera de tu oficina en casa.",
+            icono: "bi bi-phone-flip"
+        },
+                {
+            titulo: "Ahorro",
+            descripcion: "Los servicios de VoIP suelen ser más económicos que las líneas telefónicas tradicionales, lo que puede resultar en un ahorro significativo para ti como empleado que trabaja desde casa.",
+            icono: "bi bi-piggy-bank"
+        },
+                {
+            titulo: "Escalable",
+            descripcion: "Los servicios VoIP son altamente escalables, lo que significa que puedes agregar o quitar líneas telefónicas según las necesidades de tu empresa.",
+            icono: "bi bi-arrows-fullscreen"
+        },
+                {
+            titulo: "Compatible",
+            descripcion: "Los servicios VoIP suelen ser compatibles con una amplia variedad de dispositivos, como teléfonos IP, computadoras, tablets y smartphones.",
+            icono: "bi bi-puzzle"
+        },
+    ],
+    points: [
+        {
+            icono: "bi bi-soundwave",
+            titulo: "Voz",
+            subtitulo: "Profesional"
+        },
+        {
+            icono: "bi bi-compass",
+            titulo: "Navegación",
+            subtitulo: "Simplificada"
+        },
+        {
+            icono: "bi bi-clock",
+            titulo: "Ahorro de",
+            subtitulo: "Tiempo"
+        },
+        {
+            icono: "bi bi-gear",
+            titulo: "Personalizado",
+            subtitulo: ""
+        },
+                {
+            icono: "bi bi-lightning-charge",
+            titulo: "Información",
+            subtitulo: "inmediata"
+        },
+        {
+            icono: "bi bi-pencil-square",
+            titulo: "Modificable",
+            subtitulo: ""
+        },
+    ],
+    pricesVoip: [
+        {
+            titulo: "Plan Residencial",
+            precio: "150",
+            características: [
+                "1 Línea Telefónica de México",
+                "Hasta 1200 Min de México",
+            ]
+        },
+                {
+            titulo: "Pa'quete Comuniques",
+            precio: "250",
+            características: [
+                "1 Línea Telefónica de México",
+                "IVR Personalizado",
+                "5 Extensiones internas",
+                "Llamadas ilimitadas* de México",
+            ]
+        },
     ]
 }
+ 
+ 

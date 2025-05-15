@@ -11,8 +11,8 @@
 <template>
 	<LoaderComponent />
 	<HeaderComponent />
-	<section class="container-fluid py-5">
-		<div class="container">
+	<section class="container-fluid py-5 bg-body-tertiary">
+		<div class="container animate__animated animate__fadeInDown animate__delay-3s">
 			<div class="row g-4">
 			<div class="col-12 col-lg-7 pt-lg-5 mt-lg-5">
 				<h1 class="display-5 fw-bold">Enlace <span class="text-empresary">Troncal SIP</span></h1>
@@ -23,35 +23,8 @@
 				</p>
 				<div class="text-center">
 					<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#adventagesModal">
-						<i class="bi bi-star-fill"></i> Ventajas de Troncal SIP
+						<i class="bi bi-star-fill"></i> Descubre las Ventajas de la Troncal SIP
 					</button>
-				</div>
-				<div class="modal fade" id="adventagesModal" tabindex="-1" aria-labelledby="adventagesModalLabel" aria-hidden="true">
-					<div class="modal-dialog modal-dialog-centered modal-lg">
-						<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title fs-5 fw-bold text-empresary" id="adventagesModalLabel">
-								<i class="bi bi-star-fill"></i> Ventajas de Troncal SIP
-							</h5>
-							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-						</div>
-						<div class="modal-body">
-							<div class="row g-3">
-								<div v-for="(card, index) in ipTelephonyData.advantages" :key="index" class="col-12 col-lg-6 col-xl-4 d-flex">
-									<div class="card">
-										<div class="card-body">
-											<h5 class="card-title">{{ card.titulo }}</h5>
-											<p class="card-text  mt-auto small"> {{ card.descripción }}</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-						</div>
-						</div>
-					</div>
 				</div>
 			</div>
 			<div class="col-12 col-lg-5">
@@ -62,8 +35,40 @@
 		</div>
 		</div>
 	</section>
-	<section class="container-fluid bg-body-tertiary">
-		<div class="container">
+	<div class="modal fade" id="adventagesModal" tabindex="-1" aria-labelledby="adventagesModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title fs-5 fw-bold text-empresary" id="adventagesModalLabel">
+					<i class="bi bi-star-fill"></i> Ventajas de Troncal SIP
+				</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="row g-3">
+					<div v-for="(card, index) in ipTelephonyData.advantages" :key="index" class="col-12 col-lg-6 col-xl-4 d-flex">
+						<div class="card">
+							<div class="card-body">
+								<h5 class="card-title">{{ card.titulo }}</h5>
+								<p class="card-text  mt-auto small"> {{ card.descripción }}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+			</div>
+			</div>
+		</div>
+	</div>
+	<section class="container-fluid">
+		<div 
+			class="container"
+			v-motion-pop-visible
+			:delay="200"
+			:duration="1200"
+		>
 			<h2 class="display-6 fw-bold text-center">Costo de <span class="text-empresary">Troncal SIP</span></h2>
 			<p class="lead mb-4 fs-6 text-center">
 				No dejes pasar esta oportunidad de transformar tu forma de comunicarte y, al mismo tiempo, 
@@ -141,7 +146,12 @@
 		</div>
 	</section>
 	<section class="container-fluid py-5">
-		<div class="ps-5 pe-5">
+		<div 
+			class="ps-5 pe-5"
+			v-motion-slide-visible-bottom
+			:delay="200"
+			:duration="1200"
+		>
 			<div class="row">
 				<div class="col-12 col-xl-6">
 					<h2 class="fs-3 fw-bold text-end">¿Cómo funciona una Troncal SIP? <br><span class="text-empresary display-6 fw-bold">Funcionamiento Troncal SIP</span></h2>

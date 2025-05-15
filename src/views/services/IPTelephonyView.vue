@@ -20,7 +20,7 @@ const selectedTab = ref(0);
 	<section class="text-center text-md-start bg-body-tertiary">
 		<div class="container">
 			<div class="row align-items-center">
-				<div class="col-12 col-lg-6 mb-4">
+				<div class="col-12 col-lg-6 mb-4 animate__animated animate__slideInDown animate__delay-3s">
 					<h1 class="display-3 fw-bold text-body-emphasis lh-1 mb-3">Telefonía VoIP <span class="text-empresary">Empresarial</span></h1>
 					<p class="lead">
 						Mejora la comunicación de tu empresa y reduce costos con nuestra tecnología VoIP segura, confiable y personalizada. 
@@ -31,7 +31,7 @@ const selectedTab = ref(0);
             			<button type="button" class="btn btn-primary btn-lg px-4 me-md-2 text-uppercase">Cotizar</button>
           			</div>
 				</div>
-				<div class="col-12 col-lg-6">
+				<div class="col-12 col-lg-6 animate__animated animate__zoomIn animate__delay-3s">
 					<div class="hero-home-right position-relative">
 						<img src="/img/img-hero-iptelephony.png" class="w-100 h-100" alt="hero-img">
 					</div>
@@ -40,7 +40,12 @@ const selectedTab = ref(0);
 		</div>
 	</section>
 	<section class="bg-iptelephony">
-		<div class="container bg-white p-5 rounded shadow">
+		<div 
+			class="container bg-white p-5 rounded shadow"
+			v-motion-pop-visible
+		  	:delay="200"
+		  	:duration="1200"
+		>
 			<div class="row g-4">
 				<div class="col-12 col-lg-6 col-xl-8">
 					<div class="hero-home-right position-relative mx-auto">
@@ -62,7 +67,12 @@ const selectedTab = ref(0);
 	<section class="container-fluid p-5">
 		<div class="container">
 			<div class="row g-5">
-				<div class="col-12 col-lg-6 py-5">
+				<div 
+					class="col-12 col-lg-6 py-5"
+					v-motion-slide-visible-right
+					:delay="200"
+					:duration="1200"
+				>
 					<h2 class="display-6 fw-bold text-body-emphasis lh-1 mb-3 text-empresary text-center">Descubre porque es la mejor opción para tu negocio</h2>
 					<p class="lead text-justify">
 						La <span class="text-empresary fw-bold">Telefonía IP</span> permite integrar múltiples aplicaciones de comunicación en una sola plataforma, 
@@ -115,7 +125,12 @@ const selectedTab = ref(0);
 						</div>
 					</div>
 				</div>
-				<div class="col-12 col-lg-6">
+				<div 
+					class="col-12 col-lg-6"
+					v-motion-slide-visible-left 
+					:delay="200"
+					:duration="1200"
+				>
 					<div class="text-center rounded-circle bg-danger">
 						<img src="/img/img-callcenter.png" class="img-fluid" alt="hero-img">
 					</div>
@@ -123,7 +138,7 @@ const selectedTab = ref(0);
 			</div>
 		</div>
 	</section>
-	<section class="container-fluid bg-body-secondary">
+	<section class="container-fluid">
 		<div class="container">
 				<div class="p-3">
 					<h2 class="display-5 fw-bold text-body-emphasis lh-1 mb-5 text-center">
@@ -134,7 +149,12 @@ const selectedTab = ref(0);
 		</div>
 	</section>
 	<section class="container-fluid p-5">
-		<div class="container">
+		<div 
+			class="container"
+			v-motion-slide-visible-top
+			:delay="200"
+			:duration="1200"
+		>
 			<div class="d-block d-lg-none text-start pt-5">
 				<h3 class="display-6 fw-bold text-body-emphasis lh-1 mb-3 text-empresary">
 					Línea Telefónica Para Empresas
@@ -143,8 +163,8 @@ const selectedTab = ref(0);
 					Proporciona una conexión confiable y de calidad para facilitar la comunicación interna y externa de la organización.
 				</p>
 				<div class="d-grid gap-2 d-md-flex justify-content-md-start">
-            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 text-uppercase">Cotizar</button>
-        </div>
+            		<button type="button" class="btn btn-primary btn-lg px-4 me-md-2 text-uppercase">Cotizar</button>
+        		</div>
 			</div>
 			<div class="d-none d-lg-block text-start pt-5 w-50">
 				<h3 class="display-6 fw-bold text-body-emphasis lh-1 mb-3 text-empresary">
@@ -154,8 +174,8 @@ const selectedTab = ref(0);
 					Proporciona una conexión confiable y de calidad para facilitar la comunicación interna y externa de la organización.
 				</p>
 				<div class="d-grid gap-2 d-md-flex justify-content-md-start">
-            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 text-uppercase">Cotizar</button>
-        </div>
+            		<button type="button" class="btn btn-primary btn-lg px-4 me-md-2 text-uppercase">Cotizar</button>
+        			</div>
 			</div>
 			<div class="row g-5">
 				<div class="col-12 col-lg-6 py-5">
@@ -178,8 +198,13 @@ const selectedTab = ref(0);
 			</div>
 		</div>
 	</section>
-	<section class="container-fluid py-5 bg-body-secondary">
-		<div class="container">
+	<section class="container-fluid py-5">
+		<div 
+			class="container"
+			v-motion-fade-visible
+			:delay="200"
+			:duration="1200"
+		>
 					<!-- Tabs -->
 			<ul class="nav nav-tabs mb-4 justify-content-center">
 				<li class="nav-item" v-for="(tab, index) in tabs" :key="index">
@@ -233,7 +258,12 @@ const selectedTab = ref(0);
 			</div>
 		</div>
 	</section>
-	<section class="container-fluid py-4">
+	<section 
+		class="container-fluid py-4"
+			v-motion-slide-visible-bottom
+			:delay="200"
+			:duration="1200"
+	>
 		<h2 class="display-5 fw-bold text-center m-4"><span class="text-empresary">PbxHosting</span> ofrece soluciones para todo tipo de empresas</h2>
 		<div class="container">
 			<div class="row g-3">

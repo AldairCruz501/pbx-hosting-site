@@ -62,7 +62,7 @@
 		:delay="200"
 		:duration="1200"
 	/>
-	<section class="container-fluid bg-body-tertiary">
+	<section class="container-fluid">
 		<div 
 			class="container"
 			v-motion-slide-visible-right
