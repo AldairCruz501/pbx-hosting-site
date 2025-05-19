@@ -2,136 +2,136 @@ import type { Servicio, CarruselItem } from "../interfaces/Header";
 
 export const servicios: Servicio[] = [
 	{
-		nombre: "Telefonía IP",
+		nameKey: "header.services.ipTelephony.title",
 		route: "/telefonia-ip",
-		icono: 'bi-telephone',
-		servicios: [
+		icon: 'bi-telephone',
+		services: [
 			{
-				nombre: "Telefonía IP",
+				nameKey: "header.services.ipTelephony.submenu.ipTelephony",
 				route: "/telefonia-ip",
-				icono: "bi-telephone"
+				icon: "bi-telephone"
 			},
 			{
-				nombre: "Línea Sip",
+				nameKey: "header.services.ipTelephony.submenu.sipLine",
 				route: "/telefonia-ip/linea-sip",
-				icono: "bi-voicemail"
+				icon: "bi-voicemail"
 			},
 			{
-				nombre: "Líneas Telefónicas",
+				nameKey: "header.services.ipTelephony.submenu.telephoneLine",
 				route: "/telefonia-ip/lineas-telefonicas",
-				icono: "bi-phone"
+				icon: "bi-phone"
 			},
 			{
-				nombre: "Paquetes VoIP",
+				nameKey: "header.services.ipTelephony.submenu.voipPackages",
 				route: "/telefonia-ip/paquetes-voip",
-				icono: "bi-box-seam"
+				icon: "bi-box-seam"
 			},
 			{
-				nombre: "Paquetes PyME",
+				nameKey: "header.services.ipTelephony.submenu.smePackages",
 				route: "/telefonia-ip/paquetes-pyme",
-				icono: "bi-building"
+				icon: "bi-building"
 			},
 		],
 	},
 	{
-		nombre: "Conmutador en la nube",
+		nameKey: "header.services.switch.title",
 		route: "/",
-		servicios: [
+		icon: "bi-cloud",
+		services: [
 			{
-				nombre: "Conmutadores en la nube",
-				icono: "bi-cloud",
+				nameKey: "header.services.switch.submenu.cloudswitches",
+				icon: "bi-cloud",
 				route: "/"
 			}
 		],
-		icono: "bi-cloud"
 	},
 	{
-		nombre: "Hosting",
-		route: "",
-		icono: "bi-hdd-network",
-		servicios: [
+		nameKey: "header.services.hosting.title",
+		route: "/",
+		icon: "bi-hdd-network",
+		services: [
 			{
-				nombre: "Planes Hosting",
+				nameKey: "header.services.hosting.submenu.hostingPlans",
 				route: "/",
-				icono: "bi-server"
+				icon: "bi-server"
 			},
 			{
-				nombre: "Diseño Web",
+				nameKey: "header.services.hosting.submenu.webDesign",
 				route: "/",
-				icono: "bi-code-slash"
+				icon: "bi-code-slash"
 			},
 		],
 	},
 	{
-		nombre: "Dominio",
+		nameKey: "header.services.domain.title",
 		route: "/dominios",
-		icono: "bi-globe",
-		servicios: [
+		icon: "bi-globe",
+		services: [
 			{
-				nombre: "Comprar Dominio",
+				nameKey: "header.services.domain.submenu.buyDomain",
 				route: "/dominios",
-				icono: "bi-cart"
+				icon: "bi-cart"
 			},
 			{
-				nombre: "Transferir Dominio",
+				nameKey: "header.services.domain.submenu.transferDomain",
 				route: "/dominios",
-				icono: "bi-arrow-left-right"
+				icon: "bi-arrow-left-right"
 			},
 		],
 	},
 	{
-		nombre: "Servidores",
+		nameKey: "header.services.servers.title",
 		route: "/",
-		icono: "bi-cpu",
-		servicios: [
+		icon: "bi-cpu",
+		services: [
 			{
-				nombre: "VPS",
+				nameKey: "header.services.servers.submenu.vps",
 				route: "/",
-				icono: "bi-box"
+				icon: "bi-box"
 			},
 			{
-				nombre: "VPN",
+				nameKey: "header.services.servers.submenu.vpn",
 				route: "/",
-				icono: "bi-shield-lock"
+				icon: "bi-shield-lock"
 			},
 			{
-				nombre: "Dedicados",
+				nameKey: "header.services.servers.submenu.dedicated",
 				route: "/",
-				icono: "bi-pc-display-horizontal"
+				icon: "bi-pc-display-horizontal"
 			},
 		],
 	},
 	{
-		nombre: "SMS",
+		nameKey: "header.services.sms.title",
 		route: "/",
-		icono: "bi-chat-dots",
-		servicios: [
+		icon: "bi-chat-dots",
+		services: [
 			{
-				nombre: "SMS Marketing",
-				icono: "bi-chat-dots",
+				nameKey: "header.services.sms.submenu.smsMarketing",
+				icon: "bi-chat-dots",
 				route: "/"
 			}
 		],
 	},
 	{
-		nombre: "Callcenter",
+		nameKey: "header.services.callcenter.title",
 		route: "/",
-		icono: "bi-headset",
-		servicios: [
+		icon: "bi-headset",
+		services: [
 			{
-				nombre: "PBX Dialer",
+				nameKey: "header.services.callcenter.submenu.pbxDialer",
 				route: "/",
-				icono: "bi-telephone-forward"
+				icon: "bi-telephone-forward"
 			},
 			{
-				nombre: "Paquetes Callcenter",
+				nameKey: "header.services.callcenter.submenu.callPackages",
 				route: "/",
-				icono: "bi-box2"
+				icon: "bi-box2"
 			},
 			{
-				nombre: "Software Kollob",
+				nameKey: "header.services.callcenter.submenu.softwareKollob",
 				route: "/",
-				icono: "bi-window"
+				icon: "bi-window"
 			},
 		],
 	},

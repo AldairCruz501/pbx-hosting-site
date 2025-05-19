@@ -3,6 +3,7 @@ import { createApp } from 'vue';
 import './style.css';
 import App from './App.vue';
 import router from './router';
+import { i18n } from './i18n';
 
 // Dependencias globales
 import 'animate.css';
@@ -14,6 +15,7 @@ import { MotionPlugin } from '@vueuse/motion';
 // Plugin de Tawk.to
 import TawkMessengerVue from '@tawk.to/tawk-messenger-vue-3';
 
+
 // Crear y montar la app
 createApp(App)
   .use(router)
@@ -22,6 +24,7 @@ createApp(App)
     propertyId: '592f165db3d02e11ecc67aae', 
     widgetId: '1ble2n5gh',                  
   })
+  .use(i18n)
   .mount('#app');
 
 

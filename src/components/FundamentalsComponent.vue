@@ -1,8 +1,11 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 import { fundamentals } from '../data/about';
+import { useI18n } from 'vue-i18n';
 
 const activeFundamental = ref('tab-1');
+const { t } = useI18n();
+
 </script>
 
 <template>
@@ -18,7 +21,7 @@ const activeFundamental = ref('tab-1');
                 :class="{ active: activeFundamental === fund.id }"
                 @click="activeFundamental = fund.id"
               >
-                {{ fund.titulo }}
+                {{ t(fund.tituloKey) }}  <!-- <-- traducimos -->
               </button>
             </li>
           </ul>
@@ -40,8 +43,8 @@ const activeFundamental = ref('tab-1');
                   </div>
                 </div>
                 <div class="col-12 col-xl-6 content d-flex flex-column justify-content-center">
-                  <h3 class="mt-3 mt-lg-0 fw-bold">{{ fund.encabezado }}</h3>
-                  <p>{{ fund.contenido }}</p>
+                  <h3 class="mt-3 mt-lg-0 fw-bold">{{ t(fund.encabezadoKey) }}</h3>  <!-- <-- traducimos -->
+                  <p>{{ t(fund.contenidoKey) }}</p>  <!-- <-- traducimos -->
                 </div>
               </div>
             </div>
@@ -65,7 +68,7 @@ const activeFundamental = ref('tab-1');
 
 .story-area .nav-link {
   border-radius: 0;
-  border: 2px solid var(--secondary_color) !important;
+  border: 2px solid var(--primary_dark) !important;
   font-weight: 600;
   font-size: 15px;
   padding: 15px;
@@ -74,13 +77,13 @@ const activeFundamental = ref('tab-1');
 }
 
 .story-area .nav-link:hover {
-  color: #c72139;
-  border-right: 4px solid var(--secondary_color);
+  color: var(--primary_dark);
+  border-right: 4px solid var(--primary_dark);
 }
 
 .story-area .nav-link.active {
   color: #fff;
-  background: var(--secondary_color);
+  background: var(--primary_dark);
 }
 
 .story-area .tab-pane.active {
@@ -89,7 +92,7 @@ const activeFundamental = ref('tab-1');
 
 .story-area .content h3 {
   font-size: 26px;
-  color: var(--secondary_color);
+  color: var(--primary_color);
 }
 
 .story-area .content p {
@@ -99,7 +102,7 @@ const activeFundamental = ref('tab-1');
 .content a {
   padding: 10px 25px;
   display: inline-block;
-  background: var(--secondary_color);
+  background: var(--primary_dark);
   color: #fff;
 }
 

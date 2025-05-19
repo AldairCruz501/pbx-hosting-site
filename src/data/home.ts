@@ -4,67 +4,67 @@ export const homeData: HomeData = {
 	cards: [
 		{
 			imagen: "/img/card-1.webp",
-			titulo: "Telefonía IP",
-			descripcion: "Proporciona una conexión confiable para facilitar la comunicación organización."
+			tituloKey: "home.cards.0.title",
+			descripcionKey: "home.cards.0.description"
 		},
 		{
-			imagen: "/img/card-2.webp",
-			titulo: "SMS Marketing",
-			descripcion: "¡La mejor herramienta para llegar a tus clientes! Envía Recordatorios, Cupones y mucho más."
+			imagen: "/img/card-2.png",
+			tituloKey: "home.cards.1.title",
+			descripcionKey: "home.cards.1.description"
 		},
 		{
 			imagen: "/img/card-3.webp",
-			titulo: "Conmutador en la nube",
-			descripcion: "Descubre la solución definitiva para tus necesidades de comunicación empresarial."
+			tituloKey: "home.cards.2.title",
+			descripcionKey: "home.cards.2.description"
 		},
 	],
 	services: [
 		{
-			nombre: "Telefonía IP",
-			descripcion: "Proporciona una conexión confiable para facilitar la comunicación organización.",
+			nombreKey: "home.services.0.name",
+			descripcionKey: "home.services.0.description",
 			num: "1",
 			url: "/telefonia-ip"
 		},
 		{
-			nombre: "SMS Marketing",
-			descripcion: "¡La mejor herramienta para llegar a tus clientes! Envía Recordatorios, Cupones y mucho más.",
+			nombreKey: "home.services.1.name",
+			descripcionKey: "home.services.1.description",
 			num: "2",
 			url: ""
 		},
 		{
-			nombre: "Conmutador en la nube",
-			descripcion: "Descubre la solución definitiva para tus necesidades de comunicación empresarial.",
+			nombreKey: "home.services.2.name",
+			descripcionKey: "home.services.2.description",
 			num: "3",
 			url: ""
 		},
 		{
-			nombre: "Servidores",
-			descripcion: "Obtén el control total sobre tu entorno virtual con nuestros servidores VPS personalizables.",
+			nombreKey: "home.services.3.name",
+			descripcionKey: "home.services.3.description",
 			num: "4",
 			url: ""
 		},
 		{
-			nombre: "CallCenter",
-			descripcion: "Telefonía para Callcenters con una excelente tarifa para mejorar tu contactación día a día.",
+			nombreKey: "home.services.4.name",
+			descripcionKey: "home.services.4.description",
 			num: "5",
 			url: ""
 		},
 	],
 	resellers: [
 		{
-			titulo: "Genera Ganancias",
-			descripcion: "Tu colocas el precio.",
+			tituloKey: "home.resellers.0.title",
+			descripcionKey: "home.resellers.0.description",
 			icono: "bi bi-cash-coin"
 		},
 		{
-			titulo: "Panel Revendedor",
-			descripcion: "Aplica saldo, asigna números, crea planes.",
+			tituloKey: "home.resellers.1.title",
+			descripcionKey: "home.resellers.1.description",
 			icono: "bi bi-display"
 		},
 		{
-			titulo: "Mínima inversión",
-			descripcion: "Inicia con $1000MXN+IVA.",
+			tituloKey: "home.resellers.2.title",
+			descripcionKey: "home.resellers.2.description",
 			icono: "bi bi-currency-exchange"
-		},
+		}
 	]
 };

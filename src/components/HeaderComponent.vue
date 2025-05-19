@@ -1,5 +1,6 @@
 <script setup lang="ts">
-  import { computed } from 'vue';
+  import { computed, ref, watch } from 'vue';
+  import { useI18n } from 'vue-i18n';
   import { servicios, carruselItems } from '../data/header';
 
   const columnas = computed(() => {
@@ -11,6 +12,26 @@
       servicios.slice(chunk * 2)
     ]
   })
+
+  const { locale } = useI18n();
+  const { t } = useI18n();
+
+// Reactive para el select
+const localeRef = ref(localStorage.getItem('locale') || locale.value);
+
+// Cambiar idioma y guardar en localStorage
+function changeLocale() {
+  locale.value = localeRef.value;
+  localStorage.setItem('locale', localeRef.value);
+}
+
+// Si el idioma cambia desde otro sitio, sincronizamos el select
+watch(locale, (newLocale) => {
+  if (localeRef.value !== newLocale) {
+    localeRef.value = newLocale;
+  }
+});
+
 </script>
 
 <template>
@@ -40,17 +61,17 @@
           <div class="offcanvas-body">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <router-link class="nav-link text-uppercase" to="/nosotros" >Nosotros</router-link>
+              <router-link class="nav-link text-uppercase" to="/nosotros" >{{ t('header.navs.about') }}</router-link>
             </li>
             <!-- Solo en móviles -->
             <div class="d-lg-none">
               <li class="nav-item">
                 <a class="nav-link text-uppercase" data-bs-toggle="collapse" href="#serviciosCollapse" role="button" aria-expanded="false" aria-controls="serviciosCollapse">
-                  Servicios
+                  {{ t('header.navs.services') }}
                 </a>
                 <div class="collapse" id="serviciosCollapse">
                 <div class="mb-3">
-                  <h6 class="text-color fw-bold fs-5">Nuestras Promociones</h6>
+                  <h6 class="text-color fw-bold fs-5">{{ t('header.carousel.title') }}</h6>
                   <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                       <div
@@ -65,16 +86,16 @@
                   </div>
                   <hr />
                   <a href="#" class="text-decoration-none text-color">
-                    Saber Más <i class="bi bi-chevron-right float-end"></i>
+                    {{ t('header.carousel.more') }} <i class="bi bi-chevron-right float-end"></i>
                   </a>
                 </div>
                 <ul class="list-unstyled ps-3">
-                  <li v-for="grupo in servicios" :key="grupo.nombre">
-                    <strong>{{ grupo.nombre }}</strong>
+                  <li v-for="grupo in servicios">
+                    <strong>{{ t (grupo.nameKey) }}</strong>
                     <ul>
-                      <li v-for="sub in grupo.servicios" :key="sub.nombre">
+                      <li v-for="sub in grupo.services">
                         <router-link class="dropdown-item" :to="sub.route" >
-                          <i :class="`bi ${sub.icono}`" class="me-2"></i> {{ sub.nombre }}
+                          <i :class="`bi ${sub.icon}`" class="me-2"></i> {{ t(sub.nameKey) }}
                         </router-link>
                       </li>
                     </ul>
@@ -85,31 +106,38 @@
               </li>
             </div>
             <li class="nav-item">
-              <a class="nav-link text-uppercase" href="#" >Soporte</a>
+              <a class="nav-link text-uppercase" href="#" >{{ t('header.navs.support') }}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-uppercase" href="#" >Contacto</a>
+              <a class="nav-link text-uppercase" href="#" >{{ t('header.navs.contact') }}</a>
             </li>
           </ul>
-            <a href="https://www.pbxhosting.com.mx/clientarea/" target="_blank" class="btn mt-3 w-100">Mi cuenta</a>
+            <a href="https://www.pbxhosting.com.mx/clientarea/" target="_blank" class="btn mt-3 w-100">{{ t('header.navs.button') }}</a>
+                      <!-- Selector idioma en desktop -->
+          <div class="mt-4 mx-auto mx-3">
+            <select v-model="localeRef" @change="changeLocale" class="form-select form-select-sm fs-6">
+              <option value="es">Español</option>
+              <option value="en">English</option>
+            </select>
+          </div>
           </div>
         </div>
         <div class="collapse navbar-collapse justify-content-between d-none d-lg-flex" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <router-link class="nav-link text-uppercase" to="/nosotros" >Nosotros</router-link>
+              <router-link class="nav-link text-uppercase" to="/nosotros" >{{ t('header.navs.about') }}</router-link>
             </li>
 
             <!-- Mega Menú -->
             <li class="nav-item dropdown position-static">
               <a class="nav-link dropdown-toggle text-uppercase" href="#" role="button" data-bs-toggle="dropdown">
-                Servicios
+                {{ t('header.navs.services') }}
               </a>
               <div class="dropdown-menu w-100 mega-menu shadow p-4 mt-0">
                 <div class="row">
                   <!-- Columna 1: Carrusel -->
                   <div class="col-lg-3">
-                    <h6 class="text-color fw-bold fs-5">Nuestras Promociones</h6>
+                    <h6 class="text-color fw-bold fs-5">{{ t('header.carousel.title') }}</h6>
                     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
                       <div class="carousel-inner">
                         <div
@@ -124,7 +152,7 @@
                     </div>
                     <hr />
                     <a href="#" class="text-decoration-none text-color">
-                      Saber Más <i class="bi bi-chevron-right float-end"></i>
+                      {{ t('header.carousel.more') }} <i class="bi bi-chevron-right float-end"></i>
                     </a>
                   </div>
 
@@ -134,19 +162,19 @@
                     :key="colIndex"
                     class="col-lg-3"
                   >
-                    <div v-for="grupo in col" :key="grupo.nombre">
+                    <div v-for="grupo in col">
                       <h6 class="text-color fw-bold fs-5">
-                        <i :class="`bi ${grupo.icono}`" class="mx-1"></i>{{ grupo.nombre }}
+                        <i :class="`bi ${grupo.icon}`" class="mx-1"></i>{{ t(grupo.nameKey) }}
                       </h6>
                       <ul class="list-unstyled">
-                        <li v-for="sub in grupo.servicios" :key="sub.nombre">
+                        <li v-for="sub in grupo.services">
                           <router-link class="dropdown-item" :to="sub.route" >
-                            <i :class="`bi ${sub.icono}`" class="m-0"></i> {{ sub.nombre }}
+                            <i :class="`bi ${sub.icon}`" class="m-0"></i> {{ t(sub.nameKey) }}
                           </router-link>
                         </li>
-                        <li v-if="grupo.servicios.length === 0" class="text-muted ps-3">
+                        <!-- <li v-if="grupo.services.length === 0" class="text-muted ps-3">
                           Próximamente...
-                        </li>
+                        </li> -->
                       </ul>
                       <hr />
                     </div>
@@ -156,18 +184,24 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link text-uppercase" href="#" >Soporte</a>
+              <a class="nav-link text-uppercase" href="#" >{{ t('header.navs.support') }}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-uppercase" href="#" >Contacto</a>
+              <a class="nav-link text-uppercase" href="#" >{{ t('header.navs.contact') }}</a>
             </li>
             <li class="nav-item d-block d-lg-none">
-              <a class="nav-link text-uppercase" href="https://www.pbxhosting.com.mx/clientarea/" target="_blank">Mi Cuenta</a>
+              <a class="nav-link text-uppercase" href="https://www.pbxhosting.com.mx/clientarea/" target="_blank">{{ t('header.navs.button') }}</a>
             </li>
           </ul>
-
+          <!-- Selector idioma en desktop -->
+          <div class="d-none d-lg-block ms-auto me-3">
+            <select v-model="localeRef" @change="changeLocale" class="form-select form-select-sm">
+              <option value="es">Español</option>
+              <option value="en">English</option>
+            </select>
+          </div>
           <div class="d-none d-lg-block">
-            <a href="https://www.pbxhosting.com.mx/clientarea/" target="_blank" class="btn">Mi cuenta</a>
+            <a href="https://www.pbxhosting.com.mx/clientarea/" target="_blank" class="btn">{{ t('header.navs.button') }}</a>
           </div>
         </div>
       </nav>
@@ -177,7 +211,7 @@
 
 <style scoped>
   .header-pbx {
-    background: var(--default_color);
+    background: var(--background_color);
     box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.06);
   }
   .navbar-brand{
@@ -203,7 +237,7 @@
     transition: .4s all ease;
   }
   .header-pbx .nav-link:hover{
-    color: var(--secondary_color);
+    color: var(--primary_color);
     transition: .4s all ease;
   }
 
@@ -253,7 +287,7 @@
 }
 
 .hover-productos {
-  background-color: var(--secondary_color);
+  background-color: var(--primary_color);
   transition: background-color 0.3s ease;
   color: var(--default_color);
 }
@@ -293,7 +327,7 @@
 }
 
 .dropdown-item:hover {
-  background-color: var(--secondary_color) !important;
+  background-color: var(--primary_dark) !important;
   color: #ffffff !important;
   font-size: 1.1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -307,7 +341,7 @@
 
 
 .text-color {
-  color: var(--secondary_color) !important;
+  color: var(--primary_color) !important;
 }
 
 @media(max-width: 991px) {

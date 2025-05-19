@@ -1,19 +1,19 @@
 export interface Card {
     imagen: string;
-    titulo: string;
-    descripcion: string;
+    tituloKey: string;
+    descripcionKey: string;
 }
 
 export interface Service {
     num: string;
-    nombre: string;
-    descripcion: string,
+    nombreKey: string;
+    descripcionKey: string,
     url: string,
 }
 
 export interface Reseller {
-    titulo: string;
-    descripcion: string;
+    tituloKey: string;
+    descripcionKey: string;
     icono: string;
 }
 

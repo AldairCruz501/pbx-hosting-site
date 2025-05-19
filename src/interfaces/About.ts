@@ -1,19 +1,18 @@
 
 export interface Fundamental {
-    id: string,
-    titulo: string,
-    encabezado: string,
-    contenido: string,
-    imagen: string;
+  id: string;
+  tituloKey: string;
+  encabezadoKey: string;
+  contenidoKey: string;
+  imagen: string;
 }
 
 export interface Value {
-    titulo: string,
-    descripcion: string,
+  tituloKey: string;
+  descripcionKey: string;
 }
 
 export interface ValueCardData {
-    descripcion: string;
-    img: string;
-  }
-  
+  descripcionKey: string;
+  img: string;
+}

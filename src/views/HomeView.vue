@@ -4,24 +4,29 @@ import FooterComponent from '../components/FooterComponent.vue';
 import HeaderComponent from '../components/HeaderComponent.vue';
 import LoaderComponent from '../components/LoaderComponent.vue';
 import { homeData } from '../data/home';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+
+
 </script>
 
 <template>
 	<LoaderComponent />
   	<HeaderComponent />
- 	<section class="hero-home text-center text-md-start bg-body-tertiary">
+ 	<section class="hero-home text-center text-md-start">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-12 col-lg-6 mb-4">
 					<h1 
 						class="large-title position-relative animate__animated animate__fadeInLeft animate__delay-3s" 
 					>
-						Conectamos lo que más importa: tu negocio y tus clientes.
+						{{ t('home.hero.title') }}
 					</h1>
 				</div>
 				<div class="col-12 col-lg-6">
 					<div class="hero-home-right position-relative animate__animated animate__fadeIn animate__delay-3s">
-						<img src="/img/img-hero.webp" class="w-100 h-100" alt="hero-img">
+						<img src="/img/img-hero.png" class="w-100 h-100" alt="hero-img">
 					</div>
 				</div>
 			</div>
@@ -37,21 +42,21 @@ import { homeData } from '../data/home';
 			<div class="row">
 				<div v-for="(card, index) in homeData.cards" :key="index" class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
 					<div
-						class="card text-center"
+						class="card text-center h-100 d-flex"
 						data-aos="fade-down"
 						data-aos-mirror="true"
 					>
 						<img :src="card.imagen" alt="img-feature" class="img-fluid mx-auto w-75" />
 						<div class="card-body">
-							<h4 class="card-title">{{ card.titulo }}</h4>
-							<p class="mb-0">{{ card.descripcion }}</p>
+							<h4 class="card-title">{{ t(card.tituloKey) }}</h4>
+							<p class="mb-0">{{ t(card.descripcionKey) }}</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
   	</section>
-	<section class="bg-body-tertiary">
+	<section>
 		<div class="container-fluid">
 			<div 
 				class="container col-xxl-8"
@@ -63,16 +68,16 @@ import { homeData } from '../data/home';
 					<div 
 						class="col-10 col-sm-8 col-lg-6"
 					>
-						<img src="/img/img-callcenter.webp" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"  width="90%" loading="lazy">
+						<img src="/img/img-callcenter-1.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"  width="90%" loading="lazy">
 					</div>
 					<div 
 						class="col-lg-6"
 					>
-						<h4 class="subtitle-hero fs-5">Servicios Escalables</h4>
-						<h2 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Soluciones VoIP Personalizadas para empresas de todos los tamaños</h2>
-						<p>Optimiza tu comunicación empresarial con servicios voip adaptados a las necesidades específicas de tu empresa o call center. Desde pequeños negocios hasta grandes corporativos, ofrecemos soluciones personalizadas que impulsan tu éxito.</p>
+						<h4 class="subtitle-hero fs-5">{{ t('home.jumbotron.badge') }}</h4>
+						<h2 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">{{ t('home.jumbotron.title') }}</h2>
+						<p>{{ t('home.jumbotron.description') }}</p>
 						<div class="d-grid gap-2 d-md-flex justify-content-md-start">
-							<button type="button" class="btn btn-lg px-4 me-md-2">Asesorate</button>
+							<button type="button" class="btn btn-lg px-4 me-md-2">{{ t('home.jumbotron.button') }}</button>
 						</div>
 					</div>
 				</div>
@@ -85,16 +90,16 @@ import { homeData } from '../data/home';
 			<div class="row">
 				<div class="col-lg-4 col-md-6">
 					<div class="services-title pt-4">
-						<p class="subtitle-service text-uppercase fw-bold mb-3">Nuestros Servicios</p>
-						<h1 class="text-uppercase">Para cualquier tipo de empresa</h1>
-						<p class="services-text">Conoce la gran variedad de servicios que te ofrecemos.</p>
+						<p class="subtitle-service text-uppercase fw-bold mb-3">{{ t('home.starServices.badge') }}</p>
+						<h1 class="text-uppercase">{{ t('home.starServices.title') }}</h1>
+						<p class="services-text">{{ t('home.starServices.description') }}</p>
 					</div>
       			</div>
 				  <div v-for="(service, index) in homeData.services" :key="index" class="col-lg-4 col-md-6 service-item">
 					<router-link class="text-black text-decoration-none" :to="service.url">
 						<div class="block"> <span class="colored-box text-center h3 mb-4">{{service.num}}</span>
-							<h3 class="mb-3 service-title">{{ service.nombre }}</h3>
-							<p class="mb-0 service-description">{{ service.descripcion }}</p>
+							<h3 class="mb-3 service-title">{{ t(service.nombreKey )}}</h3>
+							<p class="mb-0 service-description">{{ t(service.descripcionKey) }}</p>
 						</div>
 					</router-link>
      			</div>
@@ -108,9 +113,9 @@ import { homeData } from '../data/home';
 		  :delay="200"
 		  :duration="1200"
 	  >
-		<h1 class="display-4 fw-bold"><span class="title-dialer">PBXDialer:</span> Software de Call Center Intuitivo</h1>
+		<h1 class="display-4 fw-bold"><span class="title-dialer">PBXDialer:</span> {{ t('home.pbxDialer.title') }}</h1>
         <div class="col-lg-6 mx-auto pb-4">
-          <p class="lead mb-4 text-dialer">PBXDialer optimiza la contactación y el servicio al cliente con su interfaz intuitiva y marcador predictivo, mejorando la productividad del equipo y la satisfacción del cliente.</p>
+          <p class="lead mb-4 text-dialer">{{ t('home.pbxDialer.description') }}</p>
         </div>
         <div 
 			class="overflow-hidden"
@@ -121,19 +126,15 @@ import { homeData } from '../data/home';
         </div>
       </div>
     </section>
-	<section class="section bg-body-tertiary">
+	<section class="section bg-revent">
 		<div class="container">
 			<div class="row align-items-center justify-content-between">
 				<div class="col-lg-5">
 					<div class="reseller-title">
-					<p class="subtitle-reseller text-uppercase fw-bold mb-3">Genera Ganancias</p>
-					<h1>Conviértete en Revendedor</h1>
+					<p class="subtitle-reseller text-uppercase fw-bold mb-3">{{ t('home.starReseller.badge') }}</p>
+					<h3 class="fs-1">{{ t('home.starReseller.title') }}</h3>
 					<div class="content mb-0 mt-4">
-						<p class="reseller-text">
-							Ofrecemos la oportunidad de revender nuestro servicio de Telefonía IP, 
-							permitiéndote expandir tu negocio y ofrecer a tus clientes una solución 
-							de comunicaciones de alta calidad y rentable.
-						</p>
+						<p class="reseller-text">{{ t('home.starReseller.description') }}</p>
 					</div>
 					</div>
 				</div>
@@ -143,9 +144,9 @@ import { homeData } from '../data/home';
 							<div class="icon me-4 mb-4 mb-sm-0"> <i :class="reseller.icono" style="font-size:36px"></i>
 							</div>
 							<div class="block">
-								<h3 class="mb-3">{{ reseller.titulo }}</h3>
+								<h3 class="mb-3">{{ t(reseller.tituloKey) }}</h3>
 								<p class="mb-0 reseller-text">
-									{{ reseller.descripcion }}
+									{{ t(reseller.descripcionKey) }}
 								</p>
 							</div>
 						</div>
@@ -165,8 +166,8 @@ import { homeData } from '../data/home';
 									<img src="/img/plazo-forzoso.png" alt="" class="img-fluid">
 								</div>
 								<div>
-									<div class="highlight-text">Sin plazos forzosos</div>
-									<p class="text-dialer">Usa nuestro servicio sin contratos largos ni compromisos. Tú decides cuándo parar, sin penalizaciones.</p>
+									<div class="highlight-text">{{ t('home.resellerPoints.0.title') }}</div>
+									<p class="text-dialer">{{ t('home.resellerPoints.0.description') }}</p>
 								</div>
 							</div>
 						</div>
@@ -176,8 +177,8 @@ import { homeData } from '../data/home';
 									<img src="/img/paga-que-llamas.png" alt="" class="img-fluid">
 								</div>
 								<div>
-									<div class="highlight-text">Paga por lo que llamas</div>
-									<p class="text-dialer">Solo paga por los minutos que realmente usas. Sin cargos fijos ni sorpresas inesperadas en tu factura.</p>
+									<div class="highlight-text">{{ t('home.resellerPoints.1.title') }}</div>
+									<p class="text-dialer">{{ t('home.resellerPoints.1.description') }}</p>
 								</div>
 							</div>
 						</div>
@@ -187,8 +188,8 @@ import { homeData } from '../data/home';
 									<img src="/img/ladas-mexico.png" alt="" class="img-fluid">
 								</div>
 								<div>
-									<div class="highlight-text">+300 Ladas México</div>
-									<p class="text-dialer">Ofrecemos líneas telefónicas de más de 300 Ladas en México. Amplía tu presencia local en todo el país fácilmente.</p>
+									<div class="highlight-text">{{ t('home.resellerPoints.2.title') }}</div>
+									<p class="text-dialer">{{ t('home.resellerPoints.2.description') }}</p>
 								</div>
 							</div>
 						</div>
@@ -198,8 +199,8 @@ import { homeData } from '../data/home';
 									<img src="/img/tarifa-minuto.png" alt="" class="img-fluid">
 								</div>
 								<div>
-									<div class="highlight-text">La mejor tarifa por minuto</div>
-									<p class="text-dialer">Disfruta de las tarifas más bajas por minuto, ¡te podemos mejorar fácilmente la tarifa del proveedor actual!</p>
+									<div class="highlight-text">{{ t('home.resellerPoints.3.title') }}</div>
+									<p class="text-dialer">{{ t('home.resellerPoints.3.description') }}</p>
 								</div>
 							</div>
 						</div>
@@ -223,6 +224,7 @@ import { homeData } from '../data/home';
 	.hero-home{
 		padding: 100px 0px 150px;
     	background-position: right center;
+		background-color: var(--background_color);
 	}
 	.hero-home p {
 		margin-bottom: 35px;
@@ -258,7 +260,7 @@ import { homeData } from '../data/home';
 	.subtitle-hero,
 	.subtitle-service,
 	.subtitle-reseller {
-		color: var(--secondary_color)
+		color: var(--primary_color)
 	}
 	.voip-home p,
 	.text-dialer {
@@ -296,8 +298,8 @@ import { homeData } from '../data/home';
 		width: 70px;
 		line-height: 70px;
 		border-radius: 8px;
-		color: var(--secondary_color);
-		background-color: rgba(181, 81, 81, 0.2);
+		color: var(--primary_color);
+		background-color: var(--primary_light);
 	}
 	.service-item .service-title {
 	transition: color 0.3s;
@@ -307,7 +309,7 @@ import { homeData } from '../data/home';
 		font-family: "Open Sans", sans-serif !important;
 	}
 	.service-item a:hover .service-title {
-		color: var(--secondary_color);
+		color: var(--primary_color);
 	}
 	.service-item a:hover .service-description {
 		color: var(--color-tercary);
@@ -340,7 +342,7 @@ import { homeData } from '../data/home';
 	}
 	.service-item:nth-child(even) .colored-box {
 		color: var(--primary_color);
-		background-color: rgba(157, 149, 189, 0.2);
+		background-color: var(--accent_color);;
 	}
 	.service-item:hover {
 		border-color: transparent;
@@ -360,28 +362,32 @@ import { homeData } from '../data/home';
 		text-align: center;
 		border-radius: 8px;
 		color: var(--secondary_color);
-		background-color: rgba(181, 81, 81, 0.2);
+		background-color: var(--accent_color);
 	}
 	.reseller-item:nth-child(even) .icon {
 		color: var(--primary_color);
-		background-color: rgba(157, 149, 189, 0.2);
+		background-color: var(--accent_color);
 	}
 	.title-dialer {
 		color: var(--secondary_color);
 	}
 	.bg-options {
-		background-color: rgba(181, 81, 81, 0.2);
+		background-color: var(--primary_light);
 	}
 	.icon-circle {
-      background-color: var(--secondary_color);
+      background-color: var(--primary_dark);
       border-radius: 5%;
       padding: 25px;
       color: white;
       font-size: 1.5rem;
     }
+	.bg-revent {
+		background-color: var(--background_soft);
+	}
     .highlight-text {
       font-weight: bold;
       font-size: 1.25rem;
+	  color: var(--primary_color);
     }
     .custom-section {
       padding: 60px 0;

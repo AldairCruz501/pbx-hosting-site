@@ -20,7 +20,7 @@ onMounted(() => {
       <div class="mb-2">
         <img src="/img/pbx-logo.webp" alt="Logo-pbx" class="img-fluid" width="120" />
       </div>
-      <CirclesToRhombusesSpinner :animation-duration="1200" :circles-num="3" :circle-size="15" color="#be222a" />
+      <CirclesToRhombusesSpinner :animation-duration="1200" :circles-num="3" :circle-size="15" color="#02a6a3" />
     </div>
   </div>
 </template>

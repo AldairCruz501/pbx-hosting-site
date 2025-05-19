@@ -3,6 +3,9 @@ import { onMounted, ref } from 'vue';
 import { CountUp } from 'countup.js';
 import type { CounterItem } from '../interfaces/General';
 import { counters as counterData } from '../data/general';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const counters = ref<CounterItem[]>(counterData)
 const animated = ref<Set<string>>(new Set()) 
@@ -58,7 +61,7 @@ onMounted(() => {
 		  >
 			<div class="counter">
 			  <h2 :id="counter.id" class="fw-bold display-6"></h2>
-			  <h4 class="mb-0">{{ counter.label }}</h4>
+			  <h4 class="mb-0">{{ t(counter.labelKey)}}</h4>
 			</div>
 		  </div>
 		</div>
@@ -68,7 +71,7 @@ onMounted(() => {
 
 <style scoped>
     .counter-section {
-		background: linear-gradient(12deg, rgba(252, 82, 76, 0.959) 40%, rgba(228, 55, 69, 0.95) 100%), url('/img/counter_bg.webp');
+		background: linear-gradient(12deg, rgba(2, 166, 163, 0.952) 40%, rgba(2, 166, 163, 0.952) 100%), url('/img/counter_bg.webp');
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
@@ -79,10 +82,10 @@ onMounted(() => {
 		border: 1px dashed rgba(255, 255, 255, 0.25);
 	}
 	.counter h2 {
-		color: var(--default_color);
+		color: var(--primary_light);
 		margin-bottom: 20px;
 	}
 	.counter h4 {
-		color: var(--default_color);
+		color: var(--primary_light);
 	}
 </style>

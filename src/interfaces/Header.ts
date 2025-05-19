@@ -1,13 +1,13 @@
 export interface Servicio {
-    nombre: string,
+    nameKey: string,
     route: string,
-    icono: string,
-    servicios: Servicios[],
+    icon: string,
+    services: Servicios[],
 }
 
 export interface Servicios {
-    nombre: string,
-    icono: string,
+    nameKey: string,
+    icon: string,
     route: string,
 }
 

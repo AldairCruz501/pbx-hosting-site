@@ -1,47 +1,8 @@
-<template>
-    <div class="nav-bottom">
-      <!-- Popup de WhatsApp -->
-      <div class="popup-whatsapp" :class="{ 'is-active-whatsapp-popup': isActive }">
-        <div class="content-whatsapp -top">
-          <button class="closePopup" @click="togglePopup">
-            <i class="bi bi-x-lg icon-font-color"></i>
-          </button>
-          <div class="d-flex align-items-center gap-2">
-            <img
-              src="https://pbxhosting.com.mx/whatsapp/whatsapp-pbxhosting.png"
-              alt="WhatsApp"
-              class="icon-whatsapp"
-            />
-            <p>Hola, ¿en qué podemos ayudarle?</p>
-          </div>
-        </div>
-  
-        <div class="content-whatsapp -bottom">
-          <input
-            type="text"
-            class="whats-input"
-            placeholder="Enviar mensaje..."
-            v-model="message"
-            @keyup.enter="sendMessage"
-          />
-          <button class="send-msPopup" @click="sendMessage">
-            <i class="bi bi-send-fill icon-font-color--black"></i>
-          </button>
-        </div>
-      </div>
-  
-      <!-- Botón flotante -->
-      <button class="float" @click="togglePopup">
-        <i class="bi bi-whatsapp my-float"></i>
-      </button>
-  
-      <!-- Círculo animado -->
-      <div class="circle-anime"></div>
-    </div>
-  </template>
-  
   <script lang="ts" setup>
   import { ref, onMounted } from 'vue';
+   import { useI18n } from 'vue-i18n';
+
+    const { t } = useI18n();
   
   const isActive = ref(false);
   const message = ref('');
@@ -65,6 +26,48 @@
     }, 3000);
   });
   </script>
+
+<template>
+    <div class="nav-bottom">
+      <!-- Popup de WhatsApp -->
+      <div class="popup-whatsapp" :class="{ 'is-active-whatsapp-popup': isActive }">
+        <div class="content-whatsapp -top">
+          <button class="closePopup" @click="togglePopup">
+            <i class="bi bi-x-lg icon-font-color"></i>
+          </button>
+          <div class="d-flex align-items-center gap-2">
+            <img
+              src="https://pbxhosting.com.mx/whatsapp/whatsapp-pbxhosting.png"
+              alt="WhatsApp"
+              class="icon-whatsapp"
+            />
+            <p>{{ t('whatsapp.welcome') }}</p>
+          </div>
+        </div>
+  
+        <div class="content-whatsapp -bottom">
+          <input
+            type="text"
+            class="whats-input"
+            :placeholder="t('whatsapp.send')" 
+            v-model="message"
+            @keyup.enter="sendMessage"
+          />
+          <button class="send-msPopup" @click="sendMessage">
+            <i class="bi bi-send-fill icon-font-color--black"></i>
+          </button>
+        </div>
+      </div>
+  
+      <!-- Botón flotante -->
+      <button class="float" @click="togglePopup">
+        <i class="bi bi-whatsapp my-float"></i>
+      </button>
+  
+      <!-- Círculo animado -->
+      <div class="circle-anime"></div>
+    </div>
+  </template>
   
   <style scoped>
   @import url("https://fonts.googleapis.com/css?family=Roboto");

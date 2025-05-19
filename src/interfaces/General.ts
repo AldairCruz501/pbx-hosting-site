@@ -2,6 +2,6 @@ export interface CounterItem {
     id: string
     endVal: number
     suffix?: string
-    label: string
+    labelKey: string
     format?: string
   }  
