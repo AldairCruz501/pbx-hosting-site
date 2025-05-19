@@ -27,7 +27,7 @@ export default {
       ipTelephony: {
         title: "Telefonía IP",
         submenu: {
-          ipTelephony: "Telefonía Ip",
+          ipTelephony: "Telefonía IP",
           sipLine: "Línea Sip",
           telephoneLine: "Líneas Telefónicas",
           voipPackages: "Paquetes Voip",
