@@ -2,6 +2,9 @@
 <script lang="ts" setup>
   import { ref } from 'vue';
   import { ipTelephonyData } from '../data/iptelephony';
+  import { useI18n } from 'vue-i18n';
+
+	const { t } = useI18n();
 
   const tabs = ipTelephonyData.steps
 
@@ -65,8 +68,8 @@
                 'fade-out': animatingTab === index && isFadingOut
             }"
             >
-          <h3 class="head text-center">{{ tab.titulo }}</h3>
-          <p class="narrow text-center">{{ tab.contenido }}</p>
+          <h3 class="head text-center">{{ t(tab.tituloKey) }}</h3>
+          <p class="narrow text-center">{{ t(tab.contenidoKey) }}</p>
         </div>
       </div>
       </div>

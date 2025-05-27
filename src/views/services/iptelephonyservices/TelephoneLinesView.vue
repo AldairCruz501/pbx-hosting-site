@@ -4,6 +4,10 @@ import HeaderComponent from '../../../components/HeaderComponent.vue';
 import LoaderComponent from '../../../components/LoaderComponent.vue';
 import SoftphoneComponent from '../../../components/SoftphoneComponent.vue';
 import { ipTelephonyData } from '../../../data/iptelephony';
+
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 </script>
 
 <template>
@@ -19,12 +23,13 @@ import { ipTelephonyData } from '../../../data/iptelephony';
 					</div>
                 </div>
                 <div class="col-12">
-                    <h1 class="display-4 fw-bold text-body-emphasis lh-1 mb-3 align-content-center">Línea Telefónica</h1>
+                    <h1 class="display-4 fw-bold text-body-emphasis lh-1 mb-3 align-content-center">{{ t('telephoneLine.hero.title') }}</h1>
 					<p class="lead">
-                        Conecta tu negocio al futuro con llamadas claras y confiables a través de internet.
+                        {{ t('telephoneLine.hero.description') }}
+                        
 					</p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-center my-lg-5 text-center">
-						<button type="button" class="btn btn-lg px-4 me-md-2">Ver precios</button>
+						<button type="button" class="btn btn-lg px-4 me-md-2">{{ t('telephoneLine.hero.button') }}</button>
 					</div>
                 </div>
             </div>
@@ -43,8 +48,8 @@ import { ipTelephonyData } from '../../../data/iptelephony';
                     <div class="card p-4 h-100 d-flex flex-column">
                         <img :src="card.img" class="card-img-top w-50 mx-auto" alt="">
                         <div class="card-body text-center">
-                            <h5 class="card-title fs-2 fw-bold">{{ card.titulo }}</h5>
-                            <p class="card-text">{{ card.descrpition }}</p>
+                            <h5 class="card-title fs-2 fw-bold">{{ t(card.tituloKey) }}</h5>
+                            <p class="card-text">{{ t(card.descrpitionKey) }}</p>
                         </div>
                     </div>
                 </div>
@@ -58,68 +63,66 @@ import { ipTelephonyData } from '../../../data/iptelephony';
         :duration="1200"
     >
         <div class="text-center">
-            <span class="mb-4 fs-1">Líneas Telefónicas</span>
-            <h2 class="fw-bold mb-4 display-4 text-value">Precios Líneas Telefónicas</h2>
+            <span class="mb-4 fs-1">{{ t('telephoneLine.prices.0.badge') }}</span>
+            <h2 class="fw-bold mb-4 display-4 text-value">{{ t('telephoneLine.prices.0.title') }}</h2>
         </div>
         <div class="container py-5">
             <div class="row g-4 justify-content-center">
                 <div class="col-md-6 col-lg-4 card-efect" v-for="price in ipTelephonyData.prices">
                     <div class="card card-price h-100 shadow-sm">
                         <div class="card-body text-center">
-                            <span class="badge bg-light text-value mb-3 fw-semibold fs-6">{{ price.insignia }}</span>
-                            <h5 class="card-title">{{ price.titulo }}</h5>
-                            <p class="mb-3"><span class="fw-bold">País: </span>{{ price.pais }}</p>
+                            <span class="badge bg-light text-value mb-3 fw-semibold fs-6">{{ t(price.insigniaKey) }}</span>
+                            <h5 class="card-title">{{ t(price.tituloKey) }}</h5>
+                            <p class="mb-3"><span class="fw-bold">{{ t('telephoneLine.prices.0.country') }} </span> {{ t(price.paisKey) }}</p>
                             <img :src="price.imgPais" alt="" width="50" class="img-fluid mb-3">
-                            <h4 class="fw-bold fs-2">${{ price.precio }} <small class="text-muted fs-6">+IVA MXN</small></h4>
-                            <p class="text-muted mb-4">Anual</p>
-                            <a href="#" class="btn btn-light border-0 fw-semibold w-50 mb-4 d-none d-lg-inline-grid">Comprar</a>
-                            <a href="#" class="btn btn-light border-0 fw-semibold w-100 mb-4 d-inline-grid d-lg-none">Comprar</a>
+                            <h4 class="fw-bold fs-2">${{ price.precio }} <small class="text-muted fs-6">{{ t('telephoneLine.prices.0.price') }}</small></h4>
+                            <p class="text-muted mb-4">{{ t('telephoneLine.prices.0.plan') }}</p>
+                            <a href="#" class="btn btn-light border-0 fw-semibold w-50 mb-4 d-none d-lg-inline-grid">{{ t('telephoneLine.prices.0.button') }}</a>
+                            <a href="#" class="btn btn-light border-0 fw-semibold w-100 mb-4 d-inline-grid d-lg-none">{{ t('telephoneLine.prices.0.button') }}</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="text-center">
-            <button type="button" class="btn btn-primary fs-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
-			    <i class="bi bi-cloud-fog fs-4"></i> Conmutador en la nube
-		    </button>
+		<button type="button" class="btn btn-primary fs-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+			<i class="bi bi-cloud-fog fs-4"></i> {{ t('ipTelephony.cloudSwitch.title') }}
+		</button>
         </div>
     </section>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title fs-4 text-empresary" id="exampleModalLabel"><i class="bi bi-cloud-fog fs-4"></i> Conmutador en la nube</h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row g-3">
-                        <div class="col-12 col-lg-5">
-                            <div class="">
-                                <img src="/img/conmtuador-pbx-conmutador-virtual.png" class="img-fluid" alt="hero-img">
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-7">
-                            <div class="text-center">
-                                <h3 class="display-5 fw-bold text-body-emphasis mb-3 text-empresary lh-1">
-                                    <span class="text-body-emphasis fs-6">Conmutador Virtual</span> <br>
-                                    PBX CLOUD
-                                </h3>
-                            </div>
-                            <p class="lead text-justify fs-6">
-                                Nuestro conmutador en la nube te brinda una completa flexibilidad y libertad al eliminar la necesidad de tener equipos 
-                                físicos en tus instalaciones. Todo el sistema se encuentra alojado en la nube, lo que significa que puedes acceder a él 
-                                desde cualquier lugar y en cualquier momento, simplemente con una conexión a Internet.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <a type="button" class="btn btn-primary" href="/conmutador-en-la-nube">Ver Más</a>
-                </div>
-            </div>
-        </div>
-    </div>
+		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title fs-4 text-empresary" id="exampleModalLabel"><i class="bi bi-cloud-fog fs-4"></i> {{ t('ipTelephony.cloudSwitch.title') }}</h3>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="row g-3">
+							<div class="col-12 col-lg-5">
+								<div class="">
+									<img src="/img/conmtuador-pbx-conmutador-virtual.png" class="img-fluid" alt="hero-img">
+								</div>
+							</div>
+							<div class="col-12 col-lg-7">
+								<div class="text-center">
+									<h3 class="display-5 fw-bold text-body-emphasis mb-3 text-empresary lh-1">
+										<span class="text-body-emphasis fs-6">{{ t('ipTelephony.cloudSwitch.badge') }}</span> <br>
+										{{ t('ipTelephony.cloudSwitch.subtitle') }}
+									</h3>
+								</div>
+								<p class="lead text-justify fs-6">
+									{{ t('ipTelephony.cloudSwitch.description') }}
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<a type="button" class="btn btn-primary" href="/conmutador-en-la-nube">{{ t('ipTelephony.cloudSwitch.button') }}</a>
+					</div>
+				</div>
+			</div>
+		</div>
     <FooterComponent />
 </template>
 

@@ -5,6 +5,9 @@
 	import TabsSliderComponent from '../../../components/TabsSliderComponent.vue';
 	import { ipTelephonyData } from '../../../data/iptelephony';
 
+	import { useI18n } from 'vue-i18n';
+
+	const { t } = useI18n();
 
 </script>
 
@@ -15,15 +18,13 @@
 		<div class="container animate__animated animate__fadeInDown animate__delay-3s">
 			<div class="row g-4">
 			<div class="col-12 col-lg-7 pt-lg-5 mt-lg-5">
-				<h1 class="display-5 fw-bold">Enlace <span class="text-empresary">Troncal SIP</span></h1>
+				<h1 class="display-5 fw-bold">{{ t('sipLine.hero.title.0') }} <span class="text-empresary">{{ t('sipLine.hero.title.1') }}</span></h1>
 				<p class="lead mb-4">
-					Una troncal SIP es una tecnología de VoIP que permite realizar llamadas y otros servicios 
-					de comunicación a través de Internet usando el protocolo SIP, el cual gestiona el inicio, 
-					modificación y finalización de sesiones como llamadas de voz y video.
+					{{ t('sipLine.hero.description') }}
 				</p>
 				<div class="text-center">
 					<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#adventagesModal">
-						<i class="bi bi-star-fill"></i> Descubre las Ventajas de la Troncal SIP
+						<i class="bi bi-star-fill"></i> {{ t('sipLine.hero.button') }}
 					</button>
 				</div>
 			</div>
@@ -40,7 +41,7 @@
 			<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title fs-5 fw-bold text-empresary" id="adventagesModalLabel">
-					<i class="bi bi-star-fill"></i> Ventajas de Troncal SIP
+					<i class="bi bi-star-fill"></i> {{ t('sipLine.modal.title') }}
 				</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
@@ -49,15 +50,15 @@
 					<div v-for="(card, index) in ipTelephonyData.advantages" :key="index" class="col-12 col-lg-6 col-xl-4 d-flex">
 						<div class="card">
 							<div class="card-body">
-								<h5 class="card-title">{{ card.titulo }}</h5>
-								<p class="card-text  mt-auto small"> {{ card.descripción }}</p>
+								<h5 class="card-title">{{ t(card.tituloKey) }}</h5>
+								<p class="card-text  mt-auto small"> {{ t(card.descripcionKey) }}</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ t('sipLine.modal.button') }}</button>
 			</div>
 			</div>
 		</div>
@@ -69,11 +70,9 @@
 			:delay="200"
 			:duration="1200"
 		>
-			<h2 class="display-6 fw-bold text-center">Costo de <span class="text-empresary">Troncal SIP</span></h2>
+			<h2 class="display-6 fw-bold text-center">{{ t('sipLine.sipCost.title1') }} <span class="text-empresary">{{ t('sipLine.sipCost.title2') }}</span></h2>
 			<p class="lead mb-4 fs-6 text-center">
-				No dejes pasar esta oportunidad de transformar tu forma de comunicarte y, al mismo tiempo, 
-				reducir significativamente tus costos operativos. Únete a la revolución de la comunicación 
-				con nosotros y experimenta la libertad de una Troncal SIP <span class="fw-bold">sin costo</span>.
+				{{ t('sipLine.sipCost.description') }} <span class="fw-bold">{{ t('sipLine.sipCost.badge') }}</span>.
 			</p>
 			<div class="row">
 				<div class="col-12 col-md-6">
@@ -84,28 +83,28 @@
 				<div class="col-12 col-md-6">
 					<div class="card w-50 text-color d-none d-xl-block">
 						<div class="card-body text-center">
-							<h5 class="card-title fw-bold fs-3 text-uppercase">Gratis</h5>
+							<h5 class="card-title fw-bold fs-3 text-uppercase">{{ t('sipLine.sipCost.card.title') }}</h5>
 							<img src="/img/imagen-lineasip.svg" class="img-fluid w-50" alt="hero-img">
 							<ul class="mb-4">
 								<li>
 									<i class="bi bi-check-circle-fill m-0 mx-2"></i> 
-									Troncales ilimitadas
+									{{ t('sipLine.sipCost.card.points.0') }}
 								</li>
 								<li>
 									<i class="bi bi-check-circle-fill m-0 mx-2"></i> 
-									Estadísticas
+									{{ t('sipLine.sipCost.card.points.1') }}
 								</li>
 								<li>
 									<i class="bi bi-check-circle-fill m-0 mx-2"></i> 
-									Panel Web
+									{{ t('sipLine.sipCost.card.points.2') }}
 								</li>
 								<li>
 									<i class="bi bi-check-circle-fill m-0 mx-2"></i> 
-									Soporte Técnico
+									{{ t('sipLine.sipCost.card.points.3') }}
 								</li>
 							</ul>
 							<button class="btn btn-success btn-outline-rounded green">
-                  				Contratar
+                  				{{ t('sipLine.sipCost.card.button') }}
                 			</button>
 						</div>
 					</div>
@@ -113,26 +112,26 @@
 						<div class="card-body text-center">
 							<h5 class="card-title fw-bold fs-3 text-uppercase">Gratis</h5>
 							<img src="/img/imagen-lineasip.svg" class="img-fluid w-50" alt="hero-img">
-							<ul>
+							<ul >
 								<li>
-									<i class="bi bi-check-circle-fill m-0 mx-sm-2"></i> 
-									Troncales ilimitadas
+									<i class="bi bi-check-circle-fill m-0 mx-2"></i> 
+									{{ t('sipLine.sipCost.card.points.0') }}
 								</li>
 								<li>
-									<i class="bi bi-check-circle-fill m-0 mx-sm-2"></i> 
-									Estadísticas
+									<i class="bi bi-check-circle-fill m-0 mx-2"></i> 
+									{{ t('sipLine.sipCost.card.points.1') }}
 								</li>
 								<li>
-									<i class="bi bi-check-circle-fill m-0 mx-sm-2"></i> 
-									Panel Web
+									<i class="bi bi-check-circle-fill m-0 mx-2"></i> 
+									{{ t('sipLine.sipCost.card.points.2') }}
 								</li>
 								<li>
-									<i class="bi bi-check-circle-fill m-0 mx-sm-2"></i> 
-									Soporte Técnico
+									<i class="bi bi-check-circle-fill m-0 mx-2"></i> 
+									{{ t('sipLine.sipCost.card.points.3') }}
 								</li>
 							</ul>
 							<button class="btn btn-success btn-outline-rounded green">
-                  				Acción
+                  				{{ t('sipLine.sipCost.card.button') }}
                 			</button>
 						</div>
 					</div>
@@ -140,7 +139,7 @@
 			</div>
 			<div class="text-center pt-5">
 				<button class="btn btn-success btn-outline-rounded green">
-					Paquetes VOIP
+					{{ t('sipLine.sipCost.button') }}
 				</button>
 			</div>
 		</div>
@@ -154,7 +153,7 @@
 		>
 			<div class="row">
 				<div class="col-12 col-xl-6">
-					<h2 class="fs-3 fw-bold text-end">¿Cómo funciona una Troncal SIP? <br><span class="text-empresary display-6 fw-bold">Funcionamiento Troncal SIP</span></h2>
+					<h2 class="fs-3 fw-bold text-end">{{ t('sipLine.sipOperation.badge') }} <br><span class="text-empresary display-6 fw-bold">{{ t('sipLine.sipOperation.title') }}</span></h2>
 				</div>
 				<div class="col-12 col-xl-6">
 					<div class="text-start">

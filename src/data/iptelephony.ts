@@ -3,392 +3,402 @@ import type { IPTelephonyData } from "../interfaces/IPTelephony";
 export const ipTelephonyData: IPTelephonyData = {
     telfunctions: [
         {
-            titulo: "Ahorro en llamadas",
+            tituloKey: "ipTelephony.telfunctions.0.title",
             img: "/img/ahorro-llamadas.svg"
         },
         {
-            titulo: "Sin Límites Geográficos",
+            tituloKey: "ipTelephony.telfunctions.1.title",
             img: "/img/llamadas-internacionales.svg"
         },
         {
-            titulo: "Soporte 24/7",
+            tituloKey: "ipTelephony.telfunctions.2.title",
             img: "/img/soporte-24horas.svg"
         },
         {
-            titulo: "Portabilidad",
+            tituloKey: "ipTelephony.telfunctions.3.title",
             img: "/img/portabilidad-numeros-virtuales.svg"
         },
         {
-            titulo: "Calidad de llamadas HD",
+            tituloKey: "ipTelephony.telfunctions.4.title",
             img: "/img/llamadas-altacalidad.svg"
         },
         {
-            titulo: "Línea 800 TollFree",
+            tituloKey: "ipTelephony.telfunctions.5.title",
             img: "/img/linea-800.svg"
         },
     ],
     benfits: [
         {
-            titulo: "Conexión estable",
-            descripcion: "Comunicación clara y sin interrupciones."
+            tituloKey: "ipTelephony.benfits.0.title",
+            descripcionKey: "ipTelephony.benfits.0.description"
         },
         {
-            titulo: "Múltiples líneas",
-            descripcion: "Excelente gestión de llamadas simúltaneas."
+            tituloKey: "ipTelephony.benfits.1.title",
+            descripcionKey: "ipTelephony.benfits.1.description"
         },
         {
-            titulo: "Funciones Avanzadas",
-            descripcion: "Mejoran la eficiencia y productividad."
+            tituloKey: "ipTelephony.benfits.2.title",
+            descripcionKey: "ipTelephony.benfits.2.description"
         },
         {
-            titulo: "Escalabilidad",
-            descripcion: "Adaptable al crecimiento de la empresa para cubrir las necesidades."
+            tituloKey: "ipTelephony.benfits.3.title",
+            descripcionKey: "ipTelephony.benfits.3.description"
+        },
+    ],
+    tabs: [
+        {
+            tituloKey: "ipTelephony.tabs.prices.tab",
+            icono: "bi-coin"
+        },
+                {
+            tituloKey: "ipTelephony.tabs.portability.tab",
+            icono: "bi-telephone-forward"
         },
     ],
     solutions:[
         {
-            titulo: "Callcenter",
+            tituloKey: "ipTelephony.solutions.1.title",
             img: "bi bi-headset"
         },
         {
-            titulo: "Salud",
+            tituloKey: "ipTelephony.solutions.2.title",
             img: "bi bi-heart-pulse"
         },
         {
-            titulo: "Hoteles",
+            tituloKey: "ipTelephony.solutions.3.title",
             img: "bi bi-building"
         },
         {
-            titulo: "eCommerce",
+            tituloKey: "ipTelephony.solutions.4.title",
             img: "bi bi-cart"
         },
         {
-            titulo: "Escuelas",
+            tituloKey: "ipTelephony.solutions.5.title",
             img: "bi bi-backpack2"
         },
         {
-            titulo: "Bienes Raíces",
+            tituloKey: "ipTelephony.solutions.6.title",
             img: "bi bi-buildings"
         },
         {
-            titulo: "Transporte",
+            tituloKey: "ipTelephony.solutions.7.title",
             img: "bi bi-truck"
         },
         {
-            titulo: "Seguros",
+            tituloKey: "ipTelephony.solutions.8.title",
             img: "bi bi-postcard-heart"
         },
         {
-            titulo: "Restaurantes",
+            tituloKey: "ipTelephony.solutions.9.title",
             img: "bi bi-cup"
         },
         {
-            titulo: "Gobierno",
+            tituloKey: "ipTelephony.solutions.10.title",
             img: "bi bi-bank2"
         },
         {
-            titulo: "Finanzas",
+            tituloKey: "ipTelephony.solutions.11.title",
             img: "bi bi-cash-coin"
         },
         {
-            titulo: "ContactCenter",
+            tituloKey: "ipTelephony.solutions.12.title",
             img: "bi bi-headphones"
         },
     ],
     advantages: [
         {
-            titulo: "Gran Ahorro",
-            descripción: "Gracias a la transmisión de datos por internet permite ser mas económica a la telefonía tradicional."
+            tituloKey: "sipLine.advantages.0.title",
+            descripcionKey: "sipLine.advantages.0.description"
         },
         {
-            titulo: "Geolocalización",
-            descripción: "Permiten que las llamadas se enruten a través de diferentes ubicaciones geográficas, lo que puede ser beneficioso para empresas con presencia internacional."
+            tituloKey: "sipLine.advantages.1.title",
+            descripcionKey: "sipLine.advantages.1.description"
         },
         {
-            titulo: "Compatibilidad",
-            descripción: "Facilita la integración con PBX IP y otros equipos de telecomunicaciones modernos."
+            tituloKey: "sipLine.advantages.2.title",
+            descripcionKey: "sipLine.advantages.2.description"
         },
     ],
     steps: [
         {
             id: 1,
             icono: "bi bi-telephone",
-            titulo: "1. Inicio de la llamada",
-            contenido: "Un usuario inicia una llamada desde un teléfono conectado a una centralita telefónica (PBX).",
+            tituloKey: "sipLine.steps.0.title",
+            contenidoKey: "sipLine.steps.0.content",
             color: "one"
         },
         {
             id: 2,
             icono: "bi bi-diagram-3",
-            titulo: "2. Enrutamiento Interno",
-            contenido: "Si la llamada es interna (por ejemplo, entre dos extensiones de la misma empresa), la PBX enruta la llamada directamente al teléfono de destino.",
+            tituloKey: "sipLine.steps.1.title",
+            contenidoKey: "sipLine.steps.1.content",
             color: "two"
         },
         {
             id: 3,
             icono: "bi bi-arrow-up-right",
-            titulo: "3. Enrutamiento Externo",
-            contenido: "Si la llamada es externa, la PBX decide cómo manejarla. Puede enviarla a través de una troncal SIP o hacia la red PSTN, dependiendo de la configuración",
+            tituloKey: "sipLine.steps.2.title",
+            contenidoKey: "sipLine.steps.2.content",
             color: "three"
         },
         {
             id: 4,
             icono: "bi bi-telephone-fill",
-            titulo: "4. Comunicación con la PSTN",
-            contenido: "Si la llamada se dirige a un número fuera de la red de la empresa, la PBX la envía a la red PSTN, la cual conecta la llamada al destinatario final.",
+            tituloKey: "sipLine.steps.3.title",
+            contenidoKey: "sipLine.steps.3.content",
             color: "four"
         },
         {
             id: 5,
             icono: "bi bi-cloud-arrow-up",
-            titulo: "5. Comunicación a través de la Troncal SIP",
-            contenido: "Si la llamada se realiza a través de una troncal SIP, la PBX utiliza esta conexión basada en SIP para enrutar la llamada hacia la red VoIP o Internet.",
+            tituloKey: "sipLine.steps.4.title",
+            contenidoKey: "sipLine.steps.4.content",
             color: "five"
         },
         {
             id: 6,
             icono: "bi bi-cloud-check",
-            titulo: "6. Conexión a la Red PSTN",
-            contenido: "Si la llamada se origina en una red VoIP y se dirige a un número en la red PSTN, la troncal SIP actúa como un puente, conectando la llamada a través de la PSTN.",
+            tituloKey: "sipLine.steps.5.title",
+            contenidoKey: "sipLine.steps.5.content",
             color: "one"
         },
         {
             id: 7,
             icono: "bi bi-cloud",
-            titulo: "7. Comunicación a través de la Internet",
-            contenido: "En el caso de llamadas VoIP puras, la comunicación se realiza a través de la infraestructura de Internet utilizando protocolos VoIP como SIP.",
+            tituloKey: "sipLine.steps.6.title",
+            contenidoKey: "sipLine.steps.6.content",
             color: "two"
         },
         {
             id: 8,
             icono: "bi bi-chat",
-            titulo: "8. Conversación y Finalización",
-            contenido: "Una vez que la llamada se ha enrutado adecuadamente, los usuarios pueden hablar entre sí. La conversación continúa hasta que uno de ellos cuelga, momento en el cual la llamada se finaliza.",
+            tituloKey: "sipLine.steps.7.title",
+            contenidoKey: "sipLine.steps.7.content",
             color: "three"
         },
     ],
     purposes: [
         {
-            titulo: "Identificador de llamadas",
-            descripcion: "Te permitirá saber quién está al otro lado antes de contestar.",
+            tituloKey: "telephoneLine.purposes.1.title",
+            descripcionKey: "telephoneLine.purposes.1.description",
             icono: "bi bi-telephone-inbound"
         },
         {
-            titulo: "Multiplataforma",
-            descripcion: "Nuestra línea virtual es compatible con una variedad de dispositivos y sistemas operativos.",
+            tituloKey: "telephoneLine.purposes.2.title",
+            descripcionKey: "telephoneLine.purposes.2.description",
             icono: "bi bi-collection"
         },
         {
-            titulo: "Contactos",
-            descripcion: "Mantenga su lista de contactos organizada y accesible desde cualquier lugar.",
+            tituloKey: "telephoneLine.purposes.3.title",
+            descripcionKey: "telephoneLine.purposes.3.description",
             icono: "bi bi-person-lines-fill"
         },
         {
-            titulo: "Buzón de voz",
-            descripcion: "Con nuestro eficiente buzón de voz, puede recibir y revisar mensajes incluso cuando no puede contestar el teléfono.",
+            tituloKey: "telephoneLine.purposes.4.title",
+            descripcionKey: "telephoneLine.purposes.4.description",
             icono: "bi bi-voicemail"
         },
         {
-            titulo: "Utilice su número",
-            descripcion: "Mantenga su número actual al portarlo con nosotros.",
+            tituloKey: "telephoneLine.purposes.5.title",
+            descripcionKey: "telephoneLine.purposes.5.description",
             icono: "bi bi-123"
         },
         {
-            titulo: "Flexibilidad",
-            descripcion: "Nuestra línea virtual le brinda la libertad de adaptar su experiencia según sus necesidades.",
+            tituloKey: "telephoneLine.purposes.6.title",
+            descripcionKey: "telephoneLine.purposes.6.description",
             icono: "bi bi-arrows-move"
         },
     ],
     qualities: [
         {
             img: "/img/img-channel.png",
-            titulo: "Canales de entrada",
-            descrpition: "Es por donde se puede emitir una llamada, un canal permite una llamada, si tu número virtual cuenta con 2 canales entrada únicamente podrá recibir hasta 2 llamadas de manera simultánea y las siguientes serán rebotadas."
+            tituloKey: "telephoneLine.qualities.0.title",
+            descrpitionKey: "telephoneLine.qualities.0.description"
         },
         {
             img: "/img/img-voip-cash.png",
-            titulo: "Saldo Voip",
-            descrpition: "Crédito virtual que permite realizar llamadas por internet a diferentes destinos, tantos fijos como móviles, a un excelente costo a diferencia de otras compañías de telefonía análoga."
+            tituloKey: "telephoneLine.qualities.1.title",
+            descrpitionKey: "telephoneLine.qualities.1.description"
         },
     ],
     prices: [
         {
-            insignia: "2 Canales",
-            titulo: "Línea Telefónica",
+            insigniaKey: "telephoneLine.prices.1.badge",
+            tituloKey: "telephoneLine.prices.1.title",
             precio: "840",
-            pais: "México",
+            paisKey: "telephoneLine.prices.1.country",
             imgPais: "/img/mexico.png"
         },
         {
-            insignia: "10 Canales",
-            titulo: "Línea Telefónica",
+            insigniaKey: "telephoneLine.prices.2.badge",
+            tituloKey: "telephoneLine.prices.2.title",
             precio: "1,680",
-            pais: "México",
+            paisKey: "telephoneLine.prices.2.country",
             imgPais: "/img/mexico.png"
         },
         {
-            insignia: "2 Canales",
-            titulo: "Línea Telefónica",
+            insigniaKey: "telephoneLine.prices.3.badge",
+            tituloKey: "telephoneLine.prices.3.title",
             precio: "1,056",
-            pais: "Estados Unidos",
+            paisKey: "telephoneLine.prices.3.country",
             imgPais: "/img/estados-unidos.png"
         },
     ],
     offices: [
         {
-            titulo: "Fácil de Usar",
-            descripcion: "Los servicios VoIP suelen ser fáciles de configurar y poner en marcha. No requieren hardware costoso ni instalaciones complicadas, lo que simplifica la implementación para los usuarios de home office.",
+            tituloKey: "voipPackages.offices.0.title",
+            descripcionKey: "voipPackages.offices.0.description",
             icono: "bi bi-ui-checks"
         },
-                {
-            titulo: "Flexible",
-            descripcion: "Puedes mantener tu número de teléfono de la oficina sin importar dónde te encuentres. Esto te permite trabajar desde diferentes lugares sin cambiar tu número de contacto.",
+        {
+            tituloKey: "voipPackages.offices.1.title",
+            descripcionKey: "voipPackages.offices.1.description",
             icono: "bi bi-sliders"
         },
-                {
-            titulo: "Movilidad",
-            descripcion: "Puedes acceder a tu línea telefónica desde cualquier lugar con conexión a Internet, lo que te permite mantenerte conectado y productivo incluso cuando estás fuera de tu oficina en casa.",
+        {
+            tituloKey: "voipPackages.offices.2.title",
+            descripcionKey: "voipPackages.offices.2.description",
             icono: "bi bi-phone-flip"
         },
-                {
-            titulo: "Ahorro",
-            descripcion: "Los servicios de VoIP suelen ser más económicos que las líneas telefónicas tradicionales, lo que puede resultar en un ahorro significativo para ti como empleado que trabaja desde casa.",
+        {
+            tituloKey: "voipPackages.offices.3.title",
+            descripcionKey: "voipPackages.offices.3.description",
             icono: "bi bi-piggy-bank"
         },
-                {
-            titulo: "Escalable",
-            descripcion: "Los servicios VoIP son altamente escalables, lo que significa que puedes agregar o quitar líneas telefónicas según las necesidades de tu empresa.",
+        {
+            tituloKey: "voipPackages.offices.4.title",
+            descripcionKey: "voipPackages.offices.4.description",
             icono: "bi bi-arrows-fullscreen"
         },
-                {
-            titulo: "Compatible",
-            descripcion: "Los servicios VoIP suelen ser compatibles con una amplia variedad de dispositivos, como teléfonos IP, computadoras, tablets y smartphones.",
+        {
+            tituloKey: "voipPackages.offices.5.title",
+            descripcionKey: "voipPackages.offices.5.description",
             icono: "bi bi-puzzle"
         },
     ],
     points: [
         {
             icono: "bi bi-soundwave",
-            titulo: "Voz",
-            subtitulo: "Profesional"
+            tituloKey: "voipPackages.customIVR.points.0.title",
+            subtituloKey: "voipPackages.customIVR.points.0.subtitle"
         },
         {
             icono: "bi bi-compass",
-            titulo: "Navegación",
-            subtitulo: "Simplificada"
+            tituloKey: "voipPackages.customIVR.points.1.title",
+            subtituloKey: "voipPackages.customIVR.points.1.subtitle"
         },
         {
             icono: "bi bi-clock",
-            titulo: "Ahorro de",
-            subtitulo: "Tiempo"
+            tituloKey: "voipPackages.customIVR.points.2.title",
+            subtituloKey: "voipPackages.customIVR.points.2.subtitle"
         },
         {
             icono: "bi bi-gear",
-            titulo: "Personalizado",
-            subtitulo: ""
+            tituloKey: "voipPackages.customIVR.points.3.title",
+            subtituloKey: ""
         },
-                {
+        {
             icono: "bi bi-lightning-charge",
-            titulo: "Información",
-            subtitulo: "inmediata"
+            tituloKey: "voipPackages.customIVR.points.4.title",
+            subtituloKey: "voipPackages.customIVR.points.4.subtitle"
         },
         {
             icono: "bi bi-pencil-square",
-            titulo: "Modificable",
-            subtitulo: ""
+            tituloKey: "voipPackages.customIVR.points.5.title",
+            subtituloKey: ""
         },
     ],
     pricesVoip: [
         {
-            titulo: "Plan Residencial",
+            tituloKey: "voipPackages.voipPrice.pricesVoip.0.title",
             precio: "150",
-            características: [
-                "1 Línea Telefónica de México",
-                "Hasta 1200 Min de México",
+            característicasKey: [
+                "voipPackages.voipPrice.pricesVoip.0.features.0",
+                "voipPackages.voipPrice.pricesVoip.0.features.1",
             ]
         },
                 {
-            titulo: "Pa'quete Comuniques",
+            tituloKey: "voipPackages.voipPrice.pricesVoip.1.title",
             precio: "250",
-            características: [
-                "1 Línea Telefónica de México",
-                "IVR Personalizado",
-                "5 Extensiones internas",
-                "Llamadas ilimitadas* de México",
+            característicasKey: [
+                "voipPackages.voipPrice.pricesVoip.1.features.0",
+                "voipPackages.voipPrice.pricesVoip.1.features.1",
+                "voipPackages.voipPrice.pricesVoip.1.features.2",
+                "voipPackages.voipPrice.pricesVoip.1.features.3",
             ]
         },
     ],
     pymes: [
         {
-            titulo: "Conmutador en la Nube",
-            descripcion: "Facilita la gestión de comunicaciones entre departamentos dentro de la empresa.",
+            tituloKey: "smePackages.smePackage.pymes.0.title",
+            descripcionKey: "smePackages.smePackage.pymes.0.description",
             icono: "bi-cloud-check"
         },
         {
-            titulo: "Bolsa de minutos",
-            descripcion: "Plan de Minutos para empezar a realizar llamadas a teléfonos fijos y celulares.",
+            tituloKey: "smePackages.smePackage.pymes.1.title",
+            descripcionKey: "smePackages.smePackage.pymes.1.description",
             icono: "bi-stopwatch"
         },
         {
-            titulo: "Microsite",
-            descripcion: "Un sitio web es la mejor manera de tener una mejor presentación hacia tus clientes.",
+            tituloKey: "smePackages.smePackage.pymes.2.title",
+            descripcionKey: "smePackages.smePackage.pymes.2.description",
             icono: "bi-window"
         },
         {
-            titulo: "Líneas Telefónicas",
-            descripcion: "Las líneas telefónicas son una opción económica y flexible que permite mejorar la imagen de la empresa.",
+            tituloKey: "smePackages.smePackage.pymes.3.title",
+            descripcionKey: "smePackages.smePackage.pymes.3.description",
             icono: "bi-telephone-forward"
         },
         {
-            titulo: "Equipo Telefónico",
-            descripcion: "Incluye funciones para silenciar, transferir y realizar llamadas con hasta 3 personas en simultaneo.",
+            tituloKey: "smePackages.smePackage.pymes.4.title",
+            descripcionKey: "smePackages.smePackage.pymes.4.description",
             icono: "bi-phone"
         },
         {
-            titulo: "SMS Marketing",
-            descripcion: "Envía miles de sms en sólo 3 pasos, perfectos para campañas y recordatorios para los clientes.",
+            tituloKey: "smePackages.smePackage.pymes.5.title",
+            descripcionKey: "smePackages.smePackage.pymes.5.description",
             icono: "bi-chat-dots"
         },
     ],
     pricesPyme: [
         {
-            titulo: "PLUS 2",
+            tituloKey: "smePackages.smePrices.pricesPyme.0.title",
             precio: "6,999",
-            características: [
-                "Conmutador PBX30",
-                "4 Líneas Telefónicas 5 Canales c/u",
-                "Fijos: 1500 Minutos",
-                "Celular: 4500 Minutos",
-                "3 Teléfonos IP GXP1610",
-                "1 Teléfono IP GXP2160",
+            caracteristicasKey: [
+                "smePackages.smePrices.pricesPyme.0.features.0",
+                "smePackages.smePrices.pricesPyme.0.features.1",
+                "smePackages.smePrices.pricesPyme.0.features.2",
+                "smePackages.smePrices.pricesPyme.0.features.3",
+                "smePackages.smePrices.pricesPyme.0.features.4",
+                "smePackages.smePrices.pricesPyme.0.features.5",
             ],
             mensualidad: "2,280"
         },
         {
-            titulo: "PLUS 3",
+            tituloKey: "smePackages.smePrices.pricesPyme.1.title",
             precio: "13,156",
-            características: [
-                "Conmutador PBX60",
-                "6 Líneas Telefónicas 10 Canales c/u",
-                "Fijos: 3000 Minutos",
-                "Celular: 7000 Minutos",
-                "9 Teléfonos IP GXP1610",
-                "1 Teléfono IP GXP2160",
+            caracteristicasKey: [
+                "smePackages.smePrices.pricesPyme.1.features.0",
+                "smePackages.smePrices.pricesPyme.1.features.1",
+                "smePackages.smePrices.pricesPyme.1.features.2",
+                "smePackages.smePrices.pricesPyme.1.features.3",
+                "smePackages.smePrices.pricesPyme.1.features.4",
+                "smePackages.smePrices.pricesPyme.1.features.5",
             ],
             mensualidad: "4,099"
         },
         {
-            titulo: "ULTIMATE PRO",
+            tituloKey: "smePackages.smePrices.pricesPyme.2.title",
             precio: "6,760",
-            características: [
-                "Conmutador PBX30",
-                "3 Líneas Telefónicas 10 Canales c/u",
-                "Fijos: 1500 Minutos",
-                "Celular: 4500 Minutos",
-                "4 Teléfonos IP GXP1610",
-                "Microsite",
-                "Hosting + Dominio",
-                "500 SMS Masivos",
+            caracteristicasKey: [
+                "smePackages.smePrices.pricesPyme.2.features.0",
+                "smePackages.smePrices.pricesPyme.2.features.1",
+                "smePackages.smePrices.pricesPyme.2.features.2",
+                "smePackages.smePrices.pricesPyme.2.features.3",
+                "smePackages.smePrices.pricesPyme.2.features.4",
+                "smePackages.smePrices.pricesPyme.2.features.5",
+                "smePackages.smePrices.pricesPyme.2.features.6",
+                "smePackages.smePrices.pricesPyme.2.features.7",
             ],
             mensualidad: "2,598"
         },

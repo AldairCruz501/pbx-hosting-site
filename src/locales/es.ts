@@ -280,4 +280,499 @@ export default {
       "title": "Tecnologías y Alianzas"
     },
   },
+  ipTelephony: {
+    "hero": {
+      "title1": "Telefonía VoIP",
+      "title2": "Empresarial",
+      "description": "Mejora la comunicación de tu empresa y reduce costos con nuestra tecnología VoIP segura, confiable y personalizada. Ofrecemos soluciones adaptadas a tus necesidades, con soporte profesional y herramientas avanzadas para una gestión eficiente de tus llamadas empresariales. Lleva tus comunicaciones al siguiente nivel con nosotros.",
+      "button": "Cotizar",
+    },
+    "jumbotron": {
+      "title": "¿Qué es la Telefonía IP?",
+      "descp1": "La",
+      "descp2": "Telefonía IP",
+      "descp3": "(Protocolo de Internet) es una tecnología que permite realizar llamadas telefónicas utilizando una conexión de Internet en lugar de la infraestructura de telefonía tradicional basada en líneas físicas. La telefonía IP utiliza la tecnología de voz sobre IP",
+      "descp4": "(VoIP)",
+      "descp5": "que convierte la voz en paquetes de datos digitales que se transmiten a través de la red de Internet.",
+    },
+    "jumbotron2": {
+      "title": "Descubre porque es la mejor opción para tu negocio",
+      "descp1": "La",
+      "descp2": "Telefonía IP",
+      "descp3": "permite integrar múltiples aplicaciones de comunicación en una sola plataforma, lo que mejora la colaboración y la eficiencia en los procesos empresariales.",
+      "points": [
+        "Mejor Calidad de Audio",
+        "Mayor Ahorro",
+        "Flexibilidad",
+        "Configuración Sencilla",
+        "Multidispositivos",
+        "Funciones Avanzadas",
+      ],
+    },
+    "titleCarousel": [
+      "Funcionalidades de la",
+      "Telefonía IP",
+    ],
+    telfunctions: [ 
+      {
+        title: "Ahorro en llamadas",
+      },
+      {
+        title: "Sin Límites Geográficos",
+      },
+      {
+        title: "Soporte 24/7",
+      },
+      {
+        title: "Portabilidad",
+      },
+      {
+        title: "Calidad de llamadas HD",
+      },
+      {
+        title: "Línea 800 TollFree",
+      },
+    ],
+    "benfitsTitle": [
+      "Línea Telefónica Para Empresas",
+      "Proporciona una conexión confiable y de calidad para facilitar la comunicación interna y externa de la organización.",
+      "Cotizar"
+    ],
+    benfits: [
+      {
+        title: "Conexión estable",
+        description: "Comunicación clara y sin interrupciones.",
+      },
+      {
+        title: "Múltiples líneas",
+        description: "Excelente gestión de llamadas simúltaneas.",
+      },
+            {
+        title: "Funciones Avanzadas",
+        description: "Mejoran la eficiencia y productividad.",
+      },
+            {
+        title: "Escalabilidad",
+        description: "Adaptable al crecimiento de la empresa para cubrir las necesidades.",
+      },
+    ],
+    "tabs": {
+      "prices": {
+        "tab": "Precios",
+        "title1": "Precios",
+        "title2": "Telefonía IP",
+        "description": "Un agente de ventas está listo para atenderte y realizar un servicio personalizado.",
+        "button": "Contratar",
+      },
+      "portability": {
+        "tab": "Portabilidad",
+        "title": "Portabilidad",
+        "description": "Si ya cuentas con líneas virtuales con otro proveedor y te están fallando... Porta tus líneas con nosotros.",
+        "cards": [
+          {
+            "title" : "Línea 2 Canales",
+            "price" : "840",
+            "plan": "Mxn+Iva / Anual",
+          },
+          {
+            "title" : "Línea 10 Canales",
+            "price" : "1,680",
+            "plan": "Mxn+Iva / Anual",
+          },
+        ]
+      },
+    },
+    solutions: [
+      {
+        "title": "ofrece soluciones para todo tipo de empresas",
+      },
+      {
+        title: "Callcenter",
+      },
+      {
+        title: "Salud",
+      },
+      {
+        title: "Hoteles",
+      },
+      {
+        title: "eCommerce",
+      },
+      {
+        title: "Escuelas",
+      },
+      {
+        "title": "Bienes Raíces",
+      },
+      {
+        title: "Transporte",
+      },
+      {
+        title: "Seguros",
+      },
+      {
+        "title": "Restaurantes",
+      },
+      {
+        "title": "Gobierno",
+      },
+            {
+        "title": "Finanzas",
+      },
+            {
+        "title": "ContactCenter",
+      },
+    ],
+    "cloudSwitch": {
+      "title":"Conmutador En La Nube",
+      "badge": "Conmutador Virtual",
+      "subtitle": "PBX CLOUD",
+      "description": "Nuestro conmutador en la nube te brinda una completa flexibilidad y libertad al eliminar la necesidad de tener equipos físicos en tus instalaciones. Todo el sistema se encuentra alojado en la nube, lo que significa que puedes acceder a él desde cualquier lugar y en cualquier momento, simplemente con una conexión a Internet.",
+      "button": "Ver Más",
+    },
+  },
+  sipLine: {
+    "hero": {
+      "title": [
+        "Enlace",
+        "Troncal SIP",
+      ],
+      "description": "Una troncal SIP es una tecnología de VoIP que permite realizar llamadas y otros servicios de comunicación a través de Internet usando el protocolo SIP, el cual gestiona el inicio, modificación y finalización de sesiones como llamadas de voz y video.",
+      "button": "Descubre las Ventajas de la Troncal SIP",
+    },
+    "modal": {
+      "title": "Ventajas de Troncal SIP",
+      "button": "Cerrar",
+    },
+    advantages: [
+      {
+        title: "Gran Ahorro",
+        description: "Gracias a la transmisión de datos por internet permite ser más económica a la telefonía tradicional.",
+      },
+      {
+        title: "Geolocalización",
+        description: "Permiten que las llamadas se enruten a través de diferentes ubicaciones geográficas, lo que puede ser beneficioso para empresas con presencia internacional.",
+      },
+      {
+        title: "Compatibilidad",
+        description: "Facilita la integración con PBX IP y otros equipos de telecomunicaciones modernos.",
+      },
+    ],
+    "sipCost": {
+      "title1": "Costo de",
+      "title2": "Troncal SIP",
+      "description": "No dejes pasar esta oportunidad de transformar tu forma de comunicarte y, al mismo tiempo, reducir significativamente tus costos operativos. Únete a la revolución de la comunicación con nosotros y experimenta la libertad de una Troncal SIP",
+      "badge":"sin costo",
+      "card": {
+        "title":"Gratis",
+        "points": [
+          "Troncales ilimitadas",
+          "Estadísticas",
+          "Panel Web",
+          "Soporte Técnico",
+        ],
+        "button": "Contratar",
+      },
+      "button": "Paquetes VOIP",
+    },
+    "sipOperation": {
+      "badge": "¿Cómo funciona una Troncal SIP?",
+      "title": "Funcionamiento Troncal SIP",
+    },
+    steps: [
+      {
+        title: "1. Inicio de la llamada",
+        content: "Un usuario inicia una llamada desde un teléfono conectado a una centralita telefónica (PBX).",
+      },
+      {
+        title: "2. Enrutamiento Interno",
+        content: "Si la llamada es interna (por ejemplo, entre dos extensiones de la misma empresa), la PBX enruta la llamada directamente al teléfono de destino.",
+      },
+      {
+        title: "3. Enrutamiento Externo",
+        content: "Si la llamada es externa, la PBX decide cómo manejarla. Puede enviarla a través de una troncal SIP o hacia la red PSTN, dependiendo de la configuración",
+      },
+      {
+        title: "4. Comunicación con la PSTN",
+        content: "Si la llamada se dirige a un número fuera de la red de la empresa, la PBX la envía a la red PSTN, la cual conecta la llamada al destinatario final.",
+      },
+      {
+        title: "5. Comunicación a través de la Troncal SIP",
+        content: "Si la llamada se realiza a través de una troncal SIP, la PBX utiliza esta conexión basada en SIP para enrutar la llamada hacia la red VoIP o Internet.",
+      },
+      {
+        title: "6. Conexión a la Red PSTN",
+        content: "Si la llamada se origina en una red VoIP y se dirige a un número en la red PSTN, la troncal SIP actúa como un puente, conectando la llamada a través de la PSTN.",
+      },
+      {
+        title: "7. Comunicación a través de la Internet",
+        content: "En el caso de llamadas VoIP puras, la comunicación se realiza a través de la infraestructura de Internet utilizando protocolos VoIP como SIP.",
+      },
+      {
+        title: "8. Conversación y Finalización",
+        content: "Una vez que la llamada se ha enrutado adecuadamente, los usuarios pueden hablar entre sí. La conversación continúa hasta que uno de ellos cuelga, momento en el cual la llamada se finaliza.",
+      },                                          
+    ],
+  },
+  telephoneLine: {
+    "hero": {
+      "title": "Línea Telefónica",
+      "description": "Conecta tu negocio al futuro con llamadas claras y confiables a través de internet.",
+      "button": "Ver precios",
+    },
+    purposes: [
+      {
+        title: "¿Qué hace un softphone?",
+      },      
+      {
+        title: "Identificador de llamadas",
+        description: "Te permitirá saber quién está al otro lado antes de contestar.",
+      },
+      {
+        title: "Multiplataforma",
+        description: "Nuestra línea virtual es compatible con una variedad de dispositivos y sistemas operativos.",
+      },
+      {
+        title: "Contactos",
+        description: "Mantenga su lista de contactos organizada y accesible desde cualquier lugar.",
+      },
+      {
+        title: "Buzón de voz",
+        description: "Con nuestro eficiente buzón de voz, puede recibir y revisar mensajes incluso cuando no puede contestar el teléfono.",
+      },
+      {
+        title: "Utilice su número",
+        description: "Mantenga su número actual al portarlo con nosotros.",
+      },
+      {
+        title: "Flexibilidad",
+        description: "Nuestra línea virtual le brinda la libertad de adaptar su experiencia según sus necesidades.",
+      },                              
+    ],
+    qualities: [ 
+      {
+        title: "Canales de entrada",
+        description: "Es por donde se puede emitir una llamada, un canal permite una llamada, si tu número virtual cuenta con 2 canales entrada únicamente podrá recibir hasta 2 llamadas de manera simultánea y las siguientes serán rebotadas.",
+      },
+      {
+        title: "Saldo Voip",
+        description: "Crédito virtual que permite realizar llamadas por internet a diferentes destinos, tantos fijos como móviles, a un excelente costo a diferencia de otras compañías de telefonía análoga.",
+      },
+    ],
+    prices: [
+      {
+        badge: "Líneas Telefónicas",
+        title: "Precios Líneas Telefónicas",
+        country: "País: ",
+        plan: "Anual",
+        price: "+IVA MXN",
+        button: "Comprar"
+      },
+      {
+        badge: "2 Canales",
+        title: "Línea Telefónica",
+        country: "México",
+      },
+      {
+        badge: "10 Canales",
+        title: "Línea Telefónica",
+        country: "México",
+      },
+      {
+        badge: "2 Canales",
+        title: "Línea Telefónica",
+        country: "Estados Unidos",
+      },            
+    ], 
+  },
+  voipPackages: {
+    "hero": {
+      "badge": "Soluciones Callcenter",
+      "title": "Mejora la productividad y la satisfacción del cliente",
+      "description": "Transforma tu centro de llamadas con nuestra solución de telefonía IP. Maximiza la eficiencia, optimiza recursos y brinda una experiencia de atención al cliente excepcional. ¡Descubre cómo nuestra tecnología revolucionará tus operaciones de call center!",
+      "button": "Ver Planes",                  
+    },
+    "officesTitle": "La oficina va contigo",
+    offices: [
+      {
+        title: "Fácil de Usar",
+        description: "Los servicios VoIP suelen ser fáciles de configurar y poner en marcha. No requieren hardware costoso ni instalaciones complicadas, lo que simplifica la implementación para los usuarios de home office.",
+      },
+      {
+        title: "Flexible",
+        description: "Puedes mantener tu número de teléfono de la oficina sin importar dónde te encuentres. Esto te permite trabajar desde diferentes lugares sin cambiar tu número de contacto.",
+      },
+      {
+        title: "Movilidad",
+        description: "Puedes acceder a tu línea telefónica desde cualquier lugar con conexión a Internet, lo que te permite mantenerte conectado y productivo incluso cuando estás fuera de tu oficina en casa.",
+      },
+      {
+        title: "Ahorro",
+        description: "Los servicios de VoIP suelen ser más económicos que las líneas telefónicas tradicionales, lo que puede resultar en un ahorro significativo para ti como empleado que trabaja desde casa.",
+      },
+      {
+        title: "Escalable",
+        description: "Los servicios VoIP son altamente escalables, lo que significa que puedes agregar o quitar líneas telefónicas según las necesidades de tu empresa.",
+      },
+      {
+        title: "Compatible",
+        description: "Los servicios VoIP suelen ser compatibles con una amplia variedad de dispositivos, como teléfonos IP, computadoras, tablets y smartphones.",
+      },  
+    ],
+    customIVR: {
+      title: "IVR",
+      subtitle: "Personalizado",
+      description: "Nuestro IVR personalizado es como el anfitrión perfecto para tus llamadas telefónicas. Esta característica esencial ofrece una voz cálida y amigable que da la bienvenida a tus clientes y les guía a través de un menú de opciones diseñado especialmente para satisfacer sus necesidades.",
+      points: [
+        {
+          title: "Voz",
+          subtitle: "Profesional",
+        },
+        {
+          title: "Navegación",
+          subtitle: "Simplificada",
+        },
+        {
+          title: "Ahorro de",
+          subtitle: "Tiempo",
+        },
+        {
+          title: "Personalizado",
+          subtitle: "",
+        },
+        {
+          title: "Información",
+          subtitle: "inmediata",
+        },
+        {
+          title: "Modificable",
+          subtitle: "",
+        },                                        
+      ],
+    },
+    voipPrice: {
+      title: "Precio Paquetes VOIP",
+      price: "+IVA MXN",
+      plan: "Al Mes",
+      button: "Contratar",
+      pricesVoip: [
+        {
+          title: "Plan Residencial",
+          features: [
+            "1 Línea Telefónica de México",
+            "Hasta 1200 Min de México",
+          ],
+        },
+        {
+          title: "Pa'quete Comuniques",
+          features: [
+            "1 Línea Telefónica de México",
+            "IVR Personalizado",
+            "5 Extensiones internas",
+            "Llamadas ilimitadas* de México",                        
+          ],
+        },        
+      ],
+    },
+    billingMetohd: {
+      title: "Paquete Cobranza",
+      badge: "Premuim",
+      points: [
+        "PBXDialer 30",
+        "2 Líneas Telefónicas, 2 Canales",
+        "4,000Sms Masivos",
+        "Bolsa de Minutos: 5,000Min Fijos; 15,0000Min Telcel; 10,000Min Otros;",
+      ],
+      price: "+IVA MXN",
+      plan: "Al Mes",
+      button: "Contratar",
+    },    
+  },
+  smePackages: {
+    hero: {
+      title: "Paquetes Pyme",
+      description: "Con un paquete de telefonía para Pymes, decides el rumbo de tu negocio",
+      button: "Ver planes",
+    },
+    businessPotential: {
+      title: "¡Maximiza el Potencial de Tu Empresa!",
+      description: "Paquete especial para pequeñas y medianas empresas, soluciones de comunicación empresarial modernas y eficientes a través de nuestros servicios de Troncales SIP y Conmutador en la Nube.",
+    },
+    smePackage: {
+      badge: "¡Contrata Ya!",
+      title: "¿Porqué un Paquete Pyme?",
+      pymes: [
+        {
+          "title": "Conmutador en la Nube",
+          "description": "Facilita la gestión de comunicaciones entre departamentos dentro de la empresa.",
+        },
+        {
+          "title": "Bolsa de minutos",
+          "description": "Plan de Minutos para empezar a realizar llamadas a teléfonos fijos y celulares.",
+        },
+        {
+          "title": "Microsite",
+          "description": "Un sitio web es la mejor manera de tener una mejor presentación hacia tus clientes.",
+        },
+        {
+          "title": "Líneas Telefónicas",
+          "description": "Las líneas telefónicas son una opción económica y flexible que permite mejorar la imagen de la empresa.",
+        },
+        {
+          "title": "Equipo Telefónico",
+          "description": "Incluye funciones para silenciar, transferir y realizar llamadas con hasta 3 personas en simultáneo.",
+        },
+        {
+          "title": "SMS Marketing",
+          "description": "Envía miles de SMS en solo 3 pasos, perfectos para campañas y recordatorios para los clientes.",
+        },                                        
+      ],
+    },  
+    smePrices: {
+      badge: "Ahorra y Crece Hoy",
+      title: "Paquetes Pymes",
+      pyme:"PYME",
+      price: "Mxn+iva",
+      rec: "Contratación",
+      ren: "Renovación",
+      plan: "Al Mes",
+      pricesPyme: [
+        {
+          title: "PLUS 2",
+          features: [
+            "Conmutador PBX30",
+            "4 Líneas Telefónicas 5 Canales c/u",
+            "Fijos: 1500 Minutos",
+            "Celular: 4500 Minutos",
+            "3 Teléfonos IP GXP1610",
+            "1 Teléfono IP GXP2160",            
+          ],
+        },
+        {
+          title: "PLUS 3",
+          features: [
+            "Conmutador PBX60",
+            "6 Líneas Telefónicas 10 Canales c/u",
+            "Fijos: 3000 Minutos",
+            "Celular: 7000 Minutos",
+            "9 Teléfonos IP GXP1610",
+            "1 Teléfono IP GXP2160",
+          ],
+        },
+        {
+          title: "ULTIMATE PRO",
+          features: [
+            "Conmutador PBX30",
+            "3 Líneas Telefónicas 10 Canales c/u",
+            "Fijos: 1500 Minutos",
+            "Celular: 4500 Minutos",
+            "4 Teléfonos IP GXP1610",
+            "Microsite",
+            "Hosting + Dominio",
+            "500 SMS Masivos",
+          ],
+        },
+      ],
+    }, 
+  },
 };

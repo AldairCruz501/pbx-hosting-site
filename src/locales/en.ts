@@ -280,4 +280,499 @@ export default {
       "title": "Technologies and Alliances"
     },
   },
+  ipTelephony: {
+    "hero": {
+      "title1": "Business VoIP",
+      "title2": "Telephony",
+      "description": "Improve your business communications and reduce costs with our secure, reliable, and personalized VoIP technology. We offer solutions tailored to your needs, with professional support and advanced tools for efficient management of your business calls. Take your communications to the next level with us.",
+      "button": "Get a Quote",
+    },
+    "jumbotron": {
+      "title": "What is IP Telephony?",
+      "descp1": "",
+      "descp2": "IP Telephony",
+      "descp3": "(Internet Protocol) is a technology that allows telephone calls to be made using an internet connection instead of traditional landline-based telephony infrastructure. IP telephony uses Voice over IP",
+      "descp4": "(VoIP)",
+      "descp5": "technology, which converts voice into digital data packets that are transmitted over the internet.",
+    },
+    "jumbotron2": {
+      "title": "Discover why it's the best option for your business",
+      "descp1": "",
+      "descp2": "IP Telephony",
+      "descp3": "allows you to integrate multiple communications applications into a single platform, improving collaboration and efficiency in business processes.",
+      "points": [
+        "Better Audio Quality",
+        "Greater Savings",
+        "Flexibility",
+        "Easy Setup",
+        "Multi-Device",
+        "Advanced Features",
+      ],
+    },
+    "titleCarousel": [
+      "IP Telephony",
+      "Features",
+    ],
+    telfunctions: [ 
+      {
+        title: "Save on calls",
+      },
+      {
+        title: "No geographical limits",
+      },
+      {
+        title: "24/7 support",
+      },
+      {
+        title: "Portability",
+      },
+      {
+        title: "HD call quality",
+      },
+      {
+        title: "800 Toll-Free line",
+      },
+    ],
+    "benfitsTitle": [
+      "Business Phone Line",
+      "Provides a reliable, high-quality connection to facilitate internal and external communications within the organization.",
+      "Get a Quote",
+    ],
+    benfits: [
+      {
+        title: "Stable Connection",
+        description: "Clear and uninterrupted communication.",
+      },
+      {
+        title: "Multiple Lines",
+        description: "Excellent simultaneous call management.",
+      },
+      {
+        title: "Advanced Features",
+        description: "Improve efficiency and productivity.",
+      },
+      {
+        title: "Scalability",
+        description: "Adaptable to business growth to meet needs.",
+      },
+    ],
+    "tabs": {
+      "prices": {
+        "tab": "Prices",
+        "title1": "IP Telephony",
+        "title2": "Prices",
+        "description": "A sales agent is ready to assist you and provide personalized service.",
+        "button": "Contract",
+      },
+      "portability": {
+        "tab": "Portability",
+        "title": "Portability",
+        "description": "If you already have virtual lines with another provider and they are failing... Port your lines to us.",
+        "cards": [
+          {
+            "title": "2-Channel Line",
+            "price": "840",
+            "plan": "MXN+VAT / Annual",
+          },
+          {
+            "title": "10-Channel Line",
+            "price": "1,680",
+            "plan": "MXN+VAT / Annual",
+          },
+        ],
+      },
+    },
+    solutions: [
+      {
+        "title": "offers solutions for all types of businesses",
+      },
+      {
+        title: "Callcenter",
+      },
+      {
+        title: "Healthcare",
+      },
+      {
+        title: "Hotels",
+      },
+      {
+        title: "eCommerce",
+      },
+      {
+        title: "Schools",
+      },
+      {
+        "title": "Real Estate",
+      },
+      {
+        title: "Transportation",
+      },
+      {
+        title: "Insurance",
+      },
+      {
+        "title": "Restaurants",
+      },
+      {
+        "title": "Government",
+      },
+      {
+        "title": "Finance",
+      },
+      {
+        "title": "ContactCenter",
+      },
+    ],
+    "cloudSwitch": {
+      "title":"Cloud Switch",
+      "badge": "Virtual Switch",
+      "subtitle": "CLOUD PBX",
+      "description": "Our cloud switch gives you complete flexibility and freedom by eliminating the need for physical equipment on your premises. The entire system is hosted in the cloud, which means you can access it from anywhere, anytime, simply with an internet connection.",
+      "button": "See More",
+    },
+  },
+  sipLine: {
+    "hero": {
+      "title": [
+        "SIP",
+        "Trunking",
+      ],
+      "description": "A SIP trunk is a VoIP technology that allows calls and other communication services to be made over the Internet using the SIP protocol, which manages the initiation, modification, and termination of sessions such as voice and video calls.",
+      "button": "Discover the Advantages of SIP Trunking",
+    },
+    "modal": {
+      "title": "Advantages of SIP Trunk",
+      "button": "Close"
+    },
+    advantages: [
+      {
+        title: "Great Savings",
+        description: "Thanks to data transmission over the internet, it's cheaper than traditional telephone service.",
+      },
+      {
+        title: "Geolocation",
+        description: "Allows calls to be routed across different geographic locations, which can be beneficial for companies with an international presence.",
+      },
+      {
+        title: "Compatibility",
+        description: "Facilitates integration with IP PBXs and other modern telecommunications equipment.",
+      },
+    ],
+    "sipCost": {
+      "title1": "SIP Trunk",
+      "title2": "Cost",
+      "description": "Don't miss this opportunity to transform your way of communicating and, at the same time, significantly reduce your operating costs. Join the communications revolution with us and experience the freedom of a free",
+      "badge":"SIP Trunk",
+      "card": {
+        "title":"Free",
+        "points": [
+          "Unlimited Trunks",
+          "Statistics",
+          "Web Panel",
+          "Technical Support",
+        ],
+        "button": "Contract",
+      },
+      "button": "VOIP Packages",
+    },
+    "sipOperation": {
+      "badge": "How does a SIP Trunk work?",
+      "title": "SIP Trunk Operation",
+    },
+    steps: [
+      {
+        title: "1. Call Initiation",
+        content: "A user initiates a call from a telephone connected to a telephone system (PBX).",
+      },
+      {
+        title: "2. Internal Routing",
+        content: "If the call is internal (for example, between two extensions in the same company), the PBX routes the call directly to the destination telephone.",
+      },
+      {
+        title: "3. External Routing",
+        content: "If the call is external, the PBX decides how to handle it. It can send it through a SIP trunk or to the PSTN network, depending on the configuration",
+      },
+      {
+        title: "4. Communication with the PSTN",
+        content: "If the call is directed to a number outside the company's network, the PBX sends it to the PSTN network, which connects the call to the final recipient.",
+      },
+      {
+        title: "5. Communication through the SIP Trunk",
+        content: "If the call is made through a SIP trunk, the PBX uses this SIP-based connection to route the call to the VoIP network or the Internet.",
+      },
+      {
+        title: "6. Connection to the PSTN Network",
+        content: "If the call originates on a VoIP network and is directed to a number on the PSTN network, the trunk SIP acts as a bridge, connecting the call through the PSTN.",
+      },
+      {
+        title: "7. Communication over the Internet",
+        content: "In the case of pure VoIP calls, communication takes place over the Internet infrastructure using VoIP protocols such as SIP.",
+      },
+      {
+        title: "8. Conversation and Termination",
+        content: "Once the call has been properly routed, the users can talk to each other. The conversation continues until one of them hangs up, at which point the call is terminated.",
+      },                                          
+    ],
+  },
+  telephoneLine: {
+    "hero": {
+      "title": "Telephone Line",
+      "description": "Connect your business to the future with clear and reliable calls over the internet.",
+      "button": "See prices",
+    },
+    purposes: [
+      {
+        title: "What does a softphone do?",
+      },
+      {
+        title: "Caller ID",
+        description: "It will let you know who's on the other end before you answer.",
+      },
+      {
+        title: "Multiplatform",
+        description: "Our virtual line is compatible with a variety of devices and operating systems.",
+      },
+      {
+        title: "Contacts",
+        description: "Keep your contact list organized and accessible from anywhere.",
+      },
+      {
+        title: "Voicemail",
+        description: "With our efficient voicemail, you can receive and check messages even when you can't answer the phone.",
+      },
+      {
+        title: "Use Your Number",
+        description: "Keep your current number by porting it to us.",
+      },
+      {
+        title: "Flexibility",
+        description: "Our virtual line gives you the freedom to tailor your experience to your needs.",
+      },                              
+    ], 
+    qualities: [ 
+      {
+        title: "Incoming Channels",
+        description: "This is where you can make a call. One channel allows one call. If your virtual number has two incoming channels, it can only receive up to two calls simultaneously, and subsequent calls will be bounced.",
+      },
+      {
+        title: "VoIP Balance",
+        description: "Virtual credit that allows you to make calls over the internet to different destinations, both landlines and mobiles, at an excellent price compared to other analog telephone companies.",
+      },
+    ], 
+    prices: [
+      {
+        badge: "Telephone Lines",
+        title: "Telephone Line Prices",
+        country: "Country:",
+        plan: "Annual",
+        price: "+VAT MXN",
+        button: "To buy"
+      },
+      {
+        badge: "2 Channels",
+        title: "Telephone Line",
+        country: "Mexico",
+      },
+      {
+        badge: "10 Channels",
+        title: "Telephone Line",
+        country: "Mexico",
+      },
+      {
+        badge: "2 Channels",
+        title: "Telephone Line",
+        country: "United States",
+      },
+    ],    
+  },
+  voipPackages: {
+    "hero": {
+      "badge": "Callcenter Solutions",
+      "title": "Improve productivity and customer satisfaction",
+      "description": "Transform your call center with our IP telephony solution. Maximize efficiency, optimize resources, and deliver an exceptional customer service experience. Discover how our technology will revolutionize your call center operations!",
+      "button": "See Plans",                  
+    },
+    "officesTitle": "The office goes with you",
+    offices: [
+      {
+        title: "Easy to Use",
+        description: "VoIP services are typically easy to set up and get up and running. They don't require expensive hardware or complicated installations, simplifying implementation for home office users.",
+      },
+      {
+        title: "Flexible",
+        description: "You can keep your office phone number no matter where you are. This allows you to work from different locations without changing your contact number.",
+      },
+      {
+        title: "Mobility",
+        description: "You can access your phone line from anywhere with an internet connection, allowing you to stay connected and productive even when you're away from your home office.",
+      },
+      {
+        title: "Cost Savings",
+        description: "VoIP services are typically cheaper than traditional phone lines, which can result in significant savings for you as a home-based employee.",
+      },
+      {
+        title: "Scalable",
+        description: "VoIP services are highly scalable, meaning you can add or remove phone lines based on your business needs.",
+      },
+      {
+        title: "Compatible",
+        description: "VoIP services are typically compatible with a wide variety of devices, such as IP phones, computers, tablets, and smartphones.",
+      },  
+    ],
+    customIVR: {
+      title: "Custom",
+      subtitle: "IVR",
+      description: "Our custom IVR is like the perfect host for your phone calls. This essential feature offers a warm and friendly voice that welcomes your customers and guides them through a menu of options specifically designed to meet their needs.",
+      points: [
+        {
+          title: "Professional",
+          subtitle: "Voice",
+        },
+        {
+          title: "Simplified",
+          subtitle: "Navigation",
+        },
+        {
+          title: "Time",
+          subtitle: "Saving",
+        },
+        {
+          title: "Personalized",
+          subtitle: "",
+        },
+        {
+          title: "Immediate",
+          subtitle: "Information",
+        },
+        {
+          title: "Modifiable",
+          subtitle: "",
+        },                                        
+      ],
+    },
+    voipPrice: {
+      title: "VOIP Packages Price",
+      price: "+VAT MXN",
+      plan: "Per Month",      
+      button: "Contract",
+      pricesVoip: [
+      {
+        title: "Residential Plan",
+        features: [
+          "1 Mexico Phone Line",
+          "Up to 1200 Minutes from Mexico",
+        ],
+      },
+      {
+        title: "Pa'quete Comuniques Package",
+        features: [
+          "1 Mexico Phone Line",
+          "Custom IVR",
+          "5 Internal Extensions",
+          "Unlimited* Calls from Mexico",
+          ],
+        },
+      ],
+    },
+    billingMetohd: {
+      title: "Collection Package",
+      badge: "Premuim",
+      points: [
+        "PBXDialer 30",
+        "2 Phone Lines, 2 Channels",
+        "4,000 Bulk SMS",
+        "Minute Package: 5,000 Fixed Minutes; 15,000 Telcel Minutes; 10,000 Other Minutes;",
+      ],
+      price: "+VAT MXN",
+      plan: "Per Month",      
+      button: "Contract",
+    },
+  },
+  smePackages: {
+    hero: {
+      title: "SME Packages",
+      description: "With a SME phone package, you decide the direction of your business.",
+      button: "See plans",
+    },
+    businessPotential: {
+      title: "Maximize Your Business's Potential!",
+      description: "A special package for small and medium-sized businesses, offering modern and efficient business communications solutions through our SIP Trunking and Cloud Switch services.",
+    },
+    smePackage: {
+      badge: "Sign Up Now!",
+      title: "Why an SME Package?",
+      pymes: [
+        {
+          "title": "Cloud Switchboard",
+          "description": "Facilitates the management of communications between departments within the company.",
+        },
+        {
+          "title": "Minutes Pool",
+          "description": "A Minute Plan to start making calls to landlines and cell phones.",
+        },
+        {
+          "title": "Microsite",
+          "description": "A website is the best way to present yourself better to your clients.",
+        },
+        {
+          "title": "Telephone Lines",
+          "description": "Telephone lines are an economical and flexible option that allows you to improve your company's image.",
+        },
+        {
+          "title": "Telephone Equipment",
+          "description": "Includes functions to mute, transfer, and make calls with up to 3 people simultaneously.",
+        },
+        {
+          "title": "SMS Marketing",
+          "description": "Send thousands of SMS in just 3 steps, perfect for campaigns and customer reminders.",
+        },                                        
+      ],      
+    }, 
+    smePrices: {
+      badge: "Save and Grow Today",
+      title: "SME Packages",
+      pyme:"SME",
+      price: "Mxn+vat",
+      rec: "Recruitment",
+      ren: "Renewal",
+      plan: "Per Month",
+      pricesPyme: [
+        {
+          title: "PLUS 2",
+          features: [
+            "PBX30 Switch",
+            "4 Telephone Lines, 5 Channels each",
+            "Landlines: 1500 Minutes",
+            "Cellular: 4500 Minutes",
+            "3 GXP1610 IP Phones",
+            "1 GXP2160 IP Phone",
+          ],
+        },
+        {
+          title: "PLUS 3",
+          features: [
+            "PBX60 Switch",
+            "6 Telephone Lines, 10 Channels each",
+            "Landlines: 3000 Minutes",
+            "Cellular: 7000 Minutes",
+            "9 GXP1610 IP Phones",
+            "1 GXP2160 IP Phone",
+          ],
+        },
+        {
+          title: "ULTIMATE PRO",
+          features: [
+            "Switch PBX30",
+            "3 Telephone Lines, 10 Channels each",
+            "Landlines: 1500 Minutes",
+            "Cell Phones: 4500 Minutes",
+            "4 GXP1610 IP Phones",
+            "Microsite",
+            "Hosting + Domain",
+            "500 Bulk SMS",
+          ],
+        },
+      ],      
+    },    
+  },    
 };

@@ -1,6 +1,7 @@
 export interface IPTelephonyData {
     telfunctions: TelephonyFunction[];
     benfits: BenfitsIPTelephony[];
+    tabs: TabIPTelephony[];
     solutions: Solution[];
     advantages: Advantage[];
     steps: Step[];
@@ -15,80 +16,85 @@ export interface IPTelephonyData {
 }
 
 export interface TelephonyFunction {
-    titulo: string,
+    tituloKey: string,
     img: string,
 }
 
 export interface BenfitsIPTelephony {
-    titulo: string,
-    descripcion: string,
+    tituloKey: string,
+    descripcionKey: string,
+}
+
+export interface TabIPTelephony {
+    tituloKey: string,
+    icono: string,
 }
 
 export interface Solution {
-    titulo: string,
+    tituloKey: string,
     img: string,
 }
 
 export interface Advantage {
-    titulo: string,
-    descripción: string,
+    tituloKey: string,
+    descripcionKey: string,
 }
 
 export interface Step {
     id: number,
     icono: string,
-    titulo: string,
-    contenido: string,
+    tituloKey: string,
+    contenidoKey: string,
     color: string,
 }
 
 export interface Purpose {
-    titulo: string,
-    descripcion: string,
+    tituloKey: string,
+    descripcionKey: string,
     icono: string,
 }
 
 export interface Qualitie {
     img: string,
-    titulo: string,
-    descrpition: string,
+    tituloKey: string,
+    descrpitionKey: string,
 }
 
 export interface Price {
-    insignia: string,
-    titulo: string,
+    insigniaKey: string,
+    tituloKey: string,
     precio: string,
-    pais: string,
+    paisKey: string,
     imgPais: string,
 }
 
 export interface Office {
-    titulo: string,
-    descripcion: string,
+    tituloKey: string,
+    descripcionKey: string,
     icono: string,
 }
 
 export interface IVR {
     icono: string,
-    titulo: string,
-    subtitulo: string,
+    tituloKey: string,
+    subtituloKey: string,
 }
 
 export interface PriceVoip {
-    titulo: string,
+    tituloKey: string,
     precio: string,
-    características: string[]
+    característicasKey: string[]
 }
 
 export interface Pyme {
-    titulo: string,
-    descripcion: string,
+    tituloKey: string,
+    descripcionKey: string,
     icono: string,
 }
 
 export interface PricePyme {
-    titulo: string,
+    tituloKey: string,
     precio: string,
     mensualidad: string,
-    características: string[]
+    caracteristicasKey: string[]
 }

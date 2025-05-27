@@ -1,5 +1,8 @@
 <script lang="ts" setup>
 import { ipTelephonyData } from '../data/iptelephony';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 </script>
 
 <template>
@@ -11,15 +14,15 @@ import { ipTelephonyData } from '../data/iptelephony';
                 :delay="200"
                 :duration="1200"
             >
-                <h2 class="fw-bold mb-4 text-center display-4">¿Qué hace un softphone?</h2>
+                <h2 class="fw-bold mb-4 text-center display-4">{{ t('telephoneLine.purposes.0.title') }}</h2>
                 <div class="row">
                     <div class="col-12 col-xl-6" v-for="(purpose, index) in ipTelephonyData.purposes" :key="index">
                         <div class="value-card p-4 rounded-4 h-100 d-flex flex-column align-items-start text-start transition">
                             <div class="rounded-circle bg-white text-value fw-bold d-flex justify-content-center align-items-center mb-3" style="width: 60px; height: 60px;">
                                 <i :class="purpose.icono"></i>
                             </div>
-                            <h5 class="fw-bold">{{ purpose.titulo }}</h5>
-                            <p class="text-white-50 small">{{ purpose.descripcion }}</p>
+                            <h5 class="fw-bold">{{ t(purpose.tituloKey) }}</h5>
+                            <p class="text-white-50 small">{{ t(purpose.descripcionKey) }}</p>
                         </div>
                     </div>
                 </div>

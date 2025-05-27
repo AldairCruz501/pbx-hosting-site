@@ -3,6 +3,9 @@
 	import HeaderComponent from '../../../components/HeaderComponent.vue';
 	import LoaderComponent from '../../../components/LoaderComponent.vue';
 	import { ipTelephonyData } from '../../../data/iptelephony';
+	import { useI18n } from 'vue-i18n';
+
+	const { t } = useI18n();
 
 </script>
 
@@ -13,13 +16,13 @@
 		<div class="container bg-white p-5 border-1 animate__animated animate__fadeInDown animate__delay-3s">
 			<div class="row g-4">
 				<div class="col-12 col-lg-7 pt-lg-5 mt-lg-5">
-					<h1 class="display-3 fw-bold text-empresary">Paquetes Pyme</h1>
+					<h1 class="display-3 fw-bold text-empresary">{{ t('smePackages.hero.title') }}</h1>
 					<p class="lead mb-4">
-						Con un paquete de telefonía para Pymes, decides el rumbo de tu negocio
+						{{ t('smePackages.hero.description') }}
 					</p>
 					<div class="text-start">
 						<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#adventagesModal">
-							Ver Planes
+							{{ t('smePackages.hero.button') }}
 						</button>
 					</div>
 				</div>
@@ -45,15 +48,15 @@
 					</div>
 				</div>
 				<div 
-					class="col-12 col-lg-6 rounded-3 bg-danger p-5"
+					class="col-12 col-lg-6 rounded-3 bg-color p-5"
 					v-motion-slide-visible-right
 					:delay="200"
 					:duration="1200"
 				>
 					<div class="m-5">
-						<h2 class="display-5 fw-bold text-white text-center mb-4">¡Maximiza el Potencial de Tu Empresa!</h2>
+						<h2 class="display-5 fw-bold text-white text-center mb-4">{{ t('smePackages.businessPotential.title') }}</h2>
 						<p class="mb-4 text-light fs-5 text-justify">
-							Paquete especial para pequeñas y medianas empresas, soluciones de comunicación empresarial modernas y eficientes a través de nuestros servicios de Troncales SIP y Conmutador en la Nube.
+							{{ t('smePackages.businessPotential.description') }}
 						</p>
 					</div>
 				</div>
@@ -68,23 +71,23 @@
 			:duration="1200"
 		>
 			<div class="text-center pb-5">
-				<span class="fs-2 fw-semibold">¡Contrata Ya!</span>
-				<h3 class="display-4 fw-bold text-empresary lh-1">¿Porqué un Paquete Pyme?</h3>
+				<span class="fs-2 fw-semibold">{{ t('smePackages.smePackage.badge') }}</span>
+				<h3 class="display-4 fw-bold text-empresary lh-1">{{ t('smePackages.smePackage.title') }}</h3>
 			</div>
 			<div class="row g-3">
 				<div class="col-12 col-xl-6">
 					<div class="row g-4">
-						<div class="col-12 col-md-6" v-for="pyme in ipTelephonyData.pymes" :key="pyme.titulo">
+						<div class="col-12 col-md-6" v-for="pyme in ipTelephonyData.pymes" :key="pyme.tituloKey">
 							<div class="value-card h-100 d-flex flex-row align-items-start text-start transition gap-3">
 								<!-- Icono a la izquierda -->
-								<div class="rounded-circle bg-white text-value fw-bold d-flex justify-content-center align-items-center border border-danger" style="width: 60px; height: 60px; flex-shrink: 0;">
+								<div class="rounded-circle bg-white text-value fw-bold d-flex justify-content-center align-items-center border-color" style="width: 60px; height: 60px; flex-shrink: 0;">
 									<i :class="pyme.icono" class="fs-3 text-empresary"></i>
 								</div>
 
 								<!-- Texto a la derecha -->
 								<div>
-									<h5 class="fw-bold fs-4 text-empresary mb-1">{{ pyme.titulo }}</h5>
-									<p class="fs-6 text-justify mb-0">{{ pyme.descripcion }}</p>
+									<h5 class="fw-bold fs-4 text-empresary mb-1">{{ t(pyme.tituloKey )}}</h5>
+									<p class="fs-6 text-justify mb-0">{{ t(pyme.descripcionKey) }}</p>
 								</div>
 							</div>
 						</div>
@@ -106,39 +109,39 @@
 			:duration="1200"
 		>
 			<div class="text-center pb-5">
-				<span class="fs-2 fw-semibold">Ahorra y Crece Hoy</span>
-				<h3 class="display-4 fw-bold text-empresary lh-1">Paquetes Pymes</h3>
+				<span class="fs-2 fw-semibold">{{ t('smePackages.smePrices.badge') }}</span>
+				<h3 class="display-4 fw-bold text-empresary lh-1">{{ t('smePackages.smePrices.title') }}</h3>
 			</div>	
 			<div class="row g-3">
 				<div class="col-12 col-xl-4 card-efect" v-for="pyme in ipTelephonyData.pricesPyme">
 					<div class="card card-price h-100 d-flex flex-column shadow rounded-4 p-4 mx-auto" style="max-width: 370px;">
 						<div class="text-center mb-1">
 							<i class="bi bi-building-fill-gear display-3"></i>
-							<h5 class="mt-3 fw-semibold">PYME</h5>
+							<h5 class="mt-3 fw-semibold">{{ t('smePackages.smePrices.pyme') }}</h5>
 						</div>
 						<div class="text-center mb-3">
-							<span class="badge bg-primary bg-opacity-10 text-primary fw-medium fs-3">{{ pyme.titulo }}</span>
-							<h3 class="fw-bold mt-4 mb-0 fs-1">${{ pyme.precio }} <span class="small fs-5 text-muted text-uppercase">Mxn+iva</span></h3>
-							<small class="text-muted">Contratación</small>
+							<span class="badge bg-primary bg-opacity-10 text-primary fw-medium fs-3">{{ t(pyme.tituloKey) }}</span>
+							<h3 class="fw-bold mt-4 mb-0 fs-1">${{ pyme.precio }} <span class="small fs-5 text-muted text-uppercase">{{ t('smePackages.smePrices.price') }}</span></h3>
+							<small class="text-muted">{{ t('smePackages.smePrices.rec') }}</small>
 						</div>
 
 						<hr>
 						<div class="text-center mb-3">
-							<span class="badge bg-info bg-opacity-10 text-info fw-medium">Renovación</span>
+							<span class="badge bg-info bg-opacity-10 text-info fw-medium">{{ t('smePackages.smePrices.ren') }}</span>
 							<h3 class="fw-bold mt-2 mb-0 fs-3">${{pyme.mensualidad}} <small class="small fs-6 text-muted text-uppercase">Mxn+iva</small></h3>
-							<small class="text-muted">Al Mes</small>
+							<small class="text-muted">{{ t('smePackages.smePrices.plan') }}</small>
 						</div>
 
 						<hr>
 
 						<ul class="list-unstyled">
 							<li
-								v-for="(feature, i) in pyme.características"
+								v-for="(feature, i) in pyme.caracteristicasKey"
 								:key="i"
 								class="mb-2 d-flex align-items-start"
 							>
 								<i class="bi bi-check-circle-fill me-2 mt-1"></i>
-								<span>{{ feature }}</span>
+								<span>{{ t(feature )}}</span>
 							</li>
 						</ul>
 					</div>
@@ -163,6 +166,14 @@
 
 .text-color:hover i {
 	color: #FFFFFF !important;
+}
+
+.bg-color {
+	background-color: var(--secondary_color);
+}
+
+.border-color {
+	border: 1px solid var(--secondary_color);
 }
 
 .card-price::before {
