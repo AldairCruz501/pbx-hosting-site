@@ -105,7 +105,7 @@ export default {
       "title": "Contacto",
     },
     "copyright": {
-      "title": "All rights reserved",
+      "title": "Todos los Derechos Reservados",
     }
   },
   "whatsapp": {
@@ -774,5 +774,109 @@ export default {
         },
       ],
     }, 
+  },
+  cloudSwitch: {
+    hero: {
+      title: "Conmutadores en la Nube",
+      description: "Descubre la solución definitiva para tus necesidades de comunicación empresarial.",
+    },
+    whatSwitch: {
+      title: "¿Qué es un Conmutador en la nube?",
+      description: "Imagina un sistema telefónico que rompe con las limitaciones físicas y te permite disfrutar de una flexibilidad sin precedentes. Nuestro Conmutador en la Nube elimina la necesidad de costosos equipos físicos y te ofrece un entorno virtual donde la comunicación fluye de manera eficiente, independientemente de dónde te encuentres.",
+      featureTitle: "Características clave",
+      features: [
+        {
+          title: " Escalabilidad Total",
+          description: "Ajusta tu sistema con un clic mientras tu empresa crece, sin restricciones.",
+        },
+        {
+          title: " Acceso Remoto Total",
+          description: "Trabaja desde cualquier lugar con conexión a Internet para una colaboración sin límites.",
+        },
+        {
+          title: "Gestión Centralizada",
+          description: "Controla todo desde una interfaz web intuitiva, configurando extensiones y gestionando llamadas fácilmente.",
+        },
+        {
+          title: "Funciones Avanzadas",
+          description: "Desde conferencias hasta transferencias instantáneas, nuestro Conmutador en la Nube mejora la eficiencia y colaboración.",
+        },
+        {
+          title: "Sin Complicaciones Técnicas",
+          description: "Elimina preocupaciones de mantenimiento; nosotros manejamos la infraestructura para que puedas concentrarte en el crecimiento.",
+        },                        
+      ],
+      button: "Ver Planes",
+    },
+    functionsSwitch: {
+      title: "Funciones de un Conmutador en la Nube",
+      functions: [
+        {
+          title: "1. Crea Extensiones",
+          description: "Asigna líneas telefónicas a áreas específicas o a miembros del personal.",
+        },
+        {
+          title: "2. Transfiere Llamadas",
+          description: "Permite redirigir llamadas a diferentes extensiones o áreas de manera eficiente, optimizando la comunicación interna.",
+        },
+        {
+          title: "3. Conferencia de Llamadas",
+          description: "Facilita la colaboración y la toma de decisiones entre varios miembros del equipo.",
+        },                
+      ]
+    },
+    featuresSwitch: {
+      scalability: {
+        title: "Escalabilidad",
+        header: "Escalabilidad",
+        content: "Los conmutadores en la nube permiten escalar fácilmente el sistema telefónico de tu empresa sin necesidad de invertir en hardware adicional. Puedes agregar o eliminar líneas telefónicas y funcionalidades según las necesidades cambiantes de tu negocio, brindando flexibilidad y adaptabilidad.",
+      },
+      extension: {
+        title: "Extensiones ilimitadas",
+        header: "Extensiones ilimitadas",
+        content: "Ya sea que tengas 10 empleados o 1000, nuestras extensiones ilimitadas garantizan que cada miembro de tu equipo tenga su propia línea personalizada, mejorando la productividad, la colaboración y la atención al cliente. Simplifica tu sistema telefónico y expande tu negocio sin restricciones con nuestras extensiones ilimitadas en el conmutador en la nube.",
+      },
+      receptionist: {
+        title: "Recepcionista Virtual (IVR)",
+        header: "Recepcionista Virtual (IVR)",
+        content: "Olvídate de largas esperas y brinda una experiencia personalizada desde el primer contacto. Nuestra Recepcionista Virtual te permite gestionar y enrutar llamadas de manera eficiente, ofreciendo opciones de menú interactivas para que los clientes encuentren rápidamente lo que necesitan."
+      },
+      callQueue: {
+        title: "Cola de llamadas",
+        header: "Cola de llamadas",
+        content: "Asegura que cada llamada sea atendida en orden, dependiendo de la prioridad en que coloques cada departamento dentro de tu empresa, si en un área no responden se mande a otra y asi sucesivamente sin perder la llamada.",
+      },
+      followMe : {
+        title: "FollowMe",
+        header: "FollowMe",
+        content: "Es una característica que permite redirigir las llamadas de una extensión a otra y tiene varias aplicaciones útiles. La configuración se realiza vinculando el seguimiento de llamadas a una extensión específica y ajustando el plan de marcado según sea necesario.",
+      },
+    },
+    monts: {
+      title: "Mensual",
+      price: "+IVA MXN",
+      plan: "Al Mes",
+      button: "Contratar",
+      pricesSwitch: [
+        {
+          title: "IPPBX CLOUD 30",
+          features: [
+            "30 Llamadas Recurrentes",
+            "4GB de Ram",
+            "80GB SSD",
+            "4TB Transferencia",
+          ],
+        },
+        {
+          title: "Pa'quete Comuniques",
+          features: [
+            "1 Línea Telefónica de México",
+            "IVR Personalizado",
+            "5 Extensiones internas",
+            "Llamadas ilimitadas* de México",                        
+          ],
+        },        
+      ],
+    },    
   },
 };

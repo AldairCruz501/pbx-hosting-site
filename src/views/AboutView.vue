@@ -69,7 +69,7 @@
 	</section>
 	<CounterComponent />
 	<FundamentalsComponent 
-		v-motion-pop-visible
+		v-motion-slide-visible-bottom
 		:delay="200"
 		:duration="1200"
 	/>

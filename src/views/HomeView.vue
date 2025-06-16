@@ -109,9 +109,9 @@ const { t } = useI18n();
 	<section class="container-fluid bg-options">
       <div 
 	  	class="px-4 pt-5 text-center text-white"
-		  v-motion-pop-visible
-		  :delay="200"
-		  :duration="1200"
+			v-motion-slide-visible-bottom
+			:delay="200"
+			:duration="1200"
 	  >
 		<h1 class="display-4 fw-bold"><span class="title-dialer">PBXDialer:</span> {{ t('home.pbxDialer.title') }}</h1>
         <div class="col-lg-6 mx-auto pb-4">

@@ -774,5 +774,83 @@ export default {
         },
       ],      
     },    
-  },    
+  }, 
+  cloudSwitch: {
+    hero: {
+      title: "Cloud Switches",
+      description: "Discover the ultimate solution for your business communications needs.",
+    },
+    whatSwitch: {
+      title: "What is a Cloud Switch?",
+      description: "Imagine a phone system that breaks away from physical limitations and allows you to enjoy unprecedented flexibility. Our Cloud Switch eliminates the need for expensive physical equipment and gives you a virtual environment where communication flows efficiently, regardless of where you are.",
+      featureTitle: "Key Features",
+      features: [
+        {
+          title: "Total Scalability",
+          description: "Adjust your system with a click as your business grows, without restrictions.",
+        },
+        {
+          title: "Total Remote Access",
+          description: "Work from anywhere with an internet connection for limitless collaboration.",
+        },
+        {
+          title: "Centralized Management",
+          description: "Control everything from an intuitive web interface, easily configuring extensions and managing calls.",
+        },
+        {
+          title: "Advanced Features",
+          description: "From conferencing to instant transfers, our Cloud Switch improves efficiency and collaboration.",
+        },
+        {
+          title: "No Technical Hassles",
+          description: "Eliminate maintenance worries; we manage the infrastructure so you can focus on growth.",
+        },
+      ],
+      button: "View Plans",
+    }, 
+    functionsSwitch: {
+    title: "Cloud Switch Features",
+     functions: [
+        {
+          title: "1. Create Extensions",
+          description: "Assign phone lines to specific areas or staff members.",
+        },
+        {
+          title: "2.Transfer Calls",
+          description: "Allows you to efficiently redirect calls to different extensions or areas, optimizing internal communication.",
+        },
+        {
+          title: "3.Call Conference",
+          description: "Facilitates collaboration and decision-making among multiple team members.",
+        },
+      ]
+    },
+    featuresSwitch: {
+      scalability: {
+        title: "Scalability",
+        header: "Scalability",
+        content: "Cloud switches allow you to easily scale your business phone system without investing in additional hardware. You can add or remove phone lines and features based on your changing business needs, providing flexibility and adaptability.",
+      },
+      extension: {
+        title: "Unlimited Extensions",
+        header: "Unlimited Extensions",
+        content: "Whether you have 10 employees or 1,000, our unlimited extensions ensure that each team member has their own personalized line, improving productivity, collaboration, and customer service. Simplify your phone system and expand your business without restrictions with our unlimited extensions on the cloud switch.",
+      },
+      receptionist: {
+        title: "Virtual Receptionist (IVR)",
+        header: "Virtual Receptionist (IVR)",
+        content: "Forget about long waits and provide a personalized experience. From the first contact. Our Virtual Receptionist allows you to manage and route calls efficiently, offering interactive menu options so customers can quickly find what they need."
+      },
+      callQueue: {
+        title: "Call Queue",
+        header: "Call Queue",
+        content: "Ensures that each call is answered in order, depending on the priority you assign to each department within your company. If one area doesn't answer, it's sent to another, and so on, without losing the call.",
+      },
+      followMe: {
+        title: "FollowMe",
+        header: "FollowMe",
+        content: "This is a feature that allows you to redirect calls from one extension to another and has several useful applications. Configuration is done by linking call tracking to a specific extension and adjusting the dial plan as needed.",
+      },
+    },       
+  },   
 };

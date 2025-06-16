@@ -6,6 +6,7 @@ import AboutView from '../views/AboutView.vue'
 //Vistas de servicios
 import IPTelephonyView from '../views/services/IPTelephonyView.vue'
 import DomainsView from '../views/services/DomainsView.vue'
+import CloudSwitchView from '../views/services/CloudSwitchView.vue'
 
 
 //Vistas de Subservicios
@@ -50,6 +51,11 @@ const routes: RouteRecordRaw[] = [
     component: SMEPackagesView,
     meta: { title: 'Paquetes PyME | PbxHosting' },
   },
+  {
+    path: '/conmutador-en-la-nube',
+    component: CloudSwitchView,
+    meta: { title: 'Conmutador en la Nube | PbxHosting' },
+  },  
   {
     path: '/dominios',
     component: DomainsView,

@@ -35,13 +35,13 @@ export const servicios: Servicio[] = [
 	},
 	{
 		nameKey: "header.services.switch.title",
-		route: "/",
+		route: "/conmutador-en-la-nube",
 		icon: "bi-cloud",
 		services: [
 			{
 				nameKey: "header.services.switch.submenu.cloudswitches",
 				icon: "bi-cloud",
-				route: "/"
+				route: "/conmutador-en-la-nube"
 			}
 		],
 	},

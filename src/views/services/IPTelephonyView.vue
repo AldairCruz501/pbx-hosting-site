@@ -19,7 +19,7 @@ const selectedTab = ref(0);
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-12 col-lg-6 mb-4 animate__animated animate__slideInDown animate__delay-3s">
-					<h1 class="display-3 fw-bold text-body-emphasis lh-1 mb-3">{{ t('ipTelephony.hero.title1') }}<span class="text-empresary">{{ t('ipTelephony.hero.title2') }}</span></h1>
+					<h1 class="display-3 fw-bold text-body-emphasis lh-1 mb-3">{{ t('ipTelephony.hero.title1') }} <span class="text-empresary">{{ t('ipTelephony.hero.title2') }}</span></h1>
 					<p class="lead">
 						{{ t('ipTelephony.hero.description') }}
 					</p>
@@ -38,9 +38,9 @@ const selectedTab = ref(0);
 	<section class="bg-iptelephony">
 		<div 
 			class="container bg-white p-5 rounded shadow"
-			v-motion-pop-visible
-		  	:delay="200"
-		  	:duration="1200"
+			v-motion-fade-visible
+			:delay="200"
+			:duration="1200"
 		>
 			<div class="row g-4">
 				<div class="col-12 col-lg-6 col-xl-8">
@@ -353,9 +353,9 @@ const selectedTab = ref(0);
   background-color: #e9ecef;
 }
 .nav-tabs .nav-link.active {
-  background-color: #dc3545;
+  background-color: #027373;
   color: #fff;
-  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(53, 214, 220, 0.25);
 }
 
 
