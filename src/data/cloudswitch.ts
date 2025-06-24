@@ -91,42 +91,78 @@ export const cloudSwitchData: CloudSwitchData = {
     ],
     monts: [
         {
-            tituloKey: "",
-            precio: "",
-            caracteristicasKey: [],
-            setup: ""
+            tituloKey: "cloudSwitch.monts.pricesSwitch.0.title",
+            precio: "660",
+            caracteristicasKey: [
+                "cloudSwitch.monts.pricesSwitch.0.features.0",
+                "cloudSwitch.monts.pricesSwitch.0.features.1",
+                "cloudSwitch.monts.pricesSwitch.0.features.2",
+                "cloudSwitch.monts.pricesSwitch.0.features.3",
+            ],
+            setup: "660",
+            img: ""
         },
         {
-            tituloKey: "",
-            precio: "",
-            caracteristicasKey: [],
-            setup: ""
+            tituloKey: "cloudSwitch.monts.pricesSwitch.1.title",
+            precio: "1,320",
+            caracteristicasKey: [
+                "cloudSwitch.monts.pricesSwitch.1.features.0",
+                "cloudSwitch.monts.pricesSwitch.1.features.1",
+                "cloudSwitch.monts.pricesSwitch.1.features.2",
+                "cloudSwitch.monts.pricesSwitch.1.features.3",
+            ],
+            setup: "1,320",
+            img: ""
         },
-                {
-            tituloKey: "",
-            precio: "",
-            caracteristicasKey: [],
-            setup: ""
+        {
+            tituloKey: "cloudSwitch.monts.pricesSwitch.2.title",
+            precio: "3,330",
+            caracteristicasKey: [
+                "cloudSwitch.monts.pricesSwitch.2.features.0",
+                "cloudSwitch.monts.pricesSwitch.2.features.1",
+                "cloudSwitch.monts.pricesSwitch.2.features.2",
+                "cloudSwitch.monts.pricesSwitch.2.features.3",
+            ],
+            setup: "3,330",
+            img: ""
         },
     ],
     years: [
         {
-            tituloKey: "",
-            precio: "",
-            caracteristicasKey: [],
-            setup: ""
+            tituloKey: "cloudSwitch.years.pricesSwitch.0.title",
+            precio: "6,740",
+            caracteristicasKey: [
+                "cloudSwitch.years.pricesSwitch.0.features.0",
+                "cloudSwitch.years.pricesSwitch.0.features.1",
+                "cloudSwitch.years.pricesSwitch.0.features.2",
+                "cloudSwitch.years.pricesSwitch.0.features.3",
+            ],
+            setup: "660",
+            img: ""
         },
         {
-            tituloKey: "",
-            precio: "",
-            caracteristicasKey: [],
-            setup: ""
+            tituloKey: "cloudSwitch.years.pricesSwitch.1.title",
+            precio: "12,680",
+            caracteristicasKey: [
+                "cloudSwitch.years.pricesSwitch.1.features.0",
+                "cloudSwitch.years.pricesSwitch.1.features.1",
+                "cloudSwitch.years.pricesSwitch.1.features.2",
+                "cloudSwitch.years.pricesSwitch.1.features.3",
+            ],
+            setup: "1,320",
+            img: ""
         },
         {
-            tituloKey: "",
-            precio: "",
-            caracteristicasKey: [],
-            setup: ""
+            tituloKey: "cloudSwitch.years.pricesSwitch.2.title",
+            precio: "35,640",
+            caracteristicasKey: [
+                "cloudSwitch.years.pricesSwitch.2.features.0",
+                "cloudSwitch.years.pricesSwitch.2.features.1",
+                "cloudSwitch.years.pricesSwitch.2.features.2",
+                "cloudSwitch.years.pricesSwitch.2.features.3",
+            ],
+            setup: "3,330",
+            img: ""
         },
     ],
 }

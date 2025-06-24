@@ -1,5 +1,9 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
+import { cloudSwitchData } from '../data/cloudswitch';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 interface Tab {
   id: string;
@@ -7,8 +11,8 @@ interface Tab {
 }
 
 const tabs: Tab[] = [
-  { id: 'home3', label: 'Mensual' },
-  { id: 'profile3', label: 'Anual' },
+  { id: 'home3', label: 'cloudSwitch.monts.title' },
+  { id: 'profile3', label: 'cloudSwitch.years.title' },
 ];
 
 const activeTab = ref<string>('home3');
@@ -31,7 +35,7 @@ const selectTab = (tabId: string) => {
           role="tab"
           @click="selectTab(tab.id)"
         >
-          {{ tab.label }}
+          {{ t(tab.label) }}
         </button>
       </li>
     </ul>
@@ -47,26 +51,29 @@ const selectTab = (tabId: string) => {
           <div class="row g-4 justify-content-center">
             <div
                 class="col-12 col-sm-10 col-md-6 col-lg-4 card-efect"
-                
-                
+                v-for="(price,index) in cloudSwitchData.monts"
+                :key="index"
             >
               <div class="card card-price h-100 d-flex flex-column p-3 shadow-sm border-color">
                 <div class="card-body d-flex flex-column align-items-center text-center">
-                  <h5 class="card-title fs-4 mb-3"></h5>
+                  <h5 class="card-title fs-4 mb-3">{{ t(price.tituloKey) }}</h5>
                   <h4 class="fw-bold fs-1">
-                      $
-                      <small class="text-muted fs-6"></small>
+                      ${{ price.precio }}
+                      <small class="text-muted fs-6">{{ t('cloudSwitch.monts.price') }}</small>
                   </h4>
-                  <p class="text-muted mb-4"></p>
-                  <a href="#" class="btn btn-light border-0 fw-semibold w-50 mb-4 d-none d-lg-inline-grid"></a>
-                  <a href="#" class="btn btn-light border-0 fw-semibold w-100 mb-4 d-inline-grid d-lg-none"></a>
+                  <p class="text-muted mb-3 fs-4">{{ t('cloudSwitch.monts.plan') }}</p>
+                  <span class="text-muted mb-4">SetUp ${{ price.setup }} <small class="text-muted fs-6">{{ t('cloudSwitch.monts.price') }}</small></span>
+
+                  <a href="#" class="btn btn-light border-0 fw-semibold w-50 mb-4 d-none d-lg-inline-grid">{{ t('cloudSwitch.monts.button') }}</a>
+                  <a href="#" class="btn btn-light border-0 fw-semibold w-100 mb-4 d-inline-grid d-lg-none">{{ t('cloudSwitch.monts.button') }}</a>
                   <ul class="list-unstyled text-start w-100">
                     <li
-
+                      v-for="(feature, i) in price.caracteristicasKey"
+                      :key="i"
                       class="mb-2 d-flex align-items-start"
                     >
                       <i class="bi bi-check-circle-fill text-value me-2 mt-1"></i>
-                      <span></span>
+                      <span>{{ t(feature) }}</span>
                     </li>
                   </ul>
                 </div>
@@ -81,18 +88,40 @@ const selectTab = (tabId: string) => {
         id="profile3"
         role="tabpanel"
       >
-        <h4>Profile Content</h4>
-        <p>This is the profile tab content with gradient style.</p>
-      </div>
+        <div class="container py-5">
+          <div class="row g-4 justify-content-center">
+            <div
+                class="col-12 col-sm-10 col-md-6 col-lg-4 card-efect"
+                v-for="(price,index) in cloudSwitchData.years"
+                :key="index"
+            >
+              <div class="card card-price h-100 d-flex flex-column p-3 shadow-sm border-color">
+                <div class="card-body d-flex flex-column align-items-center text-center">
+                  <h5 class="card-title fs-4 mb-3">{{ t(price.tituloKey) }}</h5>
+                  <h4 class="fw-bold fs-1">
+                      ${{ price.precio }}
+                      <small class="text-muted fs-6">{{ t('cloudSwitch.monts.price') }}</small>
+                  </h4>
+                  <p class="text-muted mb-3 fs-4">{{ t('cloudSwitch.monts.plan') }}</p>
+                  <span class="text-muted mb-4">SetUp ${{ price.setup }} <small class="text-muted fs-6">{{ t('cloudSwitch.monts.price') }}</small></span>
 
-      <div
-        class="tab-pane fade"
-        :class="{ show: activeTab === 'contact3', active: activeTab === 'contact3' }"
-        id="contact3"
-        role="tabpanel"
-      >
-        <h4>Contact Content</h4>
-        <p>This is the contact tab content with gradient style.</p>
+                  <a href="#" class="btn btn-light border-0 fw-semibold w-50 mb-4 d-none d-lg-inline-grid">{{ t('cloudSwitch.monts.button') }}</a>
+                  <a href="#" class="btn btn-light border-0 fw-semibold w-100 mb-4 d-inline-grid d-lg-none">{{ t('cloudSwitch.monts.button') }}</a>
+                  <ul class="list-unstyled text-start w-100">
+                    <li
+                      v-for="(feature, i) in price.caracteristicasKey"
+                      :key="i"
+                      class="mb-2 d-flex align-items-start"
+                    >
+                      <i class="bi bi-check-circle-fill text-value me-2 mt-1"></i>
+                      <span>{{ t(feature) }}</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -154,5 +183,50 @@ const selectTab = (tabId: string) => {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.card-price::before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background: transparent !important;
+    z-index: -1;
+    transition: opacity 0.4s linear;
+    opacity: 0;
+    border-radius: 10px !important;
+}
+
+.card-price:hover h5,
+.card-price:hover p {
+    color: black;
+    transition: 0.4s all;
+}
+
+.card-efect {
+    overflow: hidden;
+}
+
+.card-efect:hover .card {
+    -webkit-transform:scale(-1);transform:scale(0.95);
+}
+.text-justify {
+    text-align: justify;
+}
+@media (max-width: 575.98px) {
+    ul li {
+        font-size: 15px;
+        flex-direction:row;
+        align-items: flex-start;
+        gap: 15px;
+    } 
+}
+.btn-info  {
+    background-color: #FF972C !important;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 25px;
+    color: #fff !important;
+    font-weight: 700;
+    font-size: 20px;
 }
 </style>

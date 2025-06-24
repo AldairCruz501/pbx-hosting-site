@@ -851,6 +851,76 @@ export default {
         header: "FollowMe",
         content: "This is a feature that allows you to redirect calls from one extension to another and has several useful applications. Configuration is done by linking call tracking to a specific extension and adjusting the dial plan as needed.",
       },
-    },       
+    }, 
+    monts: {
+      title: "Monthly",
+      price: "+VAT MXN",
+      plan: "Per month",
+      button: "Contract",
+      pricesSwitch: [
+        {
+          title: "IPPBX CLOUD 30",
+          features: [
+            "30 recurring calls",
+            "4GB of RAM",
+            "80GB SSD",
+            "4TB transfer",
+          ],
+        },
+        {
+          title: "IPPBX CLOUD 60",
+          features: [
+            "60 recurring calls",
+            "8GB of RAM",
+            "160GB SSD",
+            "5TB transfer",                        
+          ],
+        },
+        {
+          title: "IPPBX CLOUD 150",
+          features: [
+            "150 recurring calls",
+            "RAM 16-32GB",
+            "192GB SSD",
+            "8TB transfer",                        
+          ],
+        },                  
+      ],
+    }, 
+    years: {
+      title: "Annual",
+      price: "+VAT MXN",
+      plan: "Per month",
+      button: "Contract",
+      pricesSwitch: [
+        {
+          title: "IPPBX CLOUD 30",
+          features: [
+            "30 recurring calls",
+            "4GB of RAM",
+            "80GB SSD",
+            "4TB transfer",
+          ],
+        },
+        {
+          title: "IPPBX CLOUD 60",
+          features: [
+            "60 recurring calls",
+            "8GB of RAM",
+            "160GB SSD",
+            "5TB transfer",                        
+          ],
+        },
+        {
+          title: "IPPBX CLOUD 150",
+          features: [
+            "150 recurring calls",
+            "RAM 16-32GB",
+            "192GB SSD",
+            "8TB transfer",                        
+          ],
+        },                  
+      ],
+    },            
   },   
 };

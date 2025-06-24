@@ -868,15 +868,59 @@ export default {
           ],
         },
         {
-          title: "Pa'quete Comuniques",
+          title: "IPPBX CLOUD 60",
           features: [
-            "1 Línea Telefónica de México",
-            "IVR Personalizado",
-            "5 Extensiones internas",
-            "Llamadas ilimitadas* de México",                        
+            "60 Llamadas Recurrentes",
+            "8GB de Ram",
+            "160GB SSD",
+            "5TB Transferencia",                        
           ],
-        },        
+        },
+        {
+          title: "IPPBX CLOUD 150",
+          features: [
+            "150 Llamadas Recurrentes",
+            "16-32GB de Ram",
+            "192GB SSD",
+            "8TB Transferencia",                        
+          ],
+        },                  
       ],
-    },    
+    }, 
+    years: {
+      title: "Anual",
+      price: "+IVA MXN",
+      plan: "Al Mes",
+      button: "Contratar",
+      pricesSwitch: [
+        {
+          title: "IPPBX CLOUD 30",
+          features: [
+            "30 Llamadas Recurrentes",
+            "4GB de Ram",
+            "80GB SSD",
+            "4TB Transferencia",
+          ],
+        },
+        {
+          title: "IPPBX CLOUD 60",
+          features: [
+            "60 Llamadas Recurrentes",
+            "8GB de Ram",
+            "160GB SSD",
+            "5TB Transferencia",                        
+          ],
+        },
+        {
+          title: "IPPBX CLOUD 150",
+          features: [
+            "150 Llamadas Recurrentes",
+            "16-32GB de Ram",
+            "192GB SSD",
+            "8TB Transferencia",                        
+          ],
+        },                  
+      ],
+    },     
   },
 };

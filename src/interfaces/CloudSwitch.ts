@@ -34,6 +34,7 @@ export interface MonthlyPrice {
     precio: string,
     caracteristicasKey: string[],
     setup: string,
+    img: string,
 }
 
 export interface AnnualPrice {
@@ -41,4 +42,5 @@ export interface AnnualPrice {
     precio: string,
     caracteristicasKey: string[],
     setup: string,
+    img: string,
 }
